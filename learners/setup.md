@@ -57,7 +57,31 @@ For [Linux](https://happygitwithr.com/install-git.html#linux)
 
 :::::::::::::::::::::::::
 
-### Configure Git
+### Install R packages
+
+Install the following packages:
+
+```r
+if(!require("pak")) install.packages("pak")
+pak::pak("gh")
+pak::pak("usethis")
+pak::pak("gitcreds")
+pak::pak("FRBCesab/rcompendium")
+pak::pak("cli")
+pak::pak("pkgdown")
+pak::pak("devtools")
+pak::pak("tidyverse")
+pak::pak("here")
+pak::pak("lifecycle")
+pak::pak("readxl")
+pak::pak("incidence2")
+pak::pak("rmarkdown")
+pak::pak("knitr")
+pak::pak("fs")
+pak::pak("renv")
+```
+
+### Configure Git and GitHub
 
 ::: prereq
 
@@ -171,3 +195,6 @@ gh::gh_whoami()
 ```
 
 :::
+
+If you need any assistance installing the software, configuring Git and GitHub, or have any other questions about the workshop, please send an email to <andree.valle-campos@lshtm.ac.uk>
+
