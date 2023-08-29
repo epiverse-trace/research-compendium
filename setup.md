@@ -59,10 +59,15 @@ For [Linux](https://happygitwithr.com/install-git.html#linux)
 
 ### Install R packages
 
-Install the following packages:
+First, install the `pak` package:
 
 ```r
 if(!require("pak")) install.packages("pak")
+```
+
+Then, install all these packages:
+
+```r
 pak::pak("gh")
 pak::pak("usethis")
 pak::pak("gitcreds")
