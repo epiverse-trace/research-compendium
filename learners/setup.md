@@ -70,19 +70,10 @@ Then, install all these packages:
 ```r
 pak::pak("gh")
 pak::pak("usethis")
-pak::pak("gitcreds")
 pak::pak("FRBCesab/rcompendium")
-pak::pak("cli")
-pak::pak("pkgdown")
-pak::pak("devtools")
 pak::pak("tidyverse")
 pak::pak("here")
-pak::pak("lifecycle")
-pak::pak("readxl")
 pak::pak("incidence2")
-pak::pak("rmarkdown")
-pak::pak("knitr")
-pak::pak("fs")
 pak::pak("renv")
 ```
 
