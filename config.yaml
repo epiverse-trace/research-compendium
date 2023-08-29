@@ -11,7 +11,7 @@
 carpentry: 'incubator'
 
 # Overall title for pages.
-title: 'Research Compendium for Epidemic Analysis'
+title: 'Improving the reliability, usability and sustainability of code for epidemic analysis with R packages'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: '2023-08-29'
