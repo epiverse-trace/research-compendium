@@ -2,6 +2,10 @@
 title: Setup
 ---
 
+Lesson for the workshop on "Improving the reliability, usability and sustainability of code for epidemic analysis with R packages" at [IDDconf 2023](https://iddconf.org/).
+
+Follow these instructions to prepare for the event.
+
 ## Data Sets
 
 <!--
