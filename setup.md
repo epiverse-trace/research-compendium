@@ -2,9 +2,6 @@
 title: Setup
 ---
 
-FIXME: Setup instructions live in this document. Please specify the tools and
-the data sets the Learner needs to have installed.
-
 ## Data Sets
 
 <!--
@@ -16,14 +13,22 @@ Download the [data zip file](https://github.com/reconhub/learn/raw/master/static
 
 ## Software Setup
 
+### Install Rstudio
+
+Install R and Rstudio <https://posit.co/download/rstudio-desktop/>
+
+### Create a GitHub account
+
+Create a GitHub account <https://github.com/>
+
+### Install Git
+
 ::::::::::::::::::::::::::::::::::::::: discussion
 
-### Details
+### Follow software specific suggestions
 
-Setup for different systems can be presented in dropdown menus via a `solution`
-tag. They will join to this discussion block, so you can give a general overview
-of the software used in this lesson here and fill out the individual operating
-systems (and potentially add more, e.g. online setup) in the solutions blocks.
+Follow [happygitwithr recommendation](https://happygitwithr.com/install-git.html) for each Operating system.
+
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -31,7 +36,7 @@ systems (and potentially add more, e.g. online setup) in the solutions blocks.
 
 ### Windows
 
-Use PuTTY
+For [Windows](https://happygitwithr.com/install-git.html#install-git-windows)
 
 :::::::::::::::::::::::::
 
@@ -39,7 +44,7 @@ Use PuTTY
 
 ### MacOS
 
-Use Terminal.app
+For [MacOS](https://happygitwithr.com/install-git.html#macos)
 
 :::::::::::::::::::::::::
 
@@ -48,7 +53,121 @@ Use Terminal.app
 
 ### Linux
 
-Use Terminal
+For [Linux](https://happygitwithr.com/install-git.html#linux)
 
 :::::::::::::::::::::::::
 
+### Configure Git
+
+::: prereq
+
+### Follow all these steps
+
+#### 1. Verify your git configuration
+
+```r
+gh::gh_whoami()
+```
+
+```output
+{
+  "name": "Andree Valle Campos",
+  "login": "avallecam",
+  "html_url": "https://github.com/avallecam",
+  "scopes": "gist, repo, workflow",
+  "token": "gho_...AlAn"
+}
+
+```
+
+#### 2. Get a situational report on your current Git/GitHub status:
+
+```r
+usethis::git_sitrep()
+```
+
+If you get a message similar to this output, follow the next step:
+
+```error
+✖ Token lacks recommended scopes:
+  - 'user:email': needed to read user's email addresses
+  Consider re-creating your PAT with the missing scopes.
+  `create_github_token()` defaults to the recommended scopes.
+✖ Can't retrieve registered email addresses from GitHub.
+  Consider re-creating your PAT with the 'user' or at least 'user:email' scope.
+```
+
+#### 3. Create you GitHub token:
+
+```r
+usethis::create_github_token()
+```
+
+Check all of the following options:
+
+![](../episodes/fig/git-token.png)
+
+#### 4. Configure your token
+
+Follow the [steps from happygitwithr](https://happygitwithr.com/https-pat.html):
+
+```r
+gitcreds::gitcreds_set()
+```
+
+```output
+-> What would you like to do? 
+
+1: Abort update with error, and keep the existing credentials
+2: Replace these credentials
+3: See the password / token
+
+Selection: 2
+
+```
+
+Select option `2`
+
+#### 5. Run again the situational report:
+
+```r
+usethis::git_sitrep()
+```
+
+```output
+Git config (global)
+• Name: 'Andree Valle'
+• Email: 'avallecam@gmail.com'
+• Global (user-level) gitignore file: <unset>
+• Vaccinated: FALSE
+ℹ See `?git_vaccinate` to learn more
+• Default Git protocol: 'https'
+• Default initial branch name: 'master'
+GitHub
+• Default GitHub host: 'https://github.com'
+• Personal access token for 'https://github.com': '<discovered>'
+• GitHub user: 'avallecam'
+• Token scopes: 'delete_repo, gist, repo, user, workflow'
+• Email(s): 'avallecam@gmail.com (primary)', 'andree.valle-campos@lshtm.ac.uk'
+Git repo for current project
+ℹ No active usethis project
+```
+
+#### 6. Verify your updated git configuration
+
+```r
+gh::gh_whoami()
+```
+
+```output
+{
+  "name": "Andree Valle Campos",
+  "login": "avallecam",
+  "html_url": "https://github.com/avallecam",
+  "scopes": "delete_repo, gist, repo, user, workflow",
+  "token": "ghp_...Jq2R"
+}
+
+```
+
+:::
