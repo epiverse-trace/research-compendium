@@ -63,22 +63,31 @@ For [Linux](https://happygitwithr.com/install-git.html#linux)
 
 ### Install R packages
 
-First, install the `pak` package:
+We strongly suggest to install the development version of the `rcompendium` package:
 
 ```r
-if(!require("pak")) install.packages("pak")
+## Install < remotes > package (if not already installed) ----
+if (!requireNamespace("remotes", quietly = TRUE)) {
+  install.packages("remotes")
+}
+
+## Install dev version of < rcompendium > from GitHub ----
+remotes::install_github("FRBCesab/rcompendium")
 ```
 
 Then, install all these packages:
 
 ```r
-pak::pak("gh")
-pak::pak("usethis")
-pak::pak("FRBCesab/rcompendium")
-pak::pak("tidyverse")
-pak::pak("here")
-pak::pak("incidence2")
-pak::pak("renv")
+if(!require("pak")) install.packages("pak")
+
+new <- c("gh",
+         "usethis",
+         "tidyverse",
+         "here",
+         "incidence2",
+         "renv")
+
+pak::pak(new)
 ```
 
 ### Configure Git and GitHub
@@ -88,6 +97,12 @@ pak::pak("renv")
 ### Follow all these steps
 
 #### 1. Verify your git configuration
+
+Use `gh::gh_whoami()` to check if your local git configuration recognize:
+
+- your name
+- you github account
+- your _token_
 
 ```r
 gh::gh_whoami()
@@ -104,13 +119,15 @@ gh::gh_whoami()
 
 ```
 
+If do not have a _token_, follow the next step.
+
 #### 2. Get a situational report on your current Git/GitHub status:
+
+Use `usethis::git_sitrep()` to check if there is no `✖ ...` line in the output with and error message. One example of this below:
 
 ```r
 usethis::git_sitrep()
 ```
-
-If you get a message similar to this output, follow the next step:
 
 ```error
 ✖ Token lacks recommended scopes:
@@ -121,7 +138,11 @@ If you get a message similar to this output, follow the next step:
   Consider re-creating your PAT with the 'user' or at least 'user:email' scope.
 ```
 
+Here I do had a token but it was not configured correctly. If you get a similar error message, follow the next step.
+
 #### 3. Create you GitHub token:
+
+Do this with `usethis::create_github_token()`. This should redirect you to GitHub on your browser. Once there, check all the options in the figure below.
 
 ```r
 usethis::create_github_token()
@@ -133,7 +154,7 @@ Check all of the following options:
 
 #### 4. Configure your token
 
-Follow the [steps from happygitwithr](https://happygitwithr.com/https-pat.html):
+To [complete the configuration](https://happygitwithr.com/https-pat.html) of your token, use `gitcreds::gitcreds_set()`, then accept that you want to `2: Replace these credentials`. Do this by writing the number `2` and press ENTER.
 
 ```r
 gitcreds::gitcreds_set()
@@ -150,9 +171,10 @@ Selection: 2
 
 ```
 
-Select option `2`
 
 #### 5. Run again the situational report:
+
+Verify again that there is no `✖ ...` line in the output with and error message. A good output should like this:
 
 ```r
 usethis::git_sitrep()
@@ -177,22 +199,7 @@ Git repo for current project
 ℹ No active usethis project
 ```
 
-#### 6. Verify your updated git configuration
-
-```r
-gh::gh_whoami()
-```
-
-```output
-{
-  "name": "Andree Valle Campos",
-  "login": "avallecam",
-  "html_url": "https://github.com/avallecam",
-  "scopes": "delete_repo, gist, repo, user, workflow",
-  "token": "ghp_...Jq2R"
-}
-
-```
+If you still have an error. Copy and paste this output in your issue report to the email below. 
 
 :::
 
