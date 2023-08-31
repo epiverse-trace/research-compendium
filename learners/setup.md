@@ -2,7 +2,7 @@
 title: Setup
 ---
 
-We will use this lesson for the workshop on "Improving the reliability, usability and sustainability of code for epidemic analysis with R packages" at [IDDconf 2023](https://iddconf.org/).
+We will use this site for the workshop on "Improving the reliability, usability and sustainability of code for epidemic analysis with R packages" at [IDDconf 2023](https://iddconf.org/).
 
 Follow these instructions to prepare for the event.
 
@@ -101,6 +101,7 @@ pak::pak(new)
 ### Follow all these steps
 
 In these steps, we will verify that you have:
+
 - a correctly configured _token_, and
 - a clean output when running `usethis::git_sitrep()`.
 
@@ -167,7 +168,7 @@ Check all of the following options:
 
 #### 4. Configure your token
 
-To [complete the configuration](https://happygitwithr.com/https-pat.html) of your token, use `gitcreds::gitcreds_set()`, then accept that you want to `2: Replace these credentials`. Do this by writing the number `2` and press ENTER.
+To complete the configuration of your token use `gitcreds::gitcreds_set()` ([Ref]((https://happygitwithr.com/https-pat.html)), then accept that you want to `2: Replace these credentials`. Do this by writing the number `2` and press ENTER.
 
 ```r
 gitcreds::gitcreds_set()
