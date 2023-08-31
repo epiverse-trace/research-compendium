@@ -236,9 +236,9 @@ any links that you are not going to use.
  --></tbody></table><p>
       The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
       </p>
-      </section><section id="setup"><p>We will use this lesson for the workshop on “Improving the
-reliability, usability and sustainability of code for epidemic analysis
-with R packages” at <a href="https://iddconf.org/" class="external-link">IDDconf 2023</a>.</p>
+      </section><section id="setup"><p>We will use this site for the workshop on “Improving the reliability,
+usability and sustainability of code for epidemic analysis with R
+packages” at <a href="https://iddconf.org/" class="external-link">IDDconf 2023</a>.</p>
 <p>Follow these instructions to prepare for the event.</p>
 <!--
 ## Data Sets
@@ -285,7 +285,7 @@ recommendation</a> for each Operating system.</p>
   Windows
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>For <a href="https://happygitwithr.com/install-git.html#install-git-windows" class="external-link">Windows</a></p>
 </div>
@@ -299,7 +299,7 @@ recommendation</a> for each Operating system.</p>
   MacOS
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>For <a href="https://happygitwithr.com/install-git.html#macos" class="external-link">MacOS</a></p>
 </div>
@@ -313,7 +313,7 @@ recommendation</a> for each Operating system.</p>
   Linux
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>For <a href="https://happygitwithr.com/install-git.html#linux" class="external-link">Linux</a></p>
 </div>
@@ -364,10 +364,10 @@ press ENTER. It can take up to 3 minutes to complete.</p>
 <h3 class="callout-title">Follow all these steps<a class="anchor" aria-label="anchor" href="#follow-all-these-steps"></a>
 </h3>
 <div class="callout-content">
-<p>In these steps, we will verify that you have: - a correctly
-configured <em>token</em>, and - a clean output when running
-<code>usethis::git_sitrep()</code>.</p>
-<div class="section level4">
+<p>In these steps, we will verify that you have:</p>
+<ul><li>a correctly configured <em>token</em>, and</li>
+<li>a clean output when running <code>usethis::git_sitrep()</code>.</li>
+</ul><div class="section level4">
 <h4 id="verify-your-git-configuration">1. Verify your git configuration<a class="anchor" aria-label="anchor" href="#verify-your-git-configuration"></a></h4>
 <p>Use <code>gh::gh_whoami()</code> to check if your local git
 configuration recognizes:</p>
@@ -438,11 +438,10 @@ check all the options in the figure below.</p>
 <figure><img src="../fig/git-token.png" class="figure mx-auto d-block"></figure></div>
 <div class="section level4">
 <h4 id="configure-your-token">4. Configure your token<a class="anchor" aria-label="anchor" href="#configure-your-token"></a></h4>
-<p>To <a href="https://happygitwithr.com/https-pat.html" class="external-link">complete the
-configuration</a> of your token, use
-<code>gitcreds::gitcreds_set()</code>, then accept that you want to
-<code>2: Replace these credentials</code>. Do this by writing the number
-<code>2</code> and press ENTER.</p>
+<p>To complete the configuration of your token use
+<code>gitcreds::gitcreds_set()</code> (<a href="(https://happygitwithr.com/https-pat.html)" class="external-link">Ref</a>, then accept
+that you want to <code>2: Replace these credentials</code>. Do this by
+writing the number <code>2</code> and press ENTER.</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
