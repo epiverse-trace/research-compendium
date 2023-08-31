@@ -146,8 +146,7 @@
         
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#data-sets">Data Sets</a></li>
-<li><a href="#software-setup">Software Setup</a></li>
+        <ul><li><a href="#software-setup">Software Setup</a></li>
 <li><a href="#your-questions">Your Questions</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -222,24 +221,24 @@ any links that you are not going to use.
  -->
 
 
-      <section id="setup"><p>This lesson will be used for the workshop on “Improving the
+      <section id="setup"><p>We will use this lesson for the workshop on “Improving the
 reliability, usability and sustainability of code for epidemic analysis
 with R packages” at <a href="https://iddconf.org/" class="external-link">IDDconf 2023</a>.</p>
 <p>Follow these instructions to prepare for the event.</p>
-<section id="data-sets"><h2 class="section-heading">Data Sets<a class="anchor" aria-label="anchor" href="#data-sets"></a>
-</h2>
-<hr class="half-width"><!--
+<!--
+## Data Sets
+
 FIXME: place any data you want learners to use in `episodes/data` and then use
        a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
        link to it, replacing the example.com link.
---><p>We will use data from a Ebola virus disease outbreak notified in a
-fictional country in West Africa:</p>
-<ul><li>
-<code>linelist_20140701.xlsx</code>: a linelist containing case
-information up to the 1st July 2014.</li>
-</ul><p><a href="https://github.com/reconhub/learn/raw/master/static/data/linelist_20140701.xlsx" class="external-link">Download
-this data file file</a> and keep it in your Desktop.</p>
-</section><section id="software-setup"><h2 class="section-heading">Software Setup<a class="anchor" aria-label="anchor" href="#software-setup"></a>
+
+We will use data from an Ebola virus disease outbreak in a fictional country in West Africa:
+
+- `linelist_20140701.xlsx`: a linelist containing case information up to the 1st of July 2014.
+
+[Download this data file](https://github.com/reconhub/learn/raw/master/static/data/linelist_20140701.xlsx) and keep it in your Desktop.
+-->
+<section id="software-setup"><h2 class="section-heading">Software Setup<a class="anchor" aria-label="anchor" href="#software-setup"></a>
 </h2>
 <hr class="half-width"><div class="section level3">
 <h3 id="install-rstudio">Install Rstudio<a class="anchor" aria-label="anchor" href="#install-rstudio"></a></h3>
@@ -271,7 +270,7 @@ recommendation</a> for each Operating system.</p>
   Windows
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>For <a href="https://happygitwithr.com/install-git.html#install-git-windows" class="external-link">Windows</a></p>
 </div>
@@ -285,7 +284,7 @@ recommendation</a> for each Operating system.</p>
   MacOS
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>For <a href="https://happygitwithr.com/install-git.html#macos" class="external-link">MacOS</a></p>
 </div>
@@ -299,7 +298,7 @@ recommendation</a> for each Operating system.</p>
   Linux
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>For <a href="https://happygitwithr.com/install-git.html#linux" class="external-link">Linux</a></p>
 </div>
@@ -309,19 +308,19 @@ recommendation</a> for each Operating system.</p>
 </div>
 <div class="section level3">
 <h3 id="install-r-packages">Install R packages<a class="anchor" aria-label="anchor" href="#install-r-packages"></a></h3>
-<p>We strongly suggest to install the development version of the
-<code>rcompendium</code> package:</p>
+<p>These installation steps could ask you
+<code>? Do you want to continue (Y/n)</code> write <code>y</code> and
+press ENTER. It can take up to 3 minutes to complete.</p>
+<p>First, we strongly suggest to install the development versions of the
+<code>rcompendium</code> and <code>rrtools</code> packages:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## Install &lt; remotes &gt; package (if not already installed) ----</span></span>
-<span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu">requireNamespace</span><span class="op">(</span><span class="st">"remotes"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu">install.packages</span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
+<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw">require</span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span><span class="op">)</span> <span class="fu">install.packages</span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">## Install dev version of &lt; rcompendium &gt; from GitHub ----</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"FRBCesab/rcompendium"</span><span class="op">)</span></span></code></pre>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"FRBCesab/rcompendium"</span><span class="op">)</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"benmarwick/rrtools"</span><span class="op">)</span></span></code></pre>
 </div>
 <p>Then, install all these packages:</p>
 <div class="codewrapper sourceCode" id="cb2">
@@ -334,7 +333,7 @@ recommendation</a> for each Operating system.</p>
 <span>         <span class="st">"usethis"</span>,</span>
 <span>         <span class="st">"tidyverse"</span>,</span>
 <span>         <span class="st">"here"</span>,</span>
-<span>         <span class="st">"incidence2"</span>,</span>
+<span>         <span class="st">"yaml"</span>,</span>
 <span>         <span class="st">"renv"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu">pak</span><span class="op">(</span><span class="va">new</span><span class="op">)</span></span></code></pre>
@@ -350,12 +349,15 @@ recommendation</a> for each Operating system.</p>
 <h3 class="callout-title">Follow all these steps<a class="anchor" aria-label="anchor" href="#follow-all-these-steps"></a>
 </h3>
 <div class="callout-content">
+<p>In these steps, we will verify that you have: - a correctly
+configured <em>token</em>, and - a clean output when running
+<code>usethis::git_sitrep()</code>.</p>
 <div class="section level4">
 <h4 id="verify-your-git-configuration">1. Verify your git configuration<a class="anchor" aria-label="anchor" href="#verify-your-git-configuration"></a></h4>
 <p>Use <code>gh::gh_whoami()</code> to check if your local git
-configuration recognize:</p>
+configuration recognizes:</p>
 <ul><li>your name</li>
-<li>you github account</li>
+<li>your GitHub account</li>
 <li>your <em>token</em>
 </li>
 </ul><div class="codewrapper sourceCode" id="cb3">
@@ -376,13 +378,13 @@ configuration recognize:</p>
 }
 </code></pre>
 </div>
-<p>If do not have a <em>token</em>, follow the next step.</p>
+<p>If you do not have a <em>token</em>, follow the next step.</p>
 </div>
 <div class="section level4">
 <h4 id="get-a-situational-report-on-your-current-gitgithub-status">2. Get a situational report on your current Git/GitHub status:<a class="anchor" aria-label="anchor" href="#get-a-situational-report-on-your-current-gitgithub-status"></a></h4>
 <p>Use <code>usethis::git_sitrep()</code> to check if there is no
-<code>✖ ...</code> line in the output with and error message. One
-example of this below:</p>
+<code>✖ ...</code> line in the output with an error message.</p>
+<p>An example with two errors is below:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -399,17 +401,18 @@ example of this below:</p>
 ✖ Can't retrieve registered email addresses from GitHub.
   Consider re-creating your PAT with the 'user' or at least 'user:email' scope.</code></pre>
 </div>
-<p>Here I do had a <em>token</em> but it was not configured correctly.
-If do not have a <em>token</em> or get a similar error message, follow
-the next step.</p>
-<p>If you have another error message, copy and paste this output in your
-issue report to the email at the end of this page.</p>
+<p>The output shows that I had a <em>token</em> but must fix its
+configuration. If you do not have a <em>token</em> or get a similar
+error message, follow the next step.</p>
+<p>If you have an error message unrelated to creating a token, copy and
+paste this output in your issue report to the email at the end of this
+page.</p>
 </div>
 <div class="section level4">
-<h4 id="create-you-github-token">3. Create you GitHub token:<a class="anchor" aria-label="anchor" href="#create-you-github-token"></a></h4>
-<p>Do this with <code>usethis::create_github_token()</code>. This should
-redirect you to GitHub on your browser. Once there, check all the
-options in the figure below.</p>
+<h4 id="create-your-github-token">3. Create your GitHub token:<a class="anchor" aria-label="anchor" href="#create-your-github-token"></a></h4>
+<p>Do this with <code>usethis::create_github_token()</code>. This
+function should redirect you to GitHub on your browser. Once there,
+check all the options in the figure below.</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -447,7 +450,7 @@ Selection: 2
 <div class="section level4">
 <h4 id="run-again-the-situational-report">5. Run again the situational report:<a class="anchor" aria-label="anchor" href="#run-again-the-situational-report"></a></h4>
 <p>Verify again that there is no <code>✖ ...</code> line in the output
-with and error message. A good output should like this:</p>
+with an error message. The expected outcome should look like this:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -479,11 +482,9 @@ report to the email at the end of this page.</p>
 </div>
 <div class="section level4">
 <h4 id="two-factor-authentication">6. Two-factor authentication<a class="anchor" aria-label="anchor" href="#two-factor-authentication"></a></h4>
-<p>This is only if your have a error message related with Two-factor
-authentication. If not, omit this step.</p>
-<p>If you need to configure the two-factor authentication for GitHub, we
-recommend you <a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication" class="external-link">follow
-the steps in this guide</a>.</p>
+<p>If you have an error message related to Two-factor authentication,
+follow the <a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication" class="external-link">steps
+in this GitHub guide</a>.</p>
 </div>
 </div>
 </div>
@@ -508,16 +509,17 @@ the steps in this guide</a>.</p>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">git_default_branch_configure</span><span class="op">(</span>name <span class="op">=</span> <span class="st">"main"</span><span class="op">)</span></span></code></pre>
 </div>
-<p>This will homogenize the name of the default branch in our computers.
-We need this to make some auto generated links to work downstream.</p>
+<p>This step will homogenize the name of the default branch in our
+computers. We need this to make some auto-generated links work
+downstream.</p>
 </div>
 <div class="section level4">
 <h4 id="add-rcompendium-credentials">2. Add {rcompendium} credentials<a class="anchor" aria-label="anchor" href="#add-rcompendium-credentials"></a></h4>
-<p>Use <code>rcompendium::set_credentials()</code> add our name and
+<p>Use <code>rcompendium::set_credentials()</code> to add our name and
 personal information to the <code>.Rprofile</code> configuration
 file.</p>
-<p>Adapt the code chunk below to with your given name, family name,
-email, and ORCID. Adding your ORCID is optional.</p>
+<p>Adapt the code chunk below to your name, family name, email, and
+ORCID. Adding your ORCID is optional.</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -529,7 +531,7 @@ email, and ORCID. Adding your ORCID is optional.</p>
 <span>  orcid <span class="op">=</span> <span class="st">"0000-0002-7779-481X"</span></span>
 <span><span class="op">)</span></span></code></pre>
 </div>
-<p>You can access to the content of the <code>.Rprofile</code> file with
+<p>You can access the content of the <code>.Rprofile</code> file with
 <code>usethis::edit_r_profile()</code>.</p>
 </div>
 </div>
