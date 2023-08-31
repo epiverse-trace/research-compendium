@@ -14,7 +14,9 @@ exercises: 2
 
 - Define the concepts of Open science, Reproducible research, and Sustainable software.
 
-- Define related terms like Reliability and Usability.
+- Define related concepts like Reliability and Usability.
+
+- Define related features for each concept.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -30,9 +32,11 @@ Definition:
 
 - Also make their dissemination available to any member of an inquiring society, from professionals to citizens ([Ref](https://www.orion-openscience.eu/index.php/resources/open-science)), to improve its transparency and public ownership.
 
-Related terms:
+Related feature:
 
 - _Open Licence_: An open licence that permits reuse using MIT or GPL for software ([Ref](https://choosealicense.com/)) and CC BY or CC0 for data, prose and other creative products ([Ref1](https://creativecommons.org/about/cclicenses/), [Ref2](https://merely-useful.tech/py-rse/glossary.html#open_license)).
+
+- _DEI_: Diversity, Equity, and Inclusion. There are four CHAOSS’s metrics for projects: Project Access, Communication Transparency, Newcomer Experience, Inclusive Leadership. ([Ref](https://github.blog/2023-06-07-announcing-the-all-in-chaoss-dei-badging-pilot-initiative/))
 
 ### Reproducible research
 
@@ -42,9 +46,11 @@ Definition:
 
 - Practice of describing and documenting the research process in such a way that another researcher can re-run the software (methods) on the same data input to get the same data outputs (results).
 
-Related terms:
+Related feature:
 
 - _Documentation_: Software descriptions structured in four types with complementing purposes: tutorials, how-to guides, technical references, and explanations. ([Ref](https://documentation.divio.com/)) It includes documentation strings in one or two lines using active verbs to describe how inputs turn into outputs. ([Ref](https://merely-useful.tech/py-rse/documentation.html))
+
+Related concepts:
 
 - _Reliability_: Result consistency across many repetitions of the same experiment. ([Ref](https://www.dymockstutoring.edu.au/scientific-skills-accuracy-validity-and-reliability/))
 
@@ -55,9 +61,9 @@ Related terms:
 Definition:
 
 - The ease with which to maintain and extend rather than replace. ([Ref](https://merely-useful.tech/py-rse/index.html#intro-big-picture))
-It depends on the quality of the software, the skills of the potential maintainters, and if users can afford to keep up to date (how much the community is willing to invest).
+It depends on the quality of the software, the skills of the potential maintainers, and if users can afford to keep up to date (how much the community is willing to invest).
 
-Related terms:
+Related features:
 
 - _Modular code_: Build programs out of short, single-purpose functions with clearly-defined inputs and outputs ([Ref](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510#sec005))
 
@@ -65,7 +71,7 @@ Related terms:
 
 - _Version control_: Keeping track of changes that you or your collaborators make to data and software. ([Ref](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510#sec014))
 
-- _Community around software_: users and collaborators that can communicate effectively with maintainers given the software documentation and by public or private platforms like chat channels, video conferencing, and more. ([Ref](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510#sec007))
+- _Community around software_: Users and collaborators that can communicate effectively with maintainers given the software documentation and by public or private platforms like chat channels, video conferencing, and more. ([Ref](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510#sec007))
 
 ## How to use these concepts?
 
@@ -80,7 +86,7 @@ Often used interchangeably but use them differently can help to differentiate th
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- The definitions of Open science, Reproducible research, and Sustainable software help us identify the related software attributes. 
+- The definitions of Open science, Reproducible research, and Sustainable software help us identify their specific software features. 
 
 - Differentiating these concepts helps us to differentiate the characteristics of a project.
 
