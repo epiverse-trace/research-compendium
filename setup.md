@@ -209,6 +209,13 @@ Git repo for current project
 
 If you still have an error. Copy and paste this output in your issue report to the email at the end of this page. 
 
+#### 6. Two-factor authentication
+
+This is only if your have a error message related with Two-factor authentication. If not, omit this step.
+
+If you need to configure the two-factor authentication for GitHub, we recommend you [follow the steps in this guide](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication).
+
+
 :::
 
 ### Configure your R environment
