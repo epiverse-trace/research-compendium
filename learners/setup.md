@@ -2,23 +2,23 @@
 title: Setup
 ---
 
-This lesson will be used for the workshop on "Improving the reliability, usability and sustainability of code for epidemic analysis with R packages" at [IDDconf 2023](https://iddconf.org/).
+We will use this lesson for the workshop on "Improving the reliability, usability and sustainability of code for epidemic analysis with R packages" at [IDDconf 2023](https://iddconf.org/).
 
 Follow these instructions to prepare for the event.
 
+<!--
 ## Data Sets
 
-<!--
 FIXME: place any data you want learners to use in `episodes/data` and then use
        a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
        link to it, replacing the example.com link.
+
+We will use data from an Ebola virus disease outbreak in a fictional country in West Africa:
+
+- `linelist_20140701.xlsx`: a linelist containing case information up to the 1st of July 2014.
+
+[Download this data file](https://github.com/reconhub/learn/raw/master/static/data/linelist_20140701.xlsx) and keep it in your Desktop.
 -->
-
-We will use data from a Ebola virus disease outbreak notified in a fictional country in West Africa:
-
-- `linelist_20140701.xlsx`: a linelist containing case information up to the 1st July 2014.
-
-[Download this data file file](https://github.com/reconhub/learn/raw/master/static/data/linelist_20140701.xlsx) and keep it in your Desktop.
 
 ## Software Setup
 
@@ -68,16 +68,15 @@ For [Linux](https://happygitwithr.com/install-git.html#linux)
 
 ### Install R packages
 
-We strongly suggest to install the development version of the `rcompendium` package:
+These installation steps could ask you `? Do you want to continue (Y/n)` write `y` and press ENTER. It can take up to 3 minutes to complete.
+
+First, we strongly suggest to install the development versions of the `rcompendium` and `rrtools` packages:
 
 ```r
-## Install < remotes > package (if not already installed) ----
-if (!requireNamespace("remotes", quietly = TRUE)) {
-  install.packages("remotes")
-}
+if (!require("remotes")) install.packages("remotes")
 
-## Install dev version of < rcompendium > from GitHub ----
 remotes::install_github("FRBCesab/rcompendium")
+remotes::install_github("benmarwick/rrtools")
 ```
 
 Then, install all these packages:
@@ -89,7 +88,7 @@ new <- c("gh",
          "usethis",
          "tidyverse",
          "here",
-         "incidence2",
+         "yaml",
          "renv")
 
 pak::pak(new)
@@ -101,12 +100,16 @@ pak::pak(new)
 
 ### Follow all these steps
 
+In these steps, we will verify that you have:
+- a correctly configured _token_, and
+- a clean output when running `usethis::git_sitrep()`.
+
 #### 1. Verify your git configuration
 
-Use `gh::gh_whoami()` to check if your local git configuration recognize:
+Use `gh::gh_whoami()` to check if your local git configuration recognizes:
 
 - your name
-- you github account
+- your GitHub account
 - your _token_
 
 ```r
@@ -124,11 +127,13 @@ gh::gh_whoami()
 
 ```
 
-If do not have a _token_, follow the next step.
+If you do not have a _token_, follow the next step.
 
 #### 2. Get a situational report on your current Git/GitHub status:
 
-Use `usethis::git_sitrep()` to check if there is no `✖ ...` line in the output with and error message. One example of this below:
+Use `usethis::git_sitrep()` to check if there is no `✖ ...` line in the output with an error message. 
+
+An example with two errors is below:
 
 ```r
 usethis::git_sitrep()
@@ -143,14 +148,14 @@ usethis::git_sitrep()
   Consider re-creating your PAT with the 'user' or at least 'user:email' scope.
 ```
 
-Here I do had a _token_ but it was not configured correctly. If do not have a _token_ or get a similar error message, follow the next step. 
+The output shows that I had a _token_ but must fix its configuration. If you do not have a _token_ or get a similar error message, follow the next step. 
 
-If you have another error message, copy and paste this output in your issue report to the email at the end of this page.  
+If you have an error message unrelated to creating a token, copy and paste this output in your issue report to the email at the end of this page.  
 
 
-#### 3. Create you GitHub token:
+#### 3. Create your GitHub token:
 
-Do this with `usethis::create_github_token()`. This should redirect you to GitHub on your browser. Once there, check all the options in the figure below.
+Do this with `usethis::create_github_token()`. This function should redirect you to GitHub on your browser. Once there, check all the options in the figure below.
 
 ```r
 usethis::create_github_token()
@@ -182,7 +187,7 @@ Selection: 2
 
 #### 5. Run again the situational report:
 
-Verify again that there is no `✖ ...` line in the output with and error message. A good output should like this:
+Verify again that there is no `✖ ...` line in the output with an error message. The expected outcome should look like this:
 
 ```r
 usethis::git_sitrep()
@@ -211,9 +216,7 @@ If you still have an error. Copy and paste this output in your issue report to t
 
 #### 6. Two-factor authentication
 
-This is only if your have a error message related with Two-factor authentication. If not, omit this step.
-
-If you need to configure the two-factor authentication for GitHub, we recommend you [follow the steps in this guide](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication).
+If you have an error message related to Two-factor authentication, follow the [steps in this GitHub guide](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication).
 
 
 :::
@@ -232,13 +235,13 @@ Run the code chunk below:
 usethis::git_default_branch_configure(name = "main")
 ```
 
-This will homogenize the name of the default branch in our computers. We need this to make some auto generated links to work downstream.
+This step will homogenize the name of the default branch in our computers. We need this to make some auto-generated links work downstream.
 
 #### 2. Add {rcompendium} credentials
 
-Use `rcompendium::set_credentials()` add our name and personal information to the `.Rprofile` configuration file. 
+Use `rcompendium::set_credentials()` to add our name and personal information to the `.Rprofile` configuration file. 
 
-Adapt the code chunk below to with your given name, family name, email, and ORCID. Adding your ORCID is optional.
+Adapt the code chunk below to your name, family name, email, and ORCID. Adding your ORCID is optional.
 
 ```r
 rcompendium::set_credentials(
@@ -249,7 +252,7 @@ rcompendium::set_credentials(
 )
 ```
 
-You can access to the content of the `.Rprofile` file with `usethis::edit_r_profile()`.
+You can access the content of the `.Rprofile` file with `usethis::edit_r_profile()`.
 
 :::
 
