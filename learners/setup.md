@@ -13,7 +13,12 @@ FIXME: place any data you want learners to use in `episodes/data` and then use
        a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
        link to it, replacing the example.com link.
 -->
-Download the [data zip file](https://github.com/reconhub/learn/raw/master/static/data/linelist_20140701.xlsx) and unzip it to your Desktop
+
+We will use data from a Ebola virus disease outbreak notified in a fictional country in West Africa:
+
+- `linelist_20140701.xlsx`: a linelist containing case information up to the 1st July 2014.
+
+[Download this data file file](https://github.com/reconhub/learn/raw/master/static/data/linelist_20140701.xlsx) and keep it in your Desktop.
 
 ## Software Setup
 
@@ -138,7 +143,10 @@ usethis::git_sitrep()
   Consider re-creating your PAT with the 'user' or at least 'user:email' scope.
 ```
 
-Here I do had a token but it was not configured correctly. If you get a similar error message, follow the next step.
+Here I do had a _token_ but it was not configured correctly. If do not have a _token_ or get a similar error message, follow the next step. 
+
+If you have another error message, copy and paste this output in your issue report to the email at the end of this page.  
+
 
 #### 3. Create you GitHub token:
 
@@ -199,9 +207,46 @@ Git repo for current project
 ℹ No active usethis project
 ```
 
-If you still have an error. Copy and paste this output in your issue report to the email below. 
+If you still have an error. Copy and paste this output in your issue report to the email at the end of this page. 
 
 :::
+
+### Configure your R environment
+
+::: prereq
+
+### Follow all these steps
+
+#### 1. Set the default Git branch name
+
+Run the code chunk below:
+
+```r
+usethis::git_default_branch_configure(name = "main")
+```
+
+This will homogenize the name of the default branch in our computers. We need this to make some auto generated links to work downstream.
+
+#### 2. Add {rcompendium} credentials
+
+Use `rcompendium::set_credentials()` add our name and personal information to the `.Rprofile` configuration file. 
+
+Adapt the code chunk below to with your given name, family name, email, and ORCID. Adding your ORCID is optional.
+
+```r
+rcompendium::set_credentials(
+  given = "Andree",
+  family = "Valle-Campos",
+  email = "avallecam@gmail.com",
+  orcid = "0000-0002-7779-481X"
+)
+```
+
+You can access to the content of the `.Rprofile` file with `usethis::edit_r_profile()`.
+
+:::
+
+## Your Questions
 
 If you need any assistance installing the software, configuring Git and GitHub, or have any other questions about the workshop, please send an email to <andree.valle-campos@lshtm.ac.uk>
 
