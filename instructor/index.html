@@ -148,7 +148,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="blank.html">1. blank</a>
+        <a href="definitions.html">1. Definitions</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -195,11 +195,11 @@
         <!-- START: inst/pkgdown/templates/content-syllabus.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link float-end" href="../instructor/blank.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/definitions.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="../instructor/blank.html" rel="next">Next: blank... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/definitions.html" rel="next">Next: Definitions... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Schedule</h1>
       
@@ -217,10 +217,10 @@ any links that you are not going to use.
 <span class="visually-hidden">Duration: </span>00h 00m
 </td>
 <td>
- 1. <a href="blank.html">blank</a>
+ 1. <a href="definitions.html">Definitions</a>
 </td>
 <td>
-How ?
+How can I define Reliability, Usability and Sustainability?
 </td>
 </tr><tr><td>
 <span class="visually-hidden">Duration: </span>00h 12m
@@ -246,8 +246,13 @@ with R packages” at <a href="https://iddconf.org/" class="external-link">IDDco
 FIXME: place any data you want learners to use in `episodes/data` and then use
        a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
        link to it, replacing the example.com link.
---><p>Download the <a href="https://github.com/reconhub/learn/raw/master/static/data/linelist_20140701.xlsx" class="external-link">data
-zip file</a> and unzip it to your Desktop</p>
+--><p>We will use data from a Ebola virus disease outbreak notified in a
+fictional country in West Africa:</p>
+<ul><li>
+<code>linelist_20140701.xlsx</code>: a linelist containing case
+information up to the 1st July 2014.</li>
+</ul><p><a href="https://github.com/reconhub/learn/raw/master/static/data/linelist_20140701.xlsx" class="external-link">Download
+this data file file</a> and keep it in your Desktop.</p>
 </section><section id="software-setup"><h2 class="section-heading">Software Setup<a class="anchor" aria-label="anchor" href="#software-setup"></a>
 </h2>
 <hr class="half-width"><div class="section level3">
@@ -280,7 +285,7 @@ recommendation</a> for each Operating system.</p>
   Windows
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>For <a href="https://happygitwithr.com/install-git.html#install-git-windows" class="external-link">Windows</a></p>
 </div>
@@ -294,7 +299,7 @@ recommendation</a> for each Operating system.</p>
   MacOS
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>For <a href="https://happygitwithr.com/install-git.html#macos" class="external-link">MacOS</a></p>
 </div>
@@ -308,7 +313,7 @@ recommendation</a> for each Operating system.</p>
   Linux
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>For <a href="https://happygitwithr.com/install-git.html#linux" class="external-link">Linux</a></p>
 </div>
@@ -408,8 +413,11 @@ example of this below:</p>
 ✖ Can't retrieve registered email addresses from GitHub.
   Consider re-creating your PAT with the 'user' or at least 'user:email' scope.</code></pre>
 </div>
-<p>Here I do had a token but it was not configured correctly. If you get
-a similar error message, follow the next step.</p>
+<p>Here I do had a <em>token</em> but it was not configured correctly.
+If do not have a <em>token</em> or get a similar error message, follow
+the next step.</p>
+<p>If you have another error message, copy and paste this output in your
+issue report to the email at the end of this page.</p>
 </div>
 <div class="section level4">
 <h4 id="create-you-github-token">3. Create you GitHub token:<a class="anchor" aria-label="anchor" href="#create-you-github-token"></a></h4>
@@ -481,25 +489,74 @@ Git repo for current project
 ℹ No active usethis project</code></pre>
 </div>
 <p>If you still have an error. Copy and paste this output in your issue
-report to the email below.</p>
+report to the email at the end of this page.</p>
 </div>
 </div>
 </div>
 </div>
-<p>If you need any assistance installing the software, configuring Git
+</div>
+<div class="section level3">
+<h3 id="configure-your-r-environment">Configure your R environment<a class="anchor" aria-label="anchor" href="#configure-your-r-environment"></a></h3>
+<div id="follow-all-these-steps-1" class="callout prereq">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check"></i>
+</div>
+<div id="follow-all-these-steps-1" class="callout-inner">
+<h3 class="callout-title">Follow all these steps<a class="anchor" aria-label="anchor" href="#follow-all-these-steps-1"></a>
+</h3>
+<div class="callout-content">
+<div class="section level4">
+<h4 id="set-the-default-git-branch-name">1. Set the default Git branch name<a class="anchor" aria-label="anchor" href="#set-the-default-git-branch-name"></a></h4>
+<p>Run the code chunk below:</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">git_default_branch_configure</span><span class="op">(</span>name <span class="op">=</span> <span class="st">"main"</span><span class="op">)</span></span></code></pre>
+</div>
+<p>This will homogenize the name of the default branch in our computers.
+We need this to make some auto generated links to work downstream.</p>
+</div>
+<div class="section level4">
+<h4 id="add-rcompendium-credentials">2. Add {rcompendium} credentials<a class="anchor" aria-label="anchor" href="#add-rcompendium-credentials"></a></h4>
+<p>Use <code>rcompendium::set_credentials()</code> add our name and
+personal information to the <code>.Rprofile</code> configuration
+file.</p>
+<p>Adapt the code chunk below to with your given name, family name,
+email, and ORCID. Adding your ORCID is optional.</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">rcompendium</span><span class="fu">::</span><span class="fu">set_credentials</span><span class="op">(</span></span>
+<span>  given <span class="op">=</span> <span class="st">"Andree"</span>,</span>
+<span>  family <span class="op">=</span> <span class="st">"Valle-Campos"</span>,</span>
+<span>  email <span class="op">=</span> <span class="st">"avallecam@gmail.com"</span>,</span>
+<span>  orcid <span class="op">=</span> <span class="st">"0000-0002-7779-481X"</span></span>
+<span><span class="op">)</span></span></code></pre>
+</div>
+<p>You can access to the content of the <code>.Rprofile</code> file with
+<code>usethis::edit_r_profile()</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="your-questions"><h2 class="section-heading">Your Questions<a class="anchor" aria-label="anchor" href="#your-questions"></a>
+</h2>
+<hr class="half-width"><p>If you need any assistance installing the software, configuring Git
 and GitHub, or have any other questions about the workshop, please send
 an email to <a href="../mailto:andree.valle-campos@lshtm.ac.uk" class="email">andree.valle-campos@lshtm.ac.uk</a></p>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-</div>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link float-end" href="../instructor/blank.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/definitions.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="../instructor/blank.html" rel="next">Next: blank... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/definitions.html" rel="next">Next: Definitions... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
     </nav></div>
 <!-- END  : inst/pkgdown/templates/content-syllabus.html -->
@@ -521,9 +578,9 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper" class="external-link">sandpaper (0.12.5)</a>,
-        <a href="https://github.com/carpentries/pegboard" class="external-link">pegboard (0.6.0)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/0.2.18" class="external-link">varnish (0.2.18)</a>.</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper" class="external-link">sandpaper (0.13.0)</a>,
+        <a href="https://github.com/carpentries/pegboard" class="external-link">pegboard (0.6.1)</a>,
+      and <a href="https://github.com/carpentries/varnish" class="external-link">varnish (0.3.0)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -544,8 +601,8 @@ any links that you are not going to use.
   "url": "https://avallecam.github.io/research-compendium/instructor/index.html",
   "identifier": "https://avallecam.github.io/research-compendium/instructor/index.html",
   "dateCreated": "2023-08-29",
-  "dateModified": "2023-08-30",
-  "datePublished": "2023-08-30"
+  "dateModified": "2023-08-31",
+  "datePublished": "2023-08-31"
 }
 
   </script><script>

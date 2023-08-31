@@ -179,7 +179,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="blank.html">1. blank</a>
+        <a href="definitions.html">1. Definitions</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -241,11 +241,11 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="aio-blank"><p>Content from <a href="blank.html">blank</a></p>
+<section id="aio-definitions"><p>Content from <a href="definitions.html">Definitions</a></p>
 <hr>
-<p> Last updated on 2023-08-29 | 
+<p> Last updated on 2023-08-31 | 
         
-        <a href="https://github.com/avallecam/research-compendium/edit/main/episodes/blank.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/avallecam/research-compendium/edit/main/episodes/definitions.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -257,7 +257,7 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How ?</li>
+<li>How can I define Reliability, Usability and Sustainability?</li>
 </ul>
 </div>
 </div>
@@ -267,7 +267,9 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain</li>
+<li><p>Define the concepts of Open science, Reproducible research, and
+Sustainable software.</p></li>
+<li><p>Define related terms like Reliability and Usability.</p></li>
 </ul>
 </div>
 </div>
@@ -277,6 +279,90 @@
 <section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
+<p>Three introductory concepts informed our approach to this
+material.</p>
+<div class="section level3">
+<h3 id="open-science">Open science<a class="anchor" aria-label="anchor" href="#open-science"></a>
+</h3>
+<p>Definition:</p>
+<ul>
+<li><p>Make data inputs, software (methods), and data outputs (results)
+freely available by publishing all of them with open licences (<a href="https://merely-useful.tech/py-rse/index.html#intro-big-picture" class="external-link">Ref</a>),
+to facilitate project reuse.</p></li>
+<li><p>Also make their dissemination available to any member of an
+inquiring society, from professionals to citizens (<a href="https://www.orion-openscience.eu/index.php/resources/open-science" class="external-link">Ref</a>),
+to improve its transparency and public ownership.</p></li>
+</ul>
+<p>Related terms:</p>
+<ul>
+<li>
+<em>Open Licence</em>: An open licence that permits reuse using MIT
+or GPL for software (<a href="https://choosealicense.com/" class="external-link">Ref</a>) and
+CC BY or CC0 for data, prose and other creative products (<a href="https://creativecommons.org/about/cclicenses/" class="external-link">Ref1</a>, <a href="https://merely-useful.tech/py-rse/glossary.html#open_license" class="external-link">Ref2</a>).</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="reproducible-research">Reproducible research<a class="anchor" aria-label="anchor" href="#reproducible-research"></a>
+</h3>
+<p>Definition:</p>
+<ul>
+<li><p>Ensure that anyone with access to data inputs and software
+(methods) can feasibly generate the data outputs (results), both to
+check (review) or build on them (recreate to create).</p></li>
+<li><p>Practice of describing and documenting the research process in
+such a way that another researcher can re-run the software (methods) on
+the same data input to get the same data outputs (results).</p></li>
+</ul>
+<p>Related terms:</p>
+<ul>
+<li><p><em>Documentation</em>: Software descriptions structured in four
+types with complementing purposes: tutorials, how-to guides, technical
+references, and explanations. (<a href="https://documentation.divio.com/" class="external-link">Ref</a>) It includes
+documentation strings in one or two lines using active verbs to describe
+how inputs turn into outputs. (<a href="https://merely-useful.tech/py-rse/documentation.html" class="external-link">Ref</a>)</p></li>
+<li><p><em>Reliability</em>: Result consistency across many repetitions
+of the same experiment. (<a href="https://www.dymockstutoring.edu.au/scientific-skills-accuracy-validity-and-reliability/" class="external-link">Ref</a>)</p></li>
+<li><p><em>Usability</em>: Capacity to provide conditions to perform the
+tasks safely, effectively, and efficiently. (<a href="https://en.wikipedia.org/wiki/Usability" class="external-link">Ref</a>)</p></li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="sustainable-software">Sustainable software<a class="anchor" aria-label="anchor" href="#sustainable-software"></a>
+</h3>
+<p>Definition:</p>
+<ul>
+<li>The ease with which to maintain and extend rather than replace. (<a href="https://merely-useful.tech/py-rse/index.html#intro-big-picture" class="external-link">Ref</a>)
+It depends on the quality of the software, the skills of the potential
+maintainters, and if users can afford to keep up to date (how much the
+community is willing to invest).</li>
+</ul>
+<p>Related terms:</p>
+<ul>
+<li><p><em>Modular code</em>: Build programs out of short,
+single-purpose functions with clearly-defined inputs and outputs (<a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510#sec005" class="external-link">Ref</a>)</p></li>
+<li><p><em>Unit testing</em>: Small test of one particular feature of a
+piece of software. (<a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510#sec027" class="external-link">Ref</a>)</p></li>
+<li><p><em>Version control</em>: Keeping track of changes that you or
+your collaborators make to data and software. (<a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510#sec014" class="external-link">Ref</a>)</p></li>
+<li><p><em>Community around software</em>: users and collaborators that
+can communicate effectively with maintainers given the software
+documentation and by public or private platforms like chat channels,
+video conferencing, and more. (<a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510#sec007" class="external-link">Ref</a>)</p></li>
+</ul>
+</div>
+</section><section id="how-to-use-these-concepts"><h2 class="section-heading">How to use these concepts?<a class="anchor" aria-label="anchor" href="#how-to-use-these-concepts"></a>
+</h2>
+<hr class="half-width">
+<p>Often used interchangeably but use them differently can help to
+differentiate the characteristics of a project:</p>
+<ul>
+<li><p>We can have open science projects without documentation, thus not
+reproducible.</p></li>
+<li><p>We can have an automated and documented project not open to the
+public, thus not open science.</p></li>
+<li><p>We can have open and reproducible software but lack incentives
+for maintainers, thus not sustainable.</p></li>
+</ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -286,8 +372,11 @@
 </h3>
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code>
-</li>
+<li><p>The definitions of Open science, Reproducible research, and
+Sustainable software help us identify the related software
+attributes.</p></li>
+<li><p>Differentiating these concepts helps us to differentiate the
+characteristics of a project.</p></li>
 </ul>
 </div>
 </div>
@@ -321,9 +410,9 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper" class="external-link">sandpaper (0.12.5)</a>,
-        <a href="https://github.com/carpentries/pegboard" class="external-link">pegboard (0.6.0)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/0.2.18" class="external-link">varnish (0.2.18)</a>.</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper" class="external-link">sandpaper (0.13.0)</a>,
+        <a href="https://github.com/carpentries/pegboard" class="external-link">pegboard (0.6.1)</a>,
+      and <a href="https://github.com/carpentries/varnish" class="external-link">varnish (0.3.0)</a>.</p>
 			</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -345,8 +434,8 @@ any links that you are not going to use.
   "url": "https://avallecam.github.io/research-compendium/aio.html",
   "identifier": "https://avallecam.github.io/research-compendium/aio.html",
   "dateCreated": "2023-08-29",
-  "dateModified": "2023-08-30",
-  "datePublished": "2023-08-30"
+  "dateModified": "2023-08-31",
+  "datePublished": "2023-08-31"
 }
 
   </script><script>
