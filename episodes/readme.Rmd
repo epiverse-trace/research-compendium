@@ -1,0 +1,76 @@
+---
+title: 'introduction'
+teaching: 10
+exercises: 2
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- How do you write a lesson using R Markdown and `{sandpaper}`?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Explain how to use markdown with the new lesson template
+- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Introduction
+
+
+---
+
+<!-- objective -->
+<!-- - Create a public website for an R project using GitHub Pages. -->
+
+## Why have a website for your project?
+
+To facilitate the navigation through functions.
+
+the website
+- can help other to build upon your arms
+- annotated __functions__ can facilitate its packaging
+
+
+### Create website files
+
+To improve the visibility of all these new files we can create a website using [GitHub pages](https://pages.github.com/). To make this possible run:
+
+```r
+usethis::use_pkgdown_github_pages()
+```
+
+This implements the GitHub setup needed to automatically publish your site to GitHub pages using the [`{pkgdown}` package](https://pkgdown.r-lib.org/).
+
+This is possible in two steps: 
+
+- First, it prepares to _publish_ the pkgdown site from a new `gh-pages` branch. 
+- Then, it configures a [GitHub Action](https://github.com/features/actions) to automatically _build_ the site and _deploy_ it via GitHub Pages.
+
+Lastly, the pkgdown site's URL is added to the pkgdown configuration file, to the URL field of DESCRIPTION, and to the GitHub repo.
+
+<!-- add a concept map here / or evaluate to remove -->
+
+### Instead of websites
+
+If you do not want to rely on the website create for this project, you can add your the community links on README too. We adapted this format from the [`{rrtools}` package](https://github.com/benmarwick/rrtools/#contributing):
+
+```
+### Contributions
+
+We welcome contributions from everyone. Before you get started, please see our [contributor guidelines](/.github/CONTRIBUTING.md). Please note that this project is released with a [Contributor Code of Conduct](/.github/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+```
+
+---
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- Use `.md` files for episodes when you want static content
+- Use `.Rmd` files for episodes when you need to generate output
+- Run `sandpaper::check_lesson()` to identify any issues with your lesson
+- Run `sandpaper::build_lesson()` to preview your lesson locally
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
