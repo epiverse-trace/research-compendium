@@ -240,7 +240,7 @@ This step will homogenize the name of the default branch in our computers. We ne
 
 #### 2. Add {rcompendium} credentials
 
-Use `rcompendium::set_credentials()` to add our name and personal information to the `.Rprofile` configuration file. 
+Use `rcompendium::set_credentials()` to paste your name and personal information to the `.Rprofile` configuration file. 
 
 Adapt the code chunk below to your name, family name, email, and ORCID. Adding your ORCID is optional.
 
@@ -253,7 +253,9 @@ rcompendium::set_credentials(
 )
 ```
 
-You can access the content of the `.Rprofile` file with `usethis::edit_r_profile()`.
+This function will automatically copy a line of code to the clipboard that starts with `options(...`, and open a file called `.Rprofile`. Paste the line of code in the file. After this, close Rstudio and open it again for changes to take effect. 
+
+You can access the content of the `.Rprofile` file at any time with `usethis::edit_r_profile()`.
 
 :::
 
