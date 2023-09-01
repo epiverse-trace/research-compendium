@@ -75,7 +75,7 @@ Related features:
 
 ## How to use these concepts?
 
-Often used interchangeably but use them differently can help to differentiate the characteristics of a project:
+Often used interchangeably but use them differently can help to differentiate the characteristics of a project ([Ref](https://merely-useful.tech/py-rse/index.html#intro-big-picture)):
 
 - We can have open science projects without documentation, thus not reproducible.
 
