@@ -1,0 +1,84 @@
+---
+title: 'introduction'
+teaching: 10
+exercises: 2
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- What is the content of this workshop?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Explain why to improve our code for analysis.
+- Explain what we can do to improve it.
+- Explain how we can start improving it.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Introduction
+
+:::discussion
+
+- How many times have we wanted to revisit a statistical analysis months or years later and have not been able to, either because we do not remember how to do it or the data is not easily available? 
+
+- How much time do we waste redoing statistical analyses, figures or tables after correcting an error in the data, or following the recommendations of a reviewer? 
+
+- How much time do we spend trying to implement a new analysis method based on the brief description provided in an article? 
+
+- How many times have we tried to collect data but failed because the authors have lost the data, its format is unreadable today, or they simply refuse to share it?
+
+Questions from [Rodriguez-Sánchez et al. 2016](https://revistaecosistemas.net/index.php/ecosistemas/article/view/1178)
+
+:::
+
+<!-- why? What? How? Vision/strategy/plan -->
+
+### Why to improve our code for epidemic analysis?
+
+When we want to improve the reliability and reusability of our analysis code we want to try to make it reproducible.
+
+A goal of Reproducible research is to ensure that _anyone_ with access to data inputs and software can _feasibly generate_ the data outputs, both to check or _build on them_. Reproducibility is improved when mixed with Open science and Sustainable software features.
+
+Our vision fo this workshop is to increase the awareness of suitable tools to add into a data analysis workflow that already use R and Git.
+
+<!-- add figure of diagram of inputs to the expected workflow -->
+
+### What can we do?
+
+A fair strategy to follow is to gradually incorporate good practices on scientific computing for Data management, Software development, Collaboration, Project organization, Keep track of changes, and Manuscript writing ([Wilson et al. 2017](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)).
+
+During this process we can self-assess our efforts to these practices using review checklists like the one used by [JOSS, the Journal of Open Source Software](https://joss.readthedocs.io/en/latest/review_checklist.html).
+
+### How can we start?
+
+Our plan for this workshop is to prioritize three tools given their usefulness once mastered and time to master it:
+
+- Use research compendium templates.
+- Make reproducible analysis.
+- Write informative READMEs.
+
+For each of these tools we'll related relevant features for Sustainable software, Reproducible research, and Open science.
+
+:::testimonial
+
+### Do I need to use them all since today?
+
+No, we do not pretend that you start adopting all the good practices and tools of this workshop.
+
+If you already use a programming language like R and Git for version control, [your are already in the path!](https://www.nature.com/articles/s41559-017-0160/figures/1)
+
+We support the opinion of [Jaime Quinn](https://sorse.github.io/blog/a-reproducible-phd/): "It can be challenging to absorb so many different good practices while still getting research done. However, I would argue that _anything helps_. While all good practices in open science are important, even just incorporating one example is good for the community, and provides a solid personal foundation for _gradually incorporating_ more good practices."
+
+:::
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- Our vision is increase the awareness of tools to improve the reproducibility of data analysis.
+- Our strategy is to gradually incorporate good practices on scientific computing.
+- We plan to share specific tools to create a research compendium, make a reproducible analysis, and write READMEs.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
