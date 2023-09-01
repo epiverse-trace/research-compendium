@@ -176,7 +176,7 @@ Check all of the following options:
 
 #### 4. Configure your token
 
-To complete the configuration of your token use `gitcreds::gitcreds_set()` ([Ref]((https://happygitwithr.com/https-pat.html)), then accept that you want to `2: Replace these credentials`. Do this by writing the number `2` and press ENTER.
+To complete the configuration of your token use `gitcreds::gitcreds_set()` ([Bryan, 2023](https://happygitwithr.com/https-pat.html)), then accept that you want to `2: Replace these credentials`. Do this by writing the number `2` and press ENTER.
 
 ```r
 gitcreds::gitcreds_set()
