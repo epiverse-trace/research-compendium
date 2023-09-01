@@ -378,6 +378,16 @@ configuration recognizes:</p>
 }
 </code></pre>
 </div>
+<p>If there is no <code>name</code>, <code>login</code>, or
+<code>html_url</code>, then you need to run:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">gert</span><span class="fu">::</span><span class="fu">git_config_global_set</span><span class="op">(</span>name <span class="op">=</span> <span class="st">"user.name"</span>,   value <span class="op">=</span> <span class="st">"John Doe"</span><span class="op">)</span></span>
+<span><span class="fu">gert</span><span class="fu">::</span><span class="fu">git_config_global_set</span><span class="op">(</span>name <span class="op">=</span> <span class="st">"user.email"</span>,  value <span class="op">=</span> <span class="st">"john.doe@domain.com"</span><span class="op">)</span></span>
+<span><span class="fu">gert</span><span class="fu">::</span><span class="fu">git_config_global_set</span><span class="op">(</span>name <span class="op">=</span> <span class="st">"github.user"</span>, value <span class="op">=</span> <span class="st">"jdoe"</span><span class="op">)</span></span></code></pre>
+</div>
 <p>If you do not have a <em>token</em>, follow step number 3.</p>
 </div>
 <div class="section level4">
@@ -385,7 +395,7 @@ configuration recognizes:</p>
 <p>Use <code>usethis::git_sitrep()</code> to check if there is no
 <code>✖ ...</code> line in the output with an error message.</p>
 <p>An example with two errors is below:</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -413,7 +423,7 @@ page.</p>
 <p>Do this with <code>usethis::create_github_token()</code>. This
 function should redirect you to GitHub on your browser. Once there,
 check all the options in the figure below.</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -427,7 +437,7 @@ check all the options in the figure below.</p>
 <code>gitcreds::gitcreds_set()</code> (<a href="(https://happygitwithr.com/https-pat.html)" class="external-link">Ref</a>, then accept
 that you want to <code>2: Replace these credentials</code>. Do this by
 writing the number <code>2</code> and press ENTER.</p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -450,7 +460,7 @@ Selection: 2
 <h4 id="run-again-the-situational-report">5. Run again the situational report:<a class="anchor" aria-label="anchor" href="#run-again-the-situational-report"></a></h4>
 <p>Verify again that there is no <code>✖ ...</code> line in the output
 with an error message. The expected outcome should look like this:</p>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -502,7 +512,7 @@ in this GitHub guide</a>.</p>
 <div class="section level4">
 <h4 id="set-the-default-git-branch-name">1. Set the default Git branch name<a class="anchor" aria-label="anchor" href="#set-the-default-git-branch-name"></a></h4>
 <p>Run the code chunk below:</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -519,7 +529,7 @@ and personal information to the <code>.Rprofile</code> configuration
 file.</p>
 <p>Adapt the code chunk below to your name, family name, email, and
 ORCID. Adding your ORCID is optional.</p>
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
