@@ -136,7 +136,7 @@ gert::git_config_global_set(name = "user.email",  value = "john.doe@domain.com")
 gert::git_config_global_set(name = "github.user", value = "jdoe")
 ```
 
-If you do not have a _token_, follow step number 3.
+If you do not have a `token`, follow step number 3.
 
 #### 2. Get a situational report on your current Git/GitHub status:
 
@@ -193,6 +193,7 @@ Selection: 2
 
 ```
 
+Paste your `token` to save it and complete this step.
 
 #### 5. Run again the situational report:
 
@@ -221,7 +222,9 @@ Git repo for current project
 ℹ No active usethis project
 ```
 
-If you still have an error. Copy and paste this output in your issue report to the email at the end of this page. 
+If you still have an error, close Rstudio and open it again for changes to take effect.
+
+If the error persist, copy and paste this output in your issue report to the email at the end of this page. 
 
 #### 6. Two-factor authentication
 
