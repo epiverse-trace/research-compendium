@@ -1,24 +1,24 @@
 ---
-title: 'introduction'
+title: 'Introduction'
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What is the content of this workshop?
+- Why to improve our code for analysis?
+- What can we do to improve it?
+- How can we start improving it?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain why to improve our code for analysis.
-- Explain what we can do to improve it.
-- Explain how we can start improving it.
+- Explain our vision of an improved epidemic analysis code.
+- Share our strategy to incorporate good practices in scientific computing.
+- Define our plan to incorporate practical and quick-to-learn solutions.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Introduction
 
 :::discussion
 
@@ -36,23 +36,23 @@ Questions from [Rodriguez-Sánchez et al. 2016](https://revistaecosistemas.net/i
 
 <!-- why? What? How? Vision/strategy/plan -->
 
-### Why improve our code for epidemic analysis?
+## Why improve our code for epidemic analysis?
 
 When we want to improve our analysis code's reliability and reusability, we want to make it reproducible.
 
 Reproducible research aims to ensure that _anyone_ with access to data inputs and software can _feasibly generate_ the data outputs, both to check or _build on them_. Reproducibility is improved when mixed with Open science and Sustainable software features.
 
-Our vision for this workshop is to increase the awareness of suitable tools to add to a data analysis workflow that already uses R and Git.
+Our vision for this workshop is to increase the awareness of R packages that will increase the reproducibility of data analysis workflow that already uses R and Git.
 
 <!-- add figure of diagram of inputs to the expected workflow -->
 
-### What can we do?
+## What can we do?
 
 A fair strategy to follow is to gradually incorporate good practices in scientific computing for Data management, Software development, Collaboration, Project organization, Keep track of changes, and Manuscript writing ([Wilson et al. 2017](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)).
 
 During this process, we can self-assess our efforts in these practices using review checklists like the one used by [JOSS, the Journal of Open Source Software](https://joss.readthedocs.io/en/latest/review_checklist.html).
 
-### How can we start?
+## How can we start?
 
 Our plan for this workshop is to prioritize three tools, given their usefulness once mastered and the time to master them:
 
