@@ -60,6 +60,8 @@ contact: 'andree.valle-campos@lshtm.ac.uk'
 # Order of episodes in your lesson
 episodes:
 - definitions.Rmd
+- introduction.Rmd
+- compendium.Rmd
 
 # Information for Learners
 learners:
