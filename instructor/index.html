@@ -529,8 +529,8 @@ downstream.</p>
 </div>
 <div class="section level4">
 <h4 id="add-rcompendium-credentials">2. Add {rcompendium} credentials<a class="anchor" aria-label="anchor" href="#add-rcompendium-credentials"></a></h4>
-<p>Use <code>rcompendium::set_credentials()</code> to add our name and
-personal information to the <code>.Rprofile</code> configuration
+<p>Use <code>rcompendium::set_credentials()</code> to paste your name
+and personal information to the <code>.Rprofile</code> configuration
 file.</p>
 <p>Adapt the code chunk below to your name, family name, email, and
 ORCID. Adding your ORCID is optional.</p>
@@ -545,8 +545,12 @@ ORCID. Adding your ORCID is optional.</p>
 <span>  orcid <span class="op">=</span> <span class="st">"0000-0002-7779-481X"</span></span>
 <span><span class="op">)</span></span></code></pre>
 </div>
-<p>You can access the content of the <code>.Rprofile</code> file with
-<code>usethis::edit_r_profile()</code>.</p>
+<p>This function will automatically copy a line of code to the clipboard
+that starts with <code>options(...</code>, and open a file called
+<code>.Rprofile</code>. Paste the line of code in the file. After this,
+close Rstudio and open it again for changes to take effect.</p>
+<p>You can access the content of the <code>.Rprofile</code> file at any
+time with <code>usethis::edit_r_profile()</code>.</p>
 </div>
 </div>
 </div>
