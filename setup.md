@@ -128,6 +128,14 @@ gh::gh_whoami()
 
 ```
 
+If there is no `name`, `login`, or `html_url`, then you need to run:
+
+```r
+gert::git_config_global_set(name = "user.name",   value = "John Doe")
+gert::git_config_global_set(name = "user.email",  value = "john.doe@domain.com")
+gert::git_config_global_set(name = "github.user", value = "jdoe")
+```
+
 If you do not have a _token_, follow step number 3.
 
 #### 2. Get a situational report on your current Git/GitHub status:
