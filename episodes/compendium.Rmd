@@ -26,7 +26,7 @@ A research compendium collects all digital parts of a research project, includin
 
 Using templates facilitates having all the required files from the beginning of your project.
 
-We understand that creativity can be “messy”. You will be able to handle it in the present, but your collaborators (and the future you) may have problems understanding it. Reproducibility is as much about the humans that interact with the code as the machines that need to run it ([Campitelli and Corrales, 2022](https://eliocamp.github.io/reproducibility-with-r/materials/day1/02-projects/)).
+We understand that creativity can be “messy” sometimes. You will be able to handle it in the present, but your collaborators (and the future you) may have problems understanding it. Reproducibility is as much about the humans that interact with the code as the machines that need to run it ([Campitelli and Corrales, 2022](https://eliocamp.github.io/reproducibility-with-r/materials/day1/02-projects/)).
 
 <!-- figure from this to that -->
 
