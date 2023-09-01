@@ -128,7 +128,7 @@ gh::gh_whoami()
 
 ```
 
-If you do not have a _token_, follow the next step.
+If you do not have a _token_, follow step number 3.
 
 #### 2. Get a situational report on your current Git/GitHub status:
 
