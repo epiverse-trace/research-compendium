@@ -62,6 +62,12 @@ episodes:
 - definitions.Rmd
 - introduction.Rmd
 - compendium.Rmd
+- reproducible.Rmd
+- functions.Rmd
+
+# between repro and functi
+# - readmefile.Rmd
+# - wrapup.Rmd
 
 # Information for Learners
 learners:
