@@ -1,0 +1,111 @@
+---
+title: 'Appendix'
+teaching: 10
+exercises: 2
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- Where to add my functions?
+- How to write my functions?
+- How to create a website for my function documentation?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Run your custom project functions using `{devtools}`
+- Create a website for your custom functions using `{usethis}`
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## What about my functions?
+
+Any custom function must be written as _Modular functions_ must be saved in the `R/` folder. To load your project functions, as written in `line 20` of the `make.R` file, run:
+
+```r
+devtools::load_all(here::here())
+```
+
+The can follow an [standard documentation method](https://r-pkgs.org/man.html). The `{rcompendium}` template already contains a `fun-demo.R` for this. 
+
+![](fig/fun-demo.png)
+
+:::callout
+
+Remember that _documented functions_ can facilitate further efforts to reuse them and create an specific R package!
+
+:::
+
+
+:::challenge
+
+## How to navigate my functions documentation?
+
+Now, Is there a easier way to navigate through the documentation for my _modular functions_? Run the following code and get a surprise:
+
+```r
+usethis::use_pkgdown_github_pages()
+```
+
+:::
+
+
+## Create website files
+
+To improve the visibility of all these new files we can create a website using [GitHub pages](https://pages.github.com/). To make this possible run:
+
+```r
+usethis::use_pkgdown_github_pages()
+```
+
+This implements the GitHub setup needed to automatically publish your site to GitHub pages using the [`{pkgdown}` package](https://pkgdown.r-lib.org/).
+
+This is possible in two steps: 
+
+- First, it prepares to _publish_ the pkgdown site from a new `gh-pages` branch. 
+- Then, it configures a [GitHub Action](https://github.com/features/actions) to automatically _build_ the site and _deploy_ it via GitHub Pages.
+- Lastly, the `pkgdown` site's URL is added to the `pkgdown` configuration file, to the URL field of `DESCRIPTION`, and to the GitHub repo.
+
+Commit and Push your changes.
+
+:::callout
+
+Remember that when using _GitHub Actions_, next to the `SHA/hash` will be the _status icon_ of the actions. 
+
+- Yellow ball for "Job running", 
+- Red cross for "Failed Run", and 
+- Green check for "job done!".
+
+:::
+
+Wait for it to get green and inspect the Reference tab on the navigation bar.
+
+Let's compare the `fun-demo.R` file and the website format:
+
+![](fig/fun-demo-web.png)
+
+:::callout
+
+## Why have a website for your project?
+
+To facilitate the navigation through 
+
+- community files and 
+- function documentation.
+
+:::
+
+## Reproducible research features
+
+Reproducible research is also defined as the practice of _describing_ and _documenting_ the research process in such a way that another researcher can re-run the software on the same data input to get the same outputs.
+
+Offering proper documentation for your custom functions with easy navigation in a website can complement these efforts!
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- Run your custom project functions with `devtools::load_all()`
+- Create a website for your custom functions with `usethis::use_pkgdown_github_pages()`
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
