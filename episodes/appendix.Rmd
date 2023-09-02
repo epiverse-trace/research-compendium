@@ -6,9 +6,10 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- Where to add my functions?
-- How to write my functions?
-- How to create a website for my function documentation?
+- Where can I add my functions?
+- How do I need to document my functions?
+- How to facilitate the readability of my functions documentation?
+- How can I increase the visibility of guidelines for support and contributions?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -40,7 +41,7 @@ Remember that _documented functions_ can facilitate further efforts to reuse the
 
 :::challenge
 
-## How to navigate my functions documentation?
+### How to navigate my functions documentation?
 
 Now, Is there a easier way to navigate through the documentation for my _modular functions_? Run the following code and get a surprise:
 
@@ -50,8 +51,7 @@ usethis::use_pkgdown_github_pages()
 
 :::
 
-
-## Create website files
+### Create website files
 
 To improve the visibility of all these new files we can create a website using [GitHub pages](https://pages.github.com/). To make this possible run:
 
@@ -65,7 +65,8 @@ This is possible in two steps:
 
 - First, it prepares to _publish_ the pkgdown site from a new `gh-pages` branch. 
 - Then, it configures a [GitHub Action](https://github.com/features/actions) to automatically _build_ the site and _deploy_ it via GitHub Pages.
-- Lastly, the `pkgdown` site's URL is added to the `pkgdown` configuration file, to the URL field of `DESCRIPTION`, and to the GitHub repo.
+
+Lastly, the `pkgdown` site's URL is added to the `pkgdown` configuration file, to the URL field of `DESCRIPTION`, and to the GitHub repo.
 
 Commit and Push your changes.
 
@@ -81,13 +82,13 @@ Remember that when using _GitHub Actions_, next to the `SHA/hash` will be the _s
 
 Wait for it to get green and inspect the Reference tab on the navigation bar.
 
-Let's compare the `fun-demo.R` file and the website format:
+Now, let's compare the `fun-demo.R` file and the website format:
 
 ![](fig/fun-demo-web.png)
 
 :::callout
 
-## Why have a website for your project?
+### Why could we opt to have a website for our project?
 
 To facilitate the navigation through 
 
@@ -96,11 +97,51 @@ To facilitate the navigation through
 
 :::
 
-## Reproducible research features
+:::intructor
 
-Reproducible research is also defined as the practice of _describing_ and _documenting_ the research process in such a way that another researcher can re-run the software on the same data input to get the same outputs.
+If required, you can add vignettes for an `{rcompendium}` using: 
 
-Offering proper documentation for your custom functions with easy navigation in a website can complement these efforts!
+```r
+rcompendium::add_vignette(filename = "vignette-01")
+```
+
+This usually looks more suitable for a package documentation.
+
+:::
+
+## How to write a manuscript for my project?
+
+You can use handy functions from another research compendium package called `{rrtools}`.
+
+To get a template of files required to fill a manuscript run:
+
+```r
+rrtools::use_analysis(location = "inst", data_in_git = FALSE)
+```
+
+This will create a folder `inst/` with a new set of folders for data and figures. You can avoid to use them and only use the `.qmd` as a template for your manuscript.
+
+<!-- add figure from new folder structure -->
+
+The `.qmd` files gets format from several template files like references using `.bib` and citation style using `.csl`.
+
+<!-- add figure of qmd file content -->
+
+Using `rrtools::use_analysis()` with those argument will not modify your `{rcompendium}` configuration. Other functions can modify it. 
+
+:::instructor
+
+This manuscript will not be visible in a website unless moved to the `vignette/` folder. This behaviour was not tested yet.
+
+:::
+
+:::callout
+
+Remember that if you have all your changes as commits with git, you can _revert_ any modification with the button __`Revert`__, located in between of the `Stage` and `Ignore` buttons.
+
+![](fig/git-revert.png)
+
+:::
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 

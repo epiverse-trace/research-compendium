@@ -63,7 +63,7 @@ episodes:
 - introduction.Rmd
 - compendium.Rmd
 - reproducible.Rmd
-- functions.Rmd
+- appendix.Rmd
 
 # between repro and functi
 # - readmefile.Rmd
