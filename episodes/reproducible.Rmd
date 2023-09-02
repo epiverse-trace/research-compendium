@@ -44,11 +44,11 @@ The `{renv}` package:
 
 Complementary to the dependencies, your analysis workflow must follow some good practices in scientific computing. 
 
-First, for __Data management__ we need to save input data as originally created and, preferably, configure it as a read-only file. 
+First, for __Data management__ we need to save input data as originally created and, preferably, configure it as a read-only file. In your project you can differentiate `raw-data` from `derived-data`
 
-Second, for __Project organization__, we need to store analysis and generated files in specific and isolated folders. These two practices mean to differentiate `raw-data` from `derived-data`, and differentiate `analyses` files (like `.R` scripts and `.Rmd` files) from `figures` and other `outputs`. 
+Second, for __Project organization__, we need to store analysis and generated files in specific and isolated folders. In your project, you can differentiate `analyses` files (like `.R` scripts and `.Rmd` files) from `figures` and other `outputs`. 
 
-<!-- add figure image of workflow -->
+![](fig/reproducible_analysis.png)
 
 ### Automate your analysis
 
@@ -73,11 +73,15 @@ To use this functionality for your `R` project, you can use the [`{targets}` pac
 
 We are going to use `{renv}` instead of `DESCRIPTION` files.
 
-:::instructor
+:::challenge
+
+Why not to use `{renv}` in addition to `DESCRIPTION`?
+
+:::solution
 
 We opt to use `{renv}` instead of `DESCRIPTION` because the `rcompendium::add_dependencies(".")` function because it assumes that all packages to add to `DESCRIPTION` are from CRAN. If you want to add GitHub packages, [you need to manually add them](https://remotes.r-lib.org/articles/dependencies.html) in a different section called `Remotes:` and write `repository/package`. The `{renv}` package solve this automatically.
 
-<!-- paste figure when using epiverse packages -->
+![We need to manually fix the DESCRIPTION file. Packages like {cfr} and {epiparameter} are on GitHub.](fig/add_dependencies-github.png)
 
 However, this stills needs to be assessed with different scenarios to confirm this as the final best decision.
 
@@ -98,9 +102,11 @@ The output below details which packages are included in the description file
 ```
 :::
 
+:::
+
 Usually, to [initiate](https://rstudio.github.io/renv/) a reproducible environment with `{renv}`, we need to run `renv::init()`. 
 
-<!-- add renv figure from its web -->
+![Source: https://rstudio.github.io/renv/](fig/renv.png)
 
 However, when working in a `{rcompendium}` template, your first step must be to run:
 
@@ -302,6 +308,11 @@ Notice that we are writing the new plot in a different path: `figures/`.
 - Explore the `i2extras::fit_curve()` to [fit a model](https://www.reconverse.org/i2extras/articles/fitting_epicurves.html#modeling-incidence) to the incidence curve. 
 - Save the output table in the corresponding folder.
 
+:::hint
+- If you need to install a new package and update the `{renv}` status.
+- If you decide to create a new file for this, remember to add it to the `make.R` file (as in the step of the following section)
+:::
+
 :::
 
 ### Automate your analysis
@@ -320,22 +331,15 @@ source(here::here("analyses", "01-clean.R"))
 source(here::here("analyses", "02-plot.R"))
 ```
 
-:::callout
+## Reproducible research features
 
-### What about functions?
+Reproducible research is defined as a practice that wants to ensure that _anyone with access_ to data inputs and software can feasibly generate the outputs, both to check or build on them.
 
-_Modular functions_ must be written in the `R/` folder. To load your project functions, as written in `line 20` of the `make.R` file, run:
+A key feature for this practice is the `make.R` file. With this file, and any other more sophisticated alternatives like `GNU Make` or `{targets}` we now are sure that we:
 
-```r
-devtools::load_all(here::here())
-```
-
-The can follow an [standard documentation method](https://r-pkgs.org/man.html). The `{rcompendium}` template already contains a `fun-demo.R` for this.
-
-Now, Is there a easier way to navigate through the documentation for my _modular functions_? Let's wait for the next episode!
-
-:::
-
+- Can feasibly _regenerate_ the outputs. 
+- Can inform about the _reliability_ of the project.
+- Have an _isolated_ time-proof capsule of dependencies.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
@@ -343,7 +347,13 @@ Now, Is there a easier way to navigate through the documentation for my _modular
 
 - Use the `DESCRIPTION` file to register your project dependencies.
 
-- Use `{renv}` to create project-specific and package-specific reproducible environments.
+- Use `{renv}` to isolate and create package-specific reproducible environments for your dependencies.
+
+- Use the folder template to differentiate your `raw-data/` and `derived-data/`.
+
+- Save analysis and generated files in isolated folders like `analyses/`, `figures/`, and `outputs/`.
+
+- Use the `make.R` to list your analysis scripts and facilitate the regeneration of all your outputs.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

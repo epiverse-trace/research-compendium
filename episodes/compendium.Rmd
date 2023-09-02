@@ -26,9 +26,11 @@ A research compendium collects all digital parts of a research project, includin
 
 Using templates facilitates having all the required files from the beginning of your project.
 
+![Source: https://github.com/rdatatoolbox/course-compendium](fig/folder_tidy_cooking.png)
+
 We understand that creativity can be “messy” sometimes. You will be able to handle it in the present, but your collaborators (and the future you) may have problems understanding it. Reproducibility is as much about the humans that interact with the code as the machines that need to run it ([Campitelli and Corrales, 2022](https://eliocamp.github.io/reproducibility-with-r/materials/day1/02-projects/)).
 
-<!-- figure from this to that -->
+![Source: https://github.com/rdatatoolbox/course-compendium](fig/folder_mess_cooking.png)
 
 ## Let's code
 
@@ -107,7 +109,7 @@ Now `commit` and `push` your changes using `git`.
 
 - We use [`git push`](https://www.atlassian.com/git/tutorials/syncing/git-push) to upload `local` repository content to a `remote` repository.
 
-<!-- add a diagram for this -->
+![Source: https://www.gitkraken.com/learn/git/git-remote](fig/push-and-pull.png)
 
 - You can use [Git with Rstudio](https://rviews.rstudio.com/2020/04/23/10-commands-to-get-started-with-git/) to performs these tasks.
 
@@ -123,7 +125,6 @@ Now `commit` and `push` your changes using `git`.
 
 - Go to GitHub:
     + Identify where this ID, called SHA/hash, is located.
-    + When using GitHub Actions, next to the SHA/hash will be the status icon of the actions. Yellow ball for "Job running", Red cross for "Failed Run", and Green check for "job done!".
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -162,7 +163,11 @@ Software is sustainable when it's easier to __maintain__ and __extend__ rather t
 - _Skills_ of the potential maintainers, and 
 - _How much_ the user community is willing to invest to keep the software up to date.
 
-Features like a __Compendium template__ and __Version control__ increase the quality of the software. A compendium follows a logical and familiar structure. A version control software registers the project's history and how one or multiple contributors wrote code and made decisions. Additionally, __Community files__ consider any gaps in the community of users to facilitate their participation and how to interact with maintainers.
+Features like a __Compendium template__ and __Version control__ increase the quality of the software. 
+
+- A compendium follows a logical and familiar structure. - A version control software registers the project's history and how one or multiple contributors wrote code and made decisions. 
+
+Additionally, __Community files__ consider any gaps in the community of users to facilitate their participation and how to interact with maintainers.
 
 :::testimonial
 
