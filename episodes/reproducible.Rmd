@@ -1,23 +1,72 @@
 ---
-title: 'introduction'
+title: 'Reproducible analysis'
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How to facilitate users, collaborators, and reviewers to participate in my project?
+- How to make my research project reproducible?
+- How to include packages as dependencies of my project?
+- What features are related to reproducible research?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Add dependencies of a project using the DESCRIPTION file.
+- Create an isolated and specific reproducible environments with `{renv}`
+- Identify your project features related to reproducible software.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## How to make my analysis reproducible?
+
+### A reproducible environment
+
+Any analysis with R needs packages. These set of packages in which your project rely are called [dependencies](https://r-pkgs.org/dependencies-mindset-background.html). To make an analysis reproducible, we need to register these packages (and their versions) somewhere as dependencies of your project. That place is the DESCRIPTION file. 
+
+In the [DESCRIPTION file](https://r-pkgs.org/description.html#the-description-file), dependencies are registered at the end of the file with the package names only and usually with a minimum version (`dplyr (>= 1.0.0)`). We can add dependencies using functions (`rcompendium::add_dependencies()`), and also use this file to automate version recovery (`devtools::install_deps()`). However, DESCRIPTION files are most useful for R packages.
+
+For [non-package projects](https://r-pkgs.org/description.html#footnotes) we can use `{renv}`. It registers specific dependencies by implementing project-specific environments. This means that `{renv}` registers even the [SHA/hash](https://happygitwithr.com/repeated-amend.html?q=sha#um-what-if-i-did-push) from GitHub packages, feature that the DESCRIPTION file can not do. These are stored in the `renv.lock` file. Also, `{renv}` isolates your project packages from your computer packages.  Lastly, `{renv}` can detect new dependencies automatically, apart from adding them with functions (`renv::snapshot()`), and it can also automate the recovery of the whole project (`renv::restore()`).
+
+:::callout
+
+`{renv}`:
+
+- Isolates the dependencies of your project from your computer.
+- Registers the specific version of packages from CRAN or GitHub.
+- Provides an automated package management solution.
+
+:::
+
+### The analysis workflow 
+
+Complementary to the dependencies, your analysis workflow must follow some good practices in scientific computing. First, for __Data management__ we need to save input data as originally created and, preferably, configure it as a read-only file. Second, for __Project organization__, we need to store analysis and generated files in specific and isolated folders. These two practices mean to differentiate `raw-data` from `derived-data`, and differentiate `analyses` files (like `.R` scripts and `.Rmd` files) from `figures` and other `outputs`. 
+
+<!-- add figure image of workflow -->
+
+### Automation is your friend
+
+The `make.R` file helps to automate the your whole analysis project.
+
+
+
+This is the only `.R` file stored in the top level of the project, out of any folder.
+
+
+
+Define the concept
+This is not GNU Make files
+When to use it? [...]
+If needed, use {targets}
+The make.R file
+
+## Let's code
+
+ 
+### reproducible environment
+
 
 Usually, with `{renv}` we use this workflow ([Ref](https://rstudio.github.io/renv/))
 
@@ -25,12 +74,38 @@ Usually, with `{renv}` we use this workflow ([Ref](https://rstudio.github.io/ren
 
 but within the `{rcompendium}` we must use `rcompendium::add_renv()`.
 
+
+### analysis workflow
+
+raw-data → clean.R → derived-data/ → plot.R → figure/
+derived-data/ → table.R → outputs/
+
+### Automate your analysis
+
+list all `.R` scripts and `.Rmd` in a sequential order in a file called `make.R`. 
+
+using the following form 
+
+`source(here::here("analyses", "script_X.R"))`
+
+:::callout
+
+```r
+devtools::load_all(here::here())
+```
+
+Is the core functionality of the software documented to a satisfactory level (e.g., API method documentation)?
+
+:::
+
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- A dependency is a package that your project needs to run.
+
+- Use the DESCRIPTION file to register your project dependencies.
+
+- Use `{renv}` to create project-specific and package-specific reproducible environments.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
