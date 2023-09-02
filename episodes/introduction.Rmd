@@ -44,7 +44,7 @@ Reproducible research aims to ensure that _anyone_ with access to data inputs an
 
 Our vision for this workshop is to increase the awareness of R packages that will increase the reproducibility of data analysis workflow that already uses R and Git.
 
-<!-- add figure of diagram of inputs to the expected workflow -->
+![](fig/goal-intro.png)
 
 ## What can we do?
 
