@@ -8,7 +8,7 @@ exercises: 2
 
 - Where can I add my functions?
 - How do I need to document my functions?
-- How to facilitate the readability of my functions documentation?
+- How do I facilitate the readability of my functions documentation?
 - How can I increase the visibility of guidelines for support and contributions?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -22,28 +22,28 @@ exercises: 2
 
 ## What about my functions?
 
-Any custom function must be written as _Modular functions_ must be saved in the `R/` folder. To load your project functions, as written in `line 20` of the `make.R` file, run:
+We must write our custom functions as _Modular functions_ and save them in the `R/` folder. To load your project functions, as written in `line 20` of the `make.R` file, run:
 
 ```r
 devtools::load_all(here::here())
 ```
 
-The can follow an [standard documentation method](https://r-pkgs.org/man.html). The `{rcompendium}` template already contains a `fun-demo.R` for this. 
+You can follow a [standard documentation method](https://r-pkgs.org/man.html). The `{rcompendium}` template already contains a `fun-demo.R` for this. 
 
 ![](fig/fun-demo.png)
 
 :::callout
 
-Remember that _documented functions_ can facilitate further efforts to reuse them and create an specific R package!
+Remember that _documented functions_ can facilitate further efforts to reuse them and create a specific R package!
 
 :::
 
 
 :::challenge
 
-### How to navigate my functions documentation?
+### How do I navigate my functions documentation?
 
-Now, Is there a easier way to navigate through the documentation for my _modular functions_? Run the following code and get a surprise:
+Is there an easier way to navigate the documentation for my _modular functions_? Run the following code and get a surprise:
 
 ```r
 usethis::use_pkgdown_github_pages()
@@ -53,15 +53,15 @@ usethis::use_pkgdown_github_pages()
 
 ### Create website files
 
-To improve the visibility of all these new files we can create a website using [GitHub pages](https://pages.github.com/). To make this possible run:
+To improve the visibility of all these new files, we can create a website using [GitHub pages](https://pages.github.com/). To make this possible run:
 
 ```r
 usethis::use_pkgdown_github_pages()
 ```
 
-This implements the GitHub setup needed to automatically publish your site to GitHub pages using the [`{pkgdown}` package](https://pkgdown.r-lib.org/).
+This function implements the GitHub setup needed to automatically publish your site to GitHub pages using the [`{pkgdown}` package](https://pkgdown.r-lib.org/).
 
-This is possible in two steps: 
+This output is possible in two steps: 
 
 - First, it prepares to _publish_ the pkgdown site from a new `gh-pages` branch. 
 - Then, it configures a [GitHub Action](https://github.com/features/actions) to automatically _build_ the site and _deploy_ it via GitHub Pages.
@@ -80,7 +80,7 @@ Remember that when using _GitHub Actions_, next to the `SHA/hash` will be the _s
 
 :::
 
-Wait for it to get green and inspect the Reference tab on the navigation bar.
+Please wait for it to get green and inspect the Reference tab on the navigation bar.
 
 Now, let's compare the `fun-demo.R` file and the website format:
 
@@ -105,11 +105,11 @@ If required, you can add vignettes for an `{rcompendium}` using:
 rcompendium::add_vignette(filename = "vignette-01")
 ```
 
-This usually looks more suitable for a package documentation.
+Vignettes look more suitable for package documentation than a project. But knowing that we have that alternative with the `{rcompendium}` template is helpful.
 
 :::
 
-## How to write a manuscript for my project?
+## How do I write a manuscript for my project?
 
 You can use handy functions from another research compendium package called `{rrtools}`.
 
@@ -119,25 +119,25 @@ To get a template of files required to fill a manuscript run:
 rrtools::use_analysis(location = "inst", data_in_git = FALSE)
 ```
 
-This will create a folder `inst/` with a new set of folders for data and figures. You can avoid to use them and only use the `.qmd` as a template for your manuscript.
+This function will create a folder `inst/` with a new set of folders for data and figures. You can avoid using them and only use the `.qmd` as a template for your manuscript.
 
 <!-- add figure from new folder structure -->
 
-The `.qmd` files gets format from several template files like references using `.bib` and citation style using `.csl`.
+The `.qmd` files get formatted from several template files like references using `.bib` and citation style using `.csl`.
 
 <!-- add figure of qmd file content -->
 
-Using `rrtools::use_analysis()` with those argument will not modify your `{rcompendium}` configuration. Other functions can modify it. 
+Using `rrtools::use_analysis()` with those arguments will not modify your `{rcompendium}` configuration. Other functions can change it. 
 
 :::instructor
 
-This manuscript will not be visible in a website unless moved to the `vignette/` folder. This behaviour was not tested yet.
+This manuscript will not be visible on a website unless moved to the `vignette/` folder. We have yet to test that behaviour.
 
 :::
 
 :::callout
 
-Remember that if you have all your changes as commits with git, you can _revert_ any modification with the button __`Revert`__, located in between of the `Stage` and `Ignore` buttons.
+Remember that if you have all your changes as commits with git, you can _revert_ any modification with the button __`Revert`__, located between the `Stage` and `Ignore` buttons.
 
 ![](fig/git-revert.png)
 
@@ -147,6 +147,7 @@ Remember that if you have all your changes as commits with git, you can _revert_
 
 - Run your custom project functions with `devtools::load_all()`
 - Create a website for your custom functions with `usethis::use_pkgdown_github_pages()`
+- Use a manuscript template with `rrtools::use_analysis(location = "inst", data_in_git = FALSE)`
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
