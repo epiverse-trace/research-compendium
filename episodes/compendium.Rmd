@@ -1,5 +1,5 @@
 ---
-title: 'Start a Research compendium'
+title: 'Research compendium'
 teaching: 10
 exercises: 2
 ---
@@ -119,8 +119,7 @@ Now `commit` and `push` your changes using `git`.
 
 - From the “Review changes” pane:
     + Go to the “History” tab in the top left.
-    + Show that each commit has an ID under the SHA/hash column
-    + Use 
+    + Show that each commit has an ID under the [SHA/hash](https://happygitwithr.com/repeated-amend.html?q=sha#um-what-if-i-did-push) column
 
 - Go to GitHub:
     + Identify where this ID, called SHA/hash, is located.
