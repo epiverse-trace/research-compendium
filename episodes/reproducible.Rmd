@@ -22,6 +22,8 @@ exercises: 2
 
 ## How do I make my analysis reproducible?
 
+We need to play under the rules of the `{rcompendium}` template.
+
 ### The reproducible environment
 
 Any analysis with R needs packages. These packages on which your project relies are called [dependencies](https://r-pkgs.org/dependencies-mindset-background.html). To make an analysis reproducible, we need to register these packages (and their versions) somewhere as your project's dependencies. That place is the `DESCRIPTION` file. 
