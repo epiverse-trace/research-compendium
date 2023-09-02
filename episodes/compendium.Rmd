@@ -165,7 +165,8 @@ Software is sustainable when it's easier to __maintain__ and __extend__ rather t
 
 Features like a __Compendium template__ and __Version control__ increase the quality of the software. 
 
-- A compendium follows a logical and familiar structure. - A version control software registers the project's history and how one or multiple contributors wrote code and made decisions. 
+- A _compendium_ follows a logical and familiar structure. 
+- A _version control_ software registers the project's history and how one or multiple contributors wrote code and made decisions. 
 
 Additionally, __Community files__ consider any gaps in the community of users to facilitate their participation and how to interact with maintainers.
 
