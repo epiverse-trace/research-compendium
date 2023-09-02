@@ -48,9 +48,14 @@ Our vision for this workshop is to increase the awareness of R packages that wil
 
 ## What can we do?
 
-A fair strategy to follow is to gradually incorporate good practices in scientific computing for Data management, Software development, Collaboration, Project organization, Keep track of changes, and Manuscript writing ([Wilson et al. 2017](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)).
+A fair strategy to follow is to gradually incorporate good practices in scientific computing ([Wilson et al. 2017](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)) that include: 
 
-During this process, we can self-assess our efforts in these practices using review checklists like the one used by [JOSS, the Journal of Open Source Software](https://joss.readthedocs.io/en/latest/review_checklist.html).
+- Data management, 
+- Software development, 
+- Collaboration, 
+- Project organization, 
+- Keep track of changes, and 
+- Manuscript writing.
 
 ## How can we start?
 
