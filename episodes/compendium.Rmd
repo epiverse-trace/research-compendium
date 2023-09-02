@@ -163,12 +163,12 @@ Software is sustainable when it's easier to __maintain__ and __extend__ rather t
 - _Skills_ of the potential maintainers, and 
 - _How much_ the user community is willing to invest to keep the software up to date.
 
-Features like a __Compendium template__ and __Version control__ increase the quality of the software. 
+Features like a __Research compendium__ template and __Version control__ increase the quality of the software. 
 
-- A _compendium_ follows a logical and familiar structure. 
-- A _version control_ software registers the project's history and how one or multiple contributors wrote code and made decisions. 
+- A _Research compendium_ follows Project organization good practices. This give a logical and familiar structure to the project. 
+- A _version control_ follows the Keep track of changes good practice. This registers the project's history and how one or multiple contributors wrote code and made decisions. 
 
-Additionally, __Community files__ consider any gaps in the community of users to facilitate their participation and how to interact with maintainers.
+Additionally, __Community files__ follow Collaboration good practices. They consider any gaps in the community of users to facilitate their participation and how to interact with maintainers.
 
 :::testimonial
 
