@@ -15,8 +15,8 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Recognise good practices for README files.
-- Complement the `{rcompendium}` README template.
+- Recognise good practices for `README` files.
+- Complement the `{rcompendium}` `README` template.
 - Identify your project features related to Open science.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -53,19 +53,19 @@ In this episode, we will complement this template with some key sections.
 
 :::callout
 
-We invite you to edit your README as you prefer! You can also use this simple [readme.so editor to generate more section templates](https://readme.so/) than the ones we will cover here.
+We invite you to edit your `README` as you prefer! You can also use this simple [readme.so editor to generate more section templates](https://readme.so/) than the ones we will cover here.
 
 :::
 
 ## Let's code
 
-First, let's `Knit` the README.Rmd.
+First, let's `Knit` the `README.Rmd`.
 
 We must remember that our `README.md` is generated from the `README.Rmd` file. So we need to edit that file and `Knit` it after any update. This step is not done automatically for this template.
 
 :::instructor
 
-The `{usethis}` package provides control of flow functionality to commit the README.md only when synchronised with README.Rmd. We have yet to test that behaviour.
+The `{usethis}` package provides control of flow functionality to commit the `README.md` only when synchronised with `README.Rmd`. We have yet to test that behaviour.
 
 :::
 
@@ -164,7 +164,7 @@ Our default `CITATION.cff` do not record the `year` of creation. To solve it, we
 year = 2023,
 ```
 
-- Then, paste this chunk with the `echo=FALSE` option in the README.Rmd:
+- Then, paste this chunk with the `echo=FALSE` option in the `README.Rmd`:
 
 ```r
 readCitationFile(file = "inst/CITATION")
@@ -211,7 +211,7 @@ Copy, edit as you prefer, and paste it to your `README` file:
 
 ### Contributing
 
-We adapted this format from the template generated from readme.so. We added hyperlinks to redirect to the Community files in the `.github/` folder.
+We adapted this format from the template generated from [readme.so](https://readme.so/). We added hyperlinks to redirect to the Community files in the `.github/` folder.
 
 Copy, edit as you prefer, and paste it to your `README` file:
 
@@ -245,13 +245,19 @@ Contributing guides and Function documentation are also visible in a website for
 
 ### Markdown
 
-In Markdown, the `Header 2` generates an underline that can help to isolate sections of the structure we choosed.
+In Markdown, the `Header 2` generates an underline that can help isolate sections of our chosen structure.
 
 ![](fig/markdown-header.png)
 
-Remove one `#` from all the main headers. This edit generates a final `README` file that look like this:
+Remove one `#` from all the main headers. This edit generates a final `README` file that looks like this:
 
 ![](fig/markdown-readme.png)
+
+:::discussion
+
+Would you remove any section of the `README` above?
+
+:::
 
 :::testimonial
 
@@ -269,7 +275,7 @@ A vital feature of this practice is the __Licenses__. Explicit licenses that inc
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Complement the README template with Installation steps, Citations, Licenses and Contributing guides.
+- Complement the `README` template with Installation steps, Citations, Licenses and Contributing guides.
 - Use different types of licenses of text and figures, software code, and data.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
