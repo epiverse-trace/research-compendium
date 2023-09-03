@@ -20,6 +20,16 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::checklist
+
+Hello!
+
+Before we start, tell us something about you on our _communication forum_ called [GitHub Discussions](https://github.com/epiverse-trace/research-compendium/discussions/1).
+
+You can fill your questions on the topic under the [Q&A category](https://github.com/epiverse-trace/research-compendium/discussions/categories/q-a).
+
+:::
+
 :::discussion
 
 - How many times have we wanted to revisit a statistical analysis months or years later and have not been able to, either because we do not remember how to do it or the data is not easily available? 
