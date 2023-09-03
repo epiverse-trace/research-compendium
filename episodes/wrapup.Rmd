@@ -1,19 +1,24 @@
 ---
-title: 'introduction'
+title: 'Wrap up'
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- Where is a full view of the concepts covered today?
+- How can I self-assess my progress using this tools?
+- Where can I ask for questions after this workshop?
+- Where can I write my feedback on this workshop?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Show the final concept map of the workshop.
+- Share a self-assessment review checklist.
+- Remind our communication forum.
+- Share the feedback form of the workshop.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -24,6 +29,12 @@ exercises: 2
 ## Self-assessment template
 
 During this process, we can self-assess our progress in these [good practices in scientific computing]([Wilson et al. 2017](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)) using a __review checklists__ like the one used by [JOSS, the Journal of Open Source Software](https://joss.readthedocs.io/en/latest/review_checklist.html).
+
+:::callout
+
+We related these two references in one [Google sheet](https://docs.google.com/spreadsheets/d/1dsGg9RoD3yCEfgHAr0ARQ-nJ1RWSeCEXcycGk7dFRKs/edit?usp=sharing). Take a look!
+
+:::
 
 ## Write an individual learning reflection
 
@@ -47,26 +58,23 @@ This exercise should take about 5 minutes.
 
 :::checklist
 
-Hello!
-
 We remind you of our _communication forum_ called [GitHub Discussions](https://github.com/epiverse-trace/research-compendium/discussions). Here we will ask and solve our and your question on the topic!
 
 You can fill your questions under the [Q&A category](https://github.com/epiverse-trace/research-compendium/discussions/categories/q-a)... at any time in the future!
 
 :::
 
-## Your Feedback
+## Your constructive feedback
 
-<https://forms.gle/4HHQatKdEmuzCiUH9>
+This form is anonymous: <https://forms.gle/4HHQatKdEmuzCiUH9>
 
 If you did not filled this form, please, take 5 minutes to fill it. This will be very useful for further improvements of our training.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- Use the JOSS review checklist to self-assess your progress.
+- Use the `GitHub Discussions` as our communication forum after the workshop.
+- Use the feedback form to share your constructive comments.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
