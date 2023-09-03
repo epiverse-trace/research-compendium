@@ -267,6 +267,13 @@ Would you remove any section of the `README` above?
 
 :::
 
+:::checklist
+
+![](fig/concept-map-03.png)
+
+:::
+
+
 ## Open science features
 
 We define Open science as making software, data inputs and outputs _freely available_ by publishing all of them with open licences to facilitate project reuse.
