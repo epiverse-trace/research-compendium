@@ -343,7 +343,7 @@ source(here::here("analyses", "02-plot.R"))
 
 We defined Reproducible research as a practice that wants to ensure that _anyone with access_ to data inputs and software can feasibly generate the outputs to check or build on them.
 
-A key feature of this practice is the `make.R` file. With this file, and any other more sophisticated alternatives like `GNU Make` or `{targets}`, we now are sure that we:
+A key feature of this practice is the __`make.R` file__. With this file, and any other more sophisticated alternatives like `GNU Make` or `{targets}`, we now are sure that we:
 
 - Can feasibly _regenerate_ the outputs. 
 - Can inform about the _reliability_ of the project.
