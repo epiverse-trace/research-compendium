@@ -22,6 +22,8 @@ exercises: 2
 
 :::discussion
 
+## Questions to think about
+
 - How many times have we wanted to revisit a statistical analysis months or years later and have not been able to, either because we do not remember how to do it or the data is not easily available? 
 
 - How much time do we waste redoing statistical analyses, figures or tables after correcting an error in the data or following a reviewer's recommendations? 
