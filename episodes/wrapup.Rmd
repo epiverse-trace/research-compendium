@@ -22,7 +22,7 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## The last concept map
+## The goal
 
 ![](fig/concept-map-00.png)
 
