@@ -188,6 +188,90 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="beforestart.html">2. Before we start</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="introduction.html">3. Introduction</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="compendium.html">4. Research compendium</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="reproducible.html">5. Reproducible analysis</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="readmefile.html">6. README files</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="wrapup.html">7. Wrap up</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush9">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading9">
+        <a href="appendix.html">8. Appendix</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -249,6 +333,77 @@ Sustainable software help us identify their specific software
 features.</p></li>
 <li><p>Differentiating these concepts helps us to differentiate the
 characteristics of a project.</p></li>
+</ul></section><section id="beforestart"><h2 class="section-heading"><a href="beforestart.html">Before we start</a></h2>
+<hr class="half-width">
+<ul>
+<li>Use the <code>GitHub Discussions</code> as our communication forum
+for the workshop.</li>
+<li>Use the Code of Conduct to report unacceptable behaviour.</li>
+</ul></section><section id="introduction"><h2 class="section-heading"><a href="introduction.html">Introduction</a></h2>
+<hr class="half-width">
+<ul>
+<li>Our vision is to increase the awareness of tools to improve the
+reproducibility of data analysis.</li>
+<li>Our strategy is to incorporate good practices in scientific
+computing gradually.</li>
+<li>We plan to share specific tools to create a research compendium,
+make a reproducible analysis, and write READMEs.</li>
+</ul></section><section id="compendium"><h2 class="section-heading"><a href="compendium.html">Research compendium</a></h2>
+<hr class="half-width">
+<ul>
+<li>Use <a href="https://github.com/FRBCesab/rcompendium" class="external-link">rcompendium</a> templates to reuse all the files and
+folders a research project needs.</li>
+<li>Use <a href="https://usethis.r-lib.org" class="external-link">usethis</a> to add complementary community files to a
+research project.</li>
+<li>
+<em>Version control</em>, <em>Research compendium</em>, and
+<em>Community files</em> are features related to Sustainable
+software.</li>
+</ul></section><section id="reproducible"><h2 class="section-heading"><a href="reproducible.html">Reproducible analysis</a></h2>
+<hr class="half-width">
+<ul>
+<li><p>A <em>dependency</em> is a package that your project needs to
+run.</p></li>
+<li><p>Use the <code>DESCRIPTION</code> file to register your project
+dependencies.</p></li>
+<li><p>Use <a href="https://rstudio.github.io/renv/" class="external-link">renv</a> to isolate and create package-specific
+reproducible environments for your dependencies.</p></li>
+<li><p>Use the folder template to differentiate your
+<code>raw-data/</code> and <code>derived-data/</code>.</p></li>
+<li><p>Save analysis and generated files in isolated folders like
+<code>analyses/</code>, <code>figures/</code>, and
+<code>outputs/</code>.</p></li>
+<li><p>Use the <code>make.R</code> to list your analysis scripts and
+facilitate the regeneration of all your outputs.</p></li>
+</ul></section><section id="readmefile"><h2 class="section-heading"><a href="readmefile.html">README files</a></h2>
+<hr class="half-width">
+<ul>
+<li>Complement the <code>README</code> template with Installation steps,
+Citations, Licenses and Contributing guides.</li>
+<li>Use different types of licenses of text and figures, software code,
+and data.</li>
+</ul></section><section id="wrapup"><h2 class="section-heading"><a href="wrapup.html">Wrap up</a></h2>
+<hr class="half-width">
+<ul>
+<li>Use the JOSS review checklist to self-assess your progress.</li>
+<li>Use the <code>GitHub Discussions</code> as our communication forum
+after the workshop.</li>
+<li>Use the feedback form to share your constructive comments.</li>
+</ul></section><section id="appendix"><h2 class="section-heading"><a href="appendix.html">Appendix</a></h2>
+<hr class="half-width">
+<ul>
+<li>Write your functions documentation following the
+<code>R/fun-demo.R</code> template.</li>
+<li>Run your project functions with
+<code>devtools::load_all()</code>.</li>
+<li>Update your functions documentation with
+<code>devtools::document()</code>.</li>
+<li>Read your functions documentation with the <code>?function</code>
+notation in the R console.</li>
+<li>Create a website for the project with
+<code>usethis::use_pkgdown_github_pages()</code>.</li>
+<li>Use a manuscript template with
+<code>rrtools::use_analysis(location = "inst", data_in_git = FALSE)</code>.</li>
 </ul></section>
 </div>
     </main>
@@ -298,8 +453,8 @@ characteristics of a project.</p></li>
   "url": "https://avallecam.github.io/research-compendium/key-points.html",
   "identifier": "https://avallecam.github.io/research-compendium/key-points.html",
   "dateCreated": "2023-08-29",
-  "dateModified": "2023-09-01",
-  "datePublished": "2023-09-01"
+  "dateModified": "2023-09-03",
+  "datePublished": "2023-09-03"
 }
 
   </script><script>

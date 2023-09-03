@@ -13,7 +13,16 @@
     <loc>https://avallecam.github.io/research-compendium/aio.html</loc>
   </url>
   <url>
+    <loc>https://avallecam.github.io/research-compendium/appendix.html</loc>
+  </url>
+  <url>
+    <loc>https://avallecam.github.io/research-compendium/beforestart.html</loc>
+  </url>
+  <url>
     <loc>https://avallecam.github.io/research-compendium/blank.html</loc>
+  </url>
+  <url>
+    <loc>https://avallecam.github.io/research-compendium/compendium.html</loc>
   </url>
   <url>
     <loc>https://avallecam.github.io/research-compendium/definitions.html</loc>
@@ -37,7 +46,16 @@
     <loc>https://avallecam.github.io/research-compendium/instructor/aio.html</loc>
   </url>
   <url>
+    <loc>https://avallecam.github.io/research-compendium/instructor/appendix.html</loc>
+  </url>
+  <url>
+    <loc>https://avallecam.github.io/research-compendium/instructor/beforestart.html</loc>
+  </url>
+  <url>
     <loc>https://avallecam.github.io/research-compendium/instructor/blank.html</loc>
+  </url>
+  <url>
+    <loc>https://avallecam.github.io/research-compendium/instructor/compendium.html</loc>
   </url>
   <url>
     <loc>https://avallecam.github.io/research-compendium/instructor/definitions.html</loc>
@@ -61,7 +79,16 @@
     <loc>https://avallecam.github.io/research-compendium/instructor/profiles.html</loc>
   </url>
   <url>
+    <loc>https://avallecam.github.io/research-compendium/instructor/readmefile.html</loc>
+  </url>
+  <url>
     <loc>https://avallecam.github.io/research-compendium/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://avallecam.github.io/research-compendium/instructor/reproducible.html</loc>
+  </url>
+  <url>
+    <loc>https://avallecam.github.io/research-compendium/instructor/wrapup.html</loc>
   </url>
   <url>
     <loc>https://avallecam.github.io/research-compendium/instructor-notes.html</loc>
@@ -76,6 +103,15 @@
     <loc>https://avallecam.github.io/research-compendium/profiles.html</loc>
   </url>
   <url>
+    <loc>https://avallecam.github.io/research-compendium/readmefile.html</loc>
+  </url>
+  <url>
     <loc>https://avallecam.github.io/research-compendium/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://avallecam.github.io/research-compendium/reproducible.html</loc>
+  </url>
+  <url>
+    <loc>https://avallecam.github.io/research-compendium/wrapup.html</loc>
   </url>
 </urlset>
