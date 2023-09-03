@@ -121,11 +121,11 @@ rrtools::use_analysis(location = "inst", data_in_git = FALSE)
 
 This function will create a folder `inst/` with a new set of folders for data and figures. You can avoid using them and only use the `.qmd` as a template for your manuscript.
 
-<!-- add figure from new folder structure -->
+![](fig/rrtools-paper.png)
 
 The `.qmd` files get formatted from several template files like references using `.bib` and citation style using `.csl`.
 
-<!-- add figure of qmd file content -->
+![](fig/rrtools-templates.png)
 
 Using `rrtools::use_analysis()` with those arguments will not modify your `{rcompendium}` configuration. Other functions can change it. 
 
