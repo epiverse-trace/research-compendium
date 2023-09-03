@@ -19,13 +19,28 @@ exercises: 2
 
 ## The last concept map
 
+<!-- add figure here -->
 
 ## Self-assessment template
 
-During this process, we can self-assess our efforts in these practices using review checklists like the one used by [JOSS, the Journal of Open Source Software](https://joss.readthedocs.io/en/latest/review_checklist.html).
+During this process, we can self-assess our progress in these [good practices in scientific computing]([Wilson et al. 2017](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)) using a __review checklists__ like the one used by [JOSS, the Journal of Open Source Software](https://joss.readthedocs.io/en/latest/review_checklist.html).
 
-## Your personal learning reflection
+## Write an individual learning reflection
 
+Before we wrap up, take 5 minutes to think over everything we have covered so far. 
+
+- On a piece of paper, write down something that captures what you want to remember about the day. 
+- The Instructor will not look at this - it is just for you.
+ 
+If you do not know where to start, consider the following list for a starting point:
+
+- draw a concept map, connecting the material
+- draw pictures or a comic depicting one of the day’s concepts
+- write an outline of the topics we covered
+- write a paragraph or “journal” entry about your experience of the training today
+- write down one thing that struck you the most
+
+This exercise should take about 5 minutes.
 
 
 ## Our communication channel
@@ -36,13 +51,15 @@ Hello!
 
 We remind you of our _communication forum_ called [GitHub Discussions](https://github.com/epiverse-trace/research-compendium/discussions). Here we will ask and solve our and your question on the topic!
 
-You can fill your questions under the [Q&A category](https://github.com/epiverse-trace/research-compendium/discussions/categories/q-a).
+You can fill your questions under the [Q&A category](https://github.com/epiverse-trace/research-compendium/discussions/categories/q-a)... at any time in the future!
 
 :::
 
 ## Your Feedback
 
+<https://forms.gle/4HHQatKdEmuzCiUH9>
 
+If you did not filled this form, please, take 5 minutes to fill it. This will be very useful for further improvements of our training.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
