@@ -65,8 +65,8 @@ episodes:
 - compendium.Rmd
 - reproducible.Rmd
 - readmefile.Rmd
-- appendix.Rmd
 - wrapup.Rmd
+- appendix.Rmd
 
 # Information for Learners
 learners:
