@@ -1,76 +1,241 @@
 ---
-title: 'introduction'
+title: 'README files'
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- Where can I give proper installation instructions?
+- Where can I add licenses for my project elements?
+- How do I properly generate a citation for my project?
+- How can I increase the visibility of community guidelines?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Recognise good practices for README files
+- Identify your project features related to Open science.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## README files
 
+`README` files can include a whole range of information from an _overview_ of the project, _installation_ instructions and _licensing_ details to information on how to contribute to the code and cite the software. With modern text markup and formatting through `Markdown`, `README` files can also be rendered in a much more _accessible_ and _appealing_ manner than traditional plain-text `README` files. ([Cohen and Crouch, 2023](https://www.imperial.ac.uk/computational-methods/rse/events/byte-sized-rse/))
 
----
+### Good practices
 
-<!-- objective -->
-<!-- - Create a public website for an R project using GitHub Pages. -->
+There is no standard for `README` files, but we can use some widely used approaches. Here we list some `README` good practices collected by [Cohen and Crouch, 2023](https://www.imperial.ac.uk/computational-methods/rse/events/byte-sized-rse/):
 
-## Why have a website for your project?
+- Consider a formatting, layout, or _structure_.
+- Ensure _clear and concise_ descriptions.
+- Avoid overloading the `README` with content that could be hosted elsewhere.
+- Consider including a table of contents if you have many sections.
+- _Know your audience_ - Is your `README` aimed at other developers or end-users of your software/code?
 
-To facilitate the navigation through functions.
+### Structure
 
-the website
-- can help other to build upon your arms
-- annotated __functions__ can facilitate its packaging
+Using an [online editor called readme.so](https://readme.so/), we selected some typical sections frequently found in R packages:
 
+![README file sections selected from https://readme.so/](fig/readme_so-sections.png)
 
-### Create website files
+Generating this `README` file preview template:
 
-To improve the visibility of all these new files we can create a website using [GitHub pages](https://pages.github.com/). To make this possible run:
+![](fig/readme_so-preview.png)
+
+We can find room for improvement if we compare this template with the `README` file from the `{rcompendium}` template.
+
+![](fig/readme-github.png)
+
+In this episode, we will complement this template with some key sections. 
+
+We invite you to edit your README as you prefer! You can also use this simple [readme.so editor to generate more section templates](https://readme.so/) than the ones we will cover here.
+
+## Let's code
+
+First, let's `Knit` the README.Rmd.
+
+We must remember that our `README.md` is generated from the `README.Rmd` file. So we need to edit that file and `Knit` it after any update. This step is not done automatically for this template.
+
+:::intructor
+
+The `{usethis}` package provides control of flow functionality to commit the README.md only when synchronised with README.Rmd. We have yet to test that behaviour.
+
+:::
+
+### Installation
+
+The `Usage` section includes the installation steps of:
+
+- Clone a repository, and
+- Use R/Rstudio.
+
+We can assess our target audience and adapt this content to our projects. 
+
+Let's assume that the following personas are examples of the types of people that are your target audience:
+
+- [Patricia](https://epiverse-trace.github.io/personas/patricia-discoverer.html) is a PhD student. She uses R to analyse infectious disease data and wants to start her first collaborative project on GitHub.
+
+- [Lucia](https://epiverse-trace.github.io/personas/lucia-outbreaks.html) is a Field epidemiologist. She uses R to clean data and create plots for outbreak response. She wants to communicate her doubts and ideas with package maintainers.
+
+We want to add external guides to facilitate the cloning step.
+
+We can complement our installation steps with the following:
+
+```
+### Usage
+
+First, clone this repository. You can follow [steps on creating a new Rstudio Project from a GitHub repository](https://happygitwithr.com/new-github-first.html#usethiscreate_from_github). 
+
+Then, run:
+```
+
+:::checklist
+`Knit` the `README.Rmd` file.
+:::
+
+:::callout
+
+`Notes` are not part of the structure but information about the `Usage` step. We can add one more `#` to its heading.
+
+:::
+
+### Citation
+
+We can take advantage of the `DESCRIPTION` file to generate a `CITATION` file.
+
+First, open the `DESCRIPTION` file. 
+
+Note that in the 5th line, the `Authors@R` section is already filled with your details. You set this up when running the Configuration steps with `rcompendium::set_credentials()`.
+
+Second, write a `Title` for the Project in the 3rd line. The [`Title` should be written](https://r-pkgs.org/man.html#title-description-details) in sentence case, not ending in a full stop.
+
+![](fig/description-title.png)
+
+:::callout
+
+[`CITATION.cff` is file format](https://ropensci.org/blog/2021/11/23/cffr/) that facilitates software citation in ecosystems like GitHub, Zenodo and Zotero.
+
+:::
+
+Third, to generate a CITATION.cff file from the DESCRIPTION file, we can install the `{cffr}` package:
 
 ```r
-usethis::use_pkgdown_github_pages()
+install.packages("cffr")
 ```
 
-This implements the GitHub setup needed to automatically publish your site to GitHub pages using the [`{pkgdown}` package](https://pkgdown.r-lib.org/).
+Fourth, create a `.cff` file:
 
-This is possible in two steps: 
-
-- First, it prepares to _publish_ the pkgdown site from a new `gh-pages` branch. 
-- Then, it configures a [GitHub Action](https://github.com/features/actions) to automatically _build_ the site and _deploy_ it via GitHub Pages.
-
-Lastly, the pkgdown site's URL is added to the pkgdown configuration file, to the URL field of DESCRIPTION, and to the GitHub repo.
-
-<!-- add a concept map here / or evaluate to remove -->
-
-### Instead of websites
-
-If you do not want to rely on the website create for this project, you can add your the community links on README too. We adapted this format from the [`{rrtools}` package](https://github.com/benmarwick/rrtools/#contributing):
-
-```
-### Contributions
-
-We welcome contributions from everyone. Before you get started, please see our [contributor guidelines](/.github/CONTRIBUTING.md). Please note that this project is released with a [Contributor Code of Conduct](/.github/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+```r
+cffr::cff_write(dependencies = FALSE)
 ```
 
----
+Commit and Push your changes. Identify that GitHub has built-in support for this citation.
+
+![](fig/citation-cff.png)
+
+:::challenge
+
+#### How can I paste the CITATION in the README file?
+
+:::solution
+
+Write a `inst/CITATION` file:
+
+```r
+cffr::write_citation(x = "CITATION.cff")
+```
+
+Open the `inst/CITATION` file. 
+
+Add the `year = 2023,` within the `bibentry()`.
+
+Then, paste this chunk with the `echo=FALSE` option in the README.Rmd:
+
+```r
+readCitationFile(file = "inst/CITATION")
+```
+
+`Knit` the `README.Rmd` file.
+
+Finally, re-run this line to update the `.cff` file with the `year`:
+
+```r
+cffr::cff_write(dependencies = FALSE)
+```
+
+
+:::
+
+:::
+
+### Licenses
+
+Our project has a [GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html) license registered in the `LICENSE.md` file and in the `DESCRIPTION` file as a [GPL (>=2)](https://choosealicense.com/licenses/gpl-3.0/).
+
+We can add an adapted text generated by the [`{rrtools}` package](https://github.com/benmarwick/rrtools/):
+
+```
+### Licenses
+
+**Text and figures :**  [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)
+
+**Code :** See the [DESCRIPTION](DESCRIPTION) file
+
+**Data :** [CC-0](http://creativecommons.org/publicdomain/zero/1.0/) attribution requested in reuse
+```
+
+:::checklist
+`Knit` the `README.Rmd` file.
+:::
+
+### Contributing
+
+We adapted this format from the template generated from readme.so. We added hyperlinks to redirect to the Community files in the `.github/` folder.
+
+```
+### Contributing
+
+Contributions are always welcome!
+
+See our [Contributing guide](/.github/CONTRIBUTING.md) for ways to get started.
+
+Please adhere to this project's [Code of Conduct](/.github/CODE_OF_CONDUCT.md).
+
+### Support
+
+Please see our [Getting help guide](/.github/SUPPORT.md) for support.
+```
+
+:::checklist
+`Knit` the `README.Rmd` file.
+:::
+
+:::intructor
+
+Contributing guides and Function documentation are more visible in a website format. Please look at the Appendix episode to learn how to do it.
+
+:::
+
+:::testimonial
+
+- We recommend you to [listen to the Code for Thought podcast](https://codeforthought.buzzsprout.com/1326658/12979597-en-bytesized-rse-the-readme-with-julian-lenz) episode on the `README` file. They also have a few links that you might find helpful.
+
+- For Badges, we recommend reading a Blog post on [Communicating development stages of open-source software](https://epiverse-trace.github.io/posts/comm-software-devel/) at the Epiverse-TRACE website.
+
+:::
+
+## Open science features
+
+We define Open science as making software, data inputs and outputs _freely available_ by publishing all of them with open licences to facilitate project reuse.
+
+A vital feature of this practice is the Licenses. Explicit licenses that include the _software_ and the specific license for _text and figures_ and _data_, in particular, are also relevant.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- Complement the README template with Installation steps, Citations, Licenses and Contributing guides.
+- Use different types of licenses of text and figures, software code, and data.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
