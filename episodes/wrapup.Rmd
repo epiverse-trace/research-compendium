@@ -1,0 +1,47 @@
+---
+title: 'introduction'
+teaching: 10
+exercises: 2
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- How do you write a lesson using R Markdown and `{sandpaper}`?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Explain how to use markdown with the new lesson template
+- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## The last concept map
+
+
+## Self-assessment template
+
+During this process, we can self-assess our efforts in these practices using review checklists like the one used by [JOSS, the Journal of Open Source Software](https://joss.readthedocs.io/en/latest/review_checklist.html).
+
+## Your personal learning reflection
+
+
+
+## Our communication channel
+
+
+
+## Your Feedback
+
+
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- Use `.md` files for episodes when you want static content
+- Use `.Rmd` files for episodes when you need to generate output
+- Run `sandpaper::check_lesson()` to identify any issues with your lesson
+- Run `sandpaper::build_lesson()` to preview your lesson locally
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
