@@ -239,9 +239,19 @@ Please see our [Getting help guide](/.github/SUPPORT.md) for support.
 
 :::instructor
 
-Contributing guides and Function documentation are more visible in a website format. Please look at the Appendix episode to learn how to do it.
+Contributing guides and Function documentation are also visible in a website format. Please look at the Appendix episode to learn how to do it.
 
 :::
+
+### Markdown
+
+In Markdown, the `Header 2` generates an underline that can help to isolate sections of the structure we choosed.
+
+![](fig/markdown-header.png)
+
+Remove one `#` from all the main headers. This edit generates a final `README` file that look like this:
+
+![](fig/markdown-readme.png)
 
 :::testimonial
 
