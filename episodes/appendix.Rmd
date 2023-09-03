@@ -97,7 +97,7 @@ To facilitate the navigation through
 
 :::
 
-:::intructor
+:::instructor
 
 If required, you can add vignettes for an `{rcompendium}` using: 
 
