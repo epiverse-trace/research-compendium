@@ -339,6 +339,13 @@ source(here::here("analyses", "01-clean.R"))
 source(here::here("analyses", "02-plot.R"))
 ```
 
+:::checklist
+
+![](fig/concept-map-02.png)
+
+:::
+
+
 ## Reproducible research features
 
 We defined Reproducible research as a practice that wants to ensure that _anyone with access_ to data inputs and software can feasibly generate the outputs to check or build on them.
@@ -351,7 +358,7 @@ A key feature of this practice is the __`make.R` file__. With this file, and any
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- A dependency is a package that your project needs to run.
+- A _dependency_ is a package that your project needs to run.
 
 - Use the `DESCRIPTION` file to register your project dependencies.
 

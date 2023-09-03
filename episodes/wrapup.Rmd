@@ -24,7 +24,7 @@ exercises: 2
 
 ## The last concept map
 
-<!-- add figure here -->
+![](fig/concept-map-00.png)
 
 ## Self-assessment template
 

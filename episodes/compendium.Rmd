@@ -154,6 +154,11 @@ These community files are also known as [community health files](https://github.
 
 :::
 
+:::checklist
+
+![](fig/concept-map-01.png)
+
+:::
 
 ## Sustainable software features
 
@@ -184,7 +189,7 @@ The repository of this lesson also came from a template that looks like a deriva
 
 - Use `{rcompendium}` templates to reuse all the files and folders a research project needs. 
 - Use `{usethis}` to add complementary community files to a research project.
-- Version control, Research compendium, and community files are features related to Sustainable software. 
+- _Version control_, _Research compendium_, and _Community files_ are features related to Sustainable software. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
