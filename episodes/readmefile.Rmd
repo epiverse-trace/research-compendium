@@ -58,7 +58,7 @@ First, let's `Knit` the README.Rmd.
 
 We must remember that our `README.md` is generated from the `README.Rmd` file. So we need to edit that file and `Knit` it after any update. This step is not done automatically for this template.
 
-:::intructor
+:::instructor
 
 The `{usethis}` package provides control of flow functionality to commit the README.md only when synchronised with README.Rmd. We have yet to test that behaviour.
 
@@ -212,7 +212,7 @@ Please see our [Getting help guide](/.github/SUPPORT.md) for support.
 `Knit` the `README.Rmd` file.
 :::
 
-:::intructor
+:::instructor
 
 Contributing guides and Function documentation are more visible in a website format. Please look at the Appendix episode to learn how to do it.
 
