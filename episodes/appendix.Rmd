@@ -152,6 +152,17 @@ This manuscript will not be visible on a website unless moved to the `vignette/`
 
 :::
 
+## Reproducible research features
+
+We also relate reproducibility with the practice of _describing_ and _documenting_ the research process so that another researcher can re-run the software on the same data input to get the same data outputs.
+
+Features related to this are:
+
+- _Documentation strings_ in one or two lines using active verbs to describe how inputs turn into outputs ([Irving et al. 2021](https://merely-useful.tech/py-rse/documentation.html)).
+
+- _Manuscripts_ using [literate programming](https://books.ropensci.org/targets/literate-programming.html) with tools like [Rmarkdown](https://rstudio.github.io/cheatsheets/html/rmarkdown.html) or [Quarto](https://quarto.org/).
+
+
 :::callout
 
 Remember that if you have all your changes as commits with git, you can _revert_ any modification with the button __`Revert`__, located between the `Stage` and `Ignore` buttons.
@@ -168,6 +179,7 @@ Remember that if you have all your changes as commits with git, you can _revert_
 - Read your functions documentation with the `?function` notation in the R console.
 - Create a website for the project with `usethis::use_pkgdown_github_pages()`.
 - Use a manuscript template with `rrtools::use_analysis(location = "inst", data_in_git = FALSE)`.
+- _Documentation strings_, and _Manuscripts_ using _literate programming_ are features related to Reproducible research.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
