@@ -24,7 +24,12 @@ exercises: 2
 
 ## The goal
 
-![](fig/concept-map-00.png)
+![Concept map of the workshop](fig/concept-map-00.png)
+
+### A next step
+
+![Data analysis resembles software engineering](fig/concept-map-04.png)
+
 
 ## Self-assessment template
 
@@ -48,7 +53,7 @@ If you do not know where to start, consider the following list for a starting po
 - Draw a concept map, connecting the material
 - Draw pictures or a comic depicting one of the day's concepts
 - Write an outline of the topics we covered
-- Write a paragraph or "journal" entry about your experience of the training today
+- Write a paragraph or "journal" entry about your experience of the workshop today
 - Write down one thing that struck you the most
 
 This exercise should take about 5 minutes.
@@ -68,7 +73,7 @@ You can fill your questions under the [Q&A category](https://github.com/epiverse
 
 This form is anonymous: <https://forms.gle/4HHQatKdEmuzCiUH9>
 
-If you did not fill out this form, please take 5 minutes to fill it. This form will be beneficial for further improvements to our training.
+If you did not fill out this form, please take 5 minutes to fill it. This form will be beneficial for further improvements to our workshop.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 

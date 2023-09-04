@@ -1,7 +1,7 @@
 ---
 title: 'Introduction'
-teaching: 10
-exercises: 2
+teaching: 5
+exercises: 5
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -44,9 +44,9 @@ When we want to improve our analysis code's reliability and reusability, we want
 
 Reproducible research aims to ensure that _anyone_ with access to data inputs and software can _feasibly generate_ the data outputs, both to check or _build on them_. Reproducibility is improved when mixed with Open science and Sustainable software features.
 
-Our vision for this workshop is to increase the awareness of R packages that will increase the reproducibility of data analysis workflow that already uses R and Git.
+Our vision for this workshop is to increase the awareness of good practices that will increase the reproducibility of data analysis workflow that already uses R and Git.
 
-![](fig/goal-intro.png)
+![Our vision: Increase the awareness of good practices that complement an R and Git workflow](fig/goal-intro.png)
 
 ## What can we do?
 
@@ -71,9 +71,9 @@ We'll relate relevant features for Sustainable software, Reproducible research, 
 
 :::testimonial
 
-### Do I need to use them all since today?
+### Do I need to use them all from today?
 
-No, we do not pretend you start adopting all this workshop's good practices and tools.
+No, we do not intend you start adopting all these workshop's good practices and tools.
 
 If you already use a programming language like R and Git for version control, [you are already on the path!](https://www.nature.com/articles/s41559-017-0160/figures/1)
 

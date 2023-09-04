@@ -1,7 +1,7 @@
 ---
 title: 'Definitions'
 teaching: 10
-exercises: 2
+exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -46,9 +46,13 @@ Definition:
 
 - Practice of describing and documenting the research process in such a way that another researcher can re-run the software on the same data input to get the same data outputs.
 
-Related feature:
+Related features:
 
-- _Documentation_: Software descriptions structured in four types with complementing purposes: tutorials, how-to guides, technical references, and explanations. ([Documentation System, 2023](https://documentation.divio.com/)) It includes documentation strings in one or two lines using active verbs to describe how inputs turn into outputs. ([Irving et al. 2021](https://merely-useful.tech/py-rse/documentation.html))
+- _Documentation strings_: in one or two lines using active verbs to describe how inputs turn into outputs ([Irving et al. 2021](https://merely-useful.tech/py-rse/documentation.html)).
+
+- _Literate programming_ is the practice of mixing code and descriptive writing in order to execute and explain a data analysis simultaneously in the same document ([Eli Lilly and Company, 2022](https://books.ropensci.org/targets/literate-programming.html)).
+
+- _Software descriptions_ structured in four types with complementing purposes: tutorials, how-to guides, technical references, and explanations. ([Documentation System, 2023](https://documentation.divio.com/)). 
 
 Related concepts:
 
