@@ -71,9 +71,9 @@ We'll relate relevant features for Sustainable software, Reproducible research, 
 
 :::testimonial
 
-### Do I need to use them all since today?
+### Do I need to use them all from today?
 
-No, we do not pretend you start adopting all this workshop's good practices and tools.
+No, we do not intend you start adopting all these workshop's good practices and tools.
 
 If you already use a programming language like R and Git for version control, [you are already on the path!](https://www.nature.com/articles/s41559-017-0160/figures/1)
 
