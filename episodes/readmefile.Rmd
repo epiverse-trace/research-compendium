@@ -1,7 +1,7 @@
 ---
 title: 'README files'
-teaching: 10
-exercises: 2
+teaching: 40
+exercises: 5
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -76,13 +76,13 @@ The `Usage` section includes the installation steps of:
 - Clone a repository, and
 - Use R/Rstudio.
 
-We can assess our target audience and adapt this content to our projects. 
+We can assess our [target audience](https://merely-useful.tech/py-rse/documentation.html#documentation-audience) and adapt this content to our projects. 
 
 Let's assume that the following personas are examples of the types of people that are your target audience:
 
 - [Patricia](https://epiverse-trace.github.io/personas/patricia-discoverer.html) is a PhD student. She uses R to analyse infectious disease data and wants it to be reproducible. She is unfamiliar with GitHub and the terminal window.
 
-- [Lucia](https://epiverse-trace.github.io/personas/lucia-outbreaks.html) is a Field epidemiologist. She uses R to clean data and create plots for outbreak response. She wants to communicate her doubts and ideas with package maintainers.
+- [Lucia](https://epiverse-trace.github.io/personas/lucia-outbreaks.html) is a Field epidemiologist. She uses R to clean data and create plots for outbreak response. She wants to communicate her doubts and ideas with package maintainers. She does not track the versions of her code with Git.
 
 If we want to add external guides to facilitate the `git clone` step, we can complement our installation steps with external resources.
 
@@ -255,7 +255,11 @@ Remove one `#` from all the main headers. This edit generates a final `README` f
 
 :::discussion
 
-Would you remove any section of the `README` above?
+Consider your research project: 
+
+- Would you add or remove any section from the `README` template above? Why?
+
+Explore the [online editor called readme.so](https://readme.so/) to identify more sections that could suit your research project.
 
 :::
 
@@ -284,6 +288,7 @@ A vital feature of this practice is the __Licenses__. Explicit licenses that inc
 
 - Complement the `README` template with Installation steps, Citations, Licenses and Contributing guides.
 - Use different types of licenses of text and figures, software code, and data.
+- _Licenses_ is a feature related to Open Science. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
