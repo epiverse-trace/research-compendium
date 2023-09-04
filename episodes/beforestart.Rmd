@@ -1,7 +1,7 @@
 ---
 title: 'Before we start'
 teaching: 10
-exercises: 2
+exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -44,6 +44,12 @@ A reminder of our [Code of conduct](https://github.com/epiverse-trace/.github/bl
 
 :::
 
+## Contributors
+
+This material has contributions from:
+
+- [James Azam, PhD](https://www.lshtm.ac.uk/aboutus/people/azam.james), RSE at Epiverse.
+- [Carmen Tamayo-Cuartero, PhD](https://www.lshtm.ac.uk/aboutus/people/tamayo-cuartero.carmen), RF at Epiverse.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
