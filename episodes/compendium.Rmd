@@ -1,7 +1,7 @@
 ---
 title: 'Research compendium'
-teaching: 10
-exercises: 2
+teaching: 25
+exercises: 5
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -26,11 +26,11 @@ A research compendium collects all digital parts of a research project, includin
 
 Using templates facilitates having all the required files from the beginning of your project.
 
-![Source: https://github.com/rdatatoolbox/course-compendium](fig/folder_tidy_cooking.png)
+![Artwork by Allison Horst https://allisonhorst.com/](fig/folder_tidy_cooking.png)
 
 We understand that creativity can be “messy” sometimes. You will be able to handle it in the present, but your collaborators (and the future you) may have problems understanding it. Reproducibility is as much about the humans that interact with the code as the machines that need to run it ([Campitelli and Corrales, 2022](https://eliocamp.github.io/reproducibility-with-r/materials/day1/02-projects/)).
 
-![Source: https://github.com/rdatatoolbox/course-compendium](fig/folder_mess_cooking.png)
+![Artwork by Allison Horst https://allisonhorst.com/](fig/folder_mess_cooking.png)
 
 ## Let's code
 
@@ -54,10 +54,10 @@ Create a new one, thinking about your current research project.
 
 Your `projectname` must follow some rules for everything to work. It must:
 
-- contain only ASCII letters, numbers, and `.` (it can not have a `-`)
+- contain only ASCII letters, numbers, and dots "`.`" (it cannot have a hyphen "`-`")
 - have at least two characters
 - start with a letter (not a number)
-- not end with `.`
+- not end with a dot "`.`"
 
 ![](fig/project-init.png){alt='New Project Wizard panel with Directory name and the Create a git repository box checked'}
 
