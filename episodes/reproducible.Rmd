@@ -366,7 +366,7 @@ A key feature of this practice is the combination of __`{renv}`__ with the __`ma
 
 - Use the `make.R` to list your analysis scripts and facilitate the regeneration of all your outputs.
 
-- _Reproducible environments_, and _Make files_ are features related to Reproducible research. 
+- _Reproducible environments_ and _Make files_ are features related to Reproducible research. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
