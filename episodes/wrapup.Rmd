@@ -24,7 +24,12 @@ exercises: 2
 
 ## The goal
 
-![](fig/concept-map-00.png)
+![Concept map of the workshop](fig/concept-map-00.png)
+
+### A next step
+
+![Data analysis resembles software engineering](fig/concept-map-04.png)
+
 
 ## Self-assessment template
 
