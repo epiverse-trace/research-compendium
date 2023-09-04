@@ -1,7 +1,7 @@
 ---
 title: 'Reproducible analysis'
-teaching: 10
-exercises: 2
+teaching: 55
+exercises: 5
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -21,8 +21,6 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## How do I make my analysis reproducible?
-
-We need to play under the rules of the `{rcompendium}` template.
 
 ### The reproducible environment
 
@@ -69,6 +67,7 @@ To use this functionality for your `R` project, you can use the [`{targets}` pac
 
 ## Let's code
 
+We need to play under the rules of the `{rcompendium}` template.
  
 ### The reproducible environment
 
@@ -93,6 +92,43 @@ Which files should renv use for dependency discovery in this project?
 ```
 
 Write `2` and press ENTER to use `{renv}` instead of `DESCRIPTION` file.
+
+:::challenge
+
+### Question
+
+Why not to use `{renv}` in addition to `DESCRIPTION`?
+
+:::solution
+
+We can use `{renv}` in addition to `DESCRIPTION`.
+
+However, we opt to use `{renv}` instead of `DESCRIPTION` because the `rcompendium::add_dependencies(".")` function because it assumes that all packages to add to `DESCRIPTION` are from CRAN. If you want to add GitHub packages, [you need to add them manually](https://remotes.r-lib.org/articles/dependencies.html) in a different section called `Remotes:` and write `repository/package`. The `{renv}` package solves this automatically.
+
+![We need to fix the DESCRIPTION file manually. Packages like {cfr} and {epiparameter} are on GitHub.](fig/add_dependencies-github.png)
+
+However, this still needs to be assessed with different scenarios to confirm this as the final best decision.
+
+If you decide to use `{renv}` in addition to `DESCRIPTION` run:
+
+```r
+rcompendium::add_dependencies(".")
+```
+
+Note that this function requires one argument specification `"."`, which means that your [working directory](https://www.epirhandbook.com/en/r-basics.html?q=getwd#working-directory) must be at the root of the R project.
+
+The output below details which packages were included in the description file
+
+```
+✔ Scanning 'Imports' dependencies
+  (*) Found 2 package(s)
+  (*) Adding the following line in 'DESCRIPTION': `Imports: devtools, here`
+```
+
+:::
+
+:::
+
 
 If you get an error message like:
 
@@ -170,42 +206,6 @@ This step creates a `renv.lock` file detailing the following:
 
 Now, you have completed your reproducible environment configuration. 
 
-:::challenge
-
-### Question
-
-Why not to use `{renv}` in addition to `DESCRIPTION`?
-
-:::solution
-
-We can use `{renv}` in addition to `DESCRIPTION`.
-
-However, we opt to use `{renv}` instead of `DESCRIPTION` because the `rcompendium::add_dependencies(".")` function because it assumes that all packages to add to `DESCRIPTION` are from CRAN. If you want to add GitHub packages, [you need to add them manually](https://remotes.r-lib.org/articles/dependencies.html) in a different section called `Remotes:` and write `repository/package`. The `{renv}` package solves this automatically.
-
-![We need to fix the DESCRIPTION file manually. Packages like {cfr} and {epiparameter} are on GitHub.](fig/add_dependencies-github.png)
-
-However, this still needs to be assessed with different scenarios to confirm this as the final best decision.
-
-If you decide to use `{renv}` in addition to `DESCRIPTION` run:
-
-```r
-rcompendium::add_dependencies(".")
-```
-
-Note that this function requires one argument specification `"."`, which means that your [working directory](https://www.epirhandbook.com/en/r-basics.html?q=getwd#working-directory) must be at the root of the R project.
-
-The output below details which packages were included in the description file
-
-```
-✔ Scanning 'Imports' dependencies
-  (*) Found 2 package(s)
-  (*) Adding the following line in 'DESCRIPTION': `Imports: devtools, here`
-```
-:::
-
-:::
-
-
 ### The analysis workflow
 
 The workflow will follow these three paths:
@@ -225,10 +225,8 @@ Second, create the analysis script to clean this raw data set. Name it `01-clean
 library(readxl)
 library(tidyverse)
 
-
 # Read raw data
 dat <- readxl::read_xlsx("data/raw-data/linelist_20140701.xlsx")
-
 
 # Clean raw data
 dat_clean <- dat %>% 
@@ -236,7 +234,6 @@ dat_clean <- dat %>%
   mutate(across(.cols = c(date_of_onset,date_of_outcome),
                 .fns = as.Date)) %>% 
   mutate(outcome = fct(outcome,level = c("Death","Recover"),na = "NA"))
-
 
 # Write clean data
 dat_clean %>% 
@@ -248,6 +245,8 @@ Notice that we are writing a new cleaned data set in a different path: `data/der
 :::callout
 
 - The default folder to save R scripts will be `R/`. This path is the place to write your _Modular functions_. Go to the `analyses/` folder to save your analysis script.
+
+- Yes, it is named `analyses/` not "analysis".
 
 :::
 
@@ -283,10 +282,8 @@ Third, create an analysis script to create an [incidence plot](https://www.recon
 library(tidyverse)
 library(incidence2)
 
-
 # Read data
 ebola_dat <- read_rds("data/derived-data/linelist_clean.rds")
-
 
 # Create incidence2 object
 ebola_onset <- 
@@ -295,13 +292,12 @@ ebola_onset <-
     date_index = c("date_of_onset"),
     interval = "epiweek"
   )
-
+  
 # Read incidence2 object
 ebola_onset
 
 # Plot incidence data
 plot(ebola_onset)
-
 
 # Write ggplot as figure
 ggsave("figures/02-plot_incidence.png",height = 3,width = 5)
@@ -348,9 +344,9 @@ source(here::here("analyses", "02-plot.R"))
 
 ## Reproducible research features
 
-We defined Reproducible research as a practice that wants to ensure that _anyone with access_ to data inputs and software can feasibly generate the outputs to check or build on them.
+We defined Reproducible research as a practice that wants to ensure that _anyone with access_ to data inputs and software can _feasibly generate_ the outputs to check or build on them.
 
-A key feature of this practice is the __`make.R` file__. With this file, and any other more sophisticated alternatives like `GNU Make` or `{targets}`, we now are sure that we:
+A key feature of this practice is the combination of __`{renv}`__ with the __`make.R` file__. With this file, and any other more sophisticated alternatives like `GNU Make` or `{targets}`, we are sure that we:
 
 - Can feasibly _regenerate_ the outputs. 
 - Can inform about the _reliability_ of the project.
@@ -369,6 +365,8 @@ A key feature of this practice is the __`make.R` file__. With this file, and any
 - Save analysis and generated files in isolated folders like `analyses/`, `figures/`, and `outputs/`.
 
 - Use the `make.R` to list your analysis scripts and facilitate the regeneration of all your outputs.
+
+- _Reproducible environments_, and _Make files_ are features related to Reproducible research. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
