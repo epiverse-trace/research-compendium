@@ -86,11 +86,11 @@
   Improve your code for Epidemic Analysis with R
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 38%" class="percentage">
-    38%
+<aside class="col-md-12 lesson-progress"><div style="width: 11%" class="percentage">
+    11%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 38%" aria-valuenow="38" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 11%" aria-valuenow="11" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -145,7 +145,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="definitions.html">1. Definitions</a>
+        <a href="beforestart.html">1. Before we start</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -154,16 +154,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="beforestart.html">2. Before we start</a>
-    </div><!--/div.accordion-header-->
-        
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush4">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading4">
-        <a href="introduction.html">3. Introduction</a>
+        <a href="introduction.html">2. Introduction</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -175,7 +166,7 @@
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
-        4. Research compendium
+        3. Research compendium
         </span>
       </button>
     </div><!--/div.accordion-header-->
@@ -191,10 +182,19 @@
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="reproducible.html">4. Reproducible analysis</a>
+    </div><!--/div.accordion-header-->
+        
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="reproducible.html">5. Reproducible analysis</a>
+        <a href="readmefile.html">5. README files</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -203,7 +203,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="readmefile.html">6. README files</a>
+        <a href="wrapup.html">6. Wrap up</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -212,7 +212,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="wrapup.html">7. Wrap up</a>
+        <a href="appendix.html">7. Appendix</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -221,7 +221,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="appendix.html">8. Appendix</a>
+        <a href="definitions.html">8. Definitions</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -278,7 +278,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Research compendium</h1>
-        <p> Last updated on 2023-09-03 | 
+        <p> Last updated on 2023-09-04 | 
         
         <a href="https://github.com/avallecam/research-compendium/edit/main/episodes/compendium.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -328,13 +328,13 @@ reproducing all results is straightforward (<a href="https://the-turing-way.netl
 Turing Way Community, 2022</a>)</p>
 <p>Using templates facilitates having all the required files from the
 beginning of your project.</p>
-<figure><img src="fig/folder_tidy_cooking.png" alt="" class="figure mx-auto d-block"><figcaption>Source: <a href="https://github.com/rdatatoolbox/course-compendium" class="external-link uri">https://github.com/rdatatoolbox/course-compendium</a></figcaption></figure><p>We understand that creativity can be “messy” sometimes. You will be
+<figure><img src="fig/folder_tidy_cooking.png" alt="" class="figure mx-auto d-block"><figcaption>Artwork by Allison Horst <a href="https://allisonhorst.com/" class="external-link uri">https://allisonhorst.com/</a></figcaption></figure><p>We understand that creativity can be “messy” sometimes. You will be
 able to handle it in the present, but your collaborators (and the future
 you) may have problems understanding it. Reproducibility is as much
 about the humans that interact with the code as the machines that need
 to run it (<a href="https://eliocamp.github.io/reproducibility-with-r/materials/day1/02-projects/" class="external-link">Campitelli
 and Corrales, 2022</a>).</p>
-<figure><img src="fig/folder_mess_cooking.png" alt="" class="figure mx-auto d-block"><figcaption>Source: <a href="https://github.com/rdatatoolbox/course-compendium" class="external-link uri">https://github.com/rdatatoolbox/course-compendium</a></figcaption></figure></section><section id="lets-code"><h2 class="section-heading">Let’s code<a class="anchor" aria-label="anchor" href="#lets-code"></a>
+<figure><img src="fig/folder_mess_cooking.png" alt="" class="figure mx-auto d-block"><figcaption>Artwork by Allison Horst <a href="https://allisonhorst.com/" class="external-link uri">https://allisonhorst.com/</a></figcaption></figure></section><section id="lets-code"><h2 class="section-heading">Let’s code<a class="anchor" aria-label="anchor" href="#lets-code"></a>
 </h2>
 <hr class="half-width"><div class="section level3">
 <h3 id="create-a-rstudio-project">Create a Rstudio Project<a class="anchor" aria-label="anchor" href="#create-a-rstudio-project"></a></h3>
@@ -358,12 +358,11 @@ Rstudio and select <code>New Project...</code>. Follow these steps:</p>
 </div>
 <p>Your <code>projectname</code> must follow some rules for everything
 to work. It must:</p>
-<ul><li>contain only ASCII letters, numbers, and <code>.</code> (it can not
-have a <code>-</code>)</li>
+<ul><li>contain only ASCII letters, numbers, and dots “<code>.</code>” (it
+cannot have a hyphen “<code>-</code>”)</li>
 <li>have at least two characters</li>
 <li>start with a letter (not a number)</li>
-<li>not end with <code>.</code>
-</li>
+<li>not end with a dot “<code>.</code>”</li>
 </ul><figure><img src="fig/project-init.png" alt="New Project Wizard panel with Directory name and the Create a git repository box checked" class="figure mx-auto d-block"></figure></div>
 <div class="section level3">
 <h3 id="create-a-research-compendium">Create a research compendium<a class="anchor" aria-label="anchor" href="#create-a-research-compendium"></a></h3>
@@ -515,7 +514,7 @@ facilitate their participation and how to interact with maintainers.</p>
 <p>Nick Huber, from the blog Towards Data Science, concludes that <a href="https://towardsdatascience.com/data-analysis-is-a-form-of-software-engineering-876232bd3ebc" class="external-link">data
 analysis best practices/tools are starting to strongly resemble
 practices/tools from software engineering</a></p>
-<p>The repository of this lesson also came from a template that looks
+<p>The repository of this lesson also came from a <a href="https://carpentries.github.io/workbench/" class="external-link">template</a> that looks
 like a derivative of a research compendium, which also looks like a
 piece of software like an R package.</p>
 </div>
@@ -597,8 +596,8 @@ any links that you are not going to use.
   "url": "https://avallecam.github.io/research-compendium/compendium.html",
   "identifier": "https://avallecam.github.io/research-compendium/compendium.html",
   "dateCreated": "2023-08-29",
-  "dateModified": "2023-09-03",
-  "datePublished": "2023-09-03"
+  "dateModified": "2023-09-04",
+  "datePublished": "2023-09-04"
 }
 
   </script><script>
