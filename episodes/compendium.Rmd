@@ -181,7 +181,7 @@ _Is a data analysis also considered a piece of software?_
 
 Nick Huber, from the blog Towards Data Science, concludes that [data analysis best practices/tools are starting to strongly resemble practices/tools from software engineering](https://towardsdatascience.com/data-analysis-is-a-form-of-software-engineering-876232bd3ebc)
 
-The repository of this lesson also came from a template that looks like a derivative of a research compendium, which also looks like a piece of software like an R package.
+The repository of this lesson also came from a [template](https://carpentries.github.io/workbench/) that looks like a derivative of a research compendium, which also looks like a piece of software like an R package.
 
 :::
 
