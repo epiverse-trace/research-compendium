@@ -1,0 +1,51 @@
+# -----------------------------------------------------------
+# CITATION file created with {cffr} R package, v0.5.0
+# See also: https://docs.ropensci.org/cffr/
+# -----------------------------------------------------------
+ 
+cff-version: 1.2.0
+message: 'To cite package "research-compendium" in publications use:'
+type: software
+license: CC-BY-4.0
+title: 'research-compendium: Improve Your Code For Epidemic Analysis With R'
+version: 0.0.0.9000
+abstract: Epiverse-TRACE tutorial on Improve your code for Epidemic Analysis with
+  R.
+authors:
+- family-names: Valle
+  given-names: Andree
+  email: andree.valle-campos@lshtm.ac.uk
+  orcid: https://orcid.org/0000-0002-7779-481X
+- family-names: Tamayo
+  given-names: Carmen
+  email: Carmen.Tamayo-Cuartero@lshtm.ac.uk
+  orcid: https://orcid.org/0000-0003-4184-2864
+- family-names: Azam
+  given-names: James M.
+  email: james.azam@lshtm.ac.uk
+  orcid: https://orcid.org/0000-0001-5782-7330
+preferred-citation:
+  type: generic
+  title: 'research-compendium: Improve Your Code For Epidemic Analysis With R'
+  authors:
+  - family-names: Valle
+    given-names: Andree
+    email: andree.valle-campos@lshtm.ac.uk
+    orcid: https://orcid.org/0000-0002-7779-481X
+  - family-names: Tamayo
+    given-names: Carmen
+    email: Carmen.Tamayo-Cuartero@lshtm.ac.uk
+    orcid: https://orcid.org/0000-0003-4184-2864
+  - family-names: Azam
+    given-names: James M.
+    email: james.azam@lshtm.ac.uk
+    orcid: https://orcid.org/0000-0001-5782-7330
+  year: '2023'
+  abstract: Epiverse-TRACE tutorial on Improve your code for Epidemic Analysis with
+    R.
+  version: 0.0.0.9000
+contact:
+- family-names: Valle
+  given-names: Andree
+  email: andree.valle-campos@lshtm.ac.uk
+  orcid: https://orcid.org/0000-0002-7779-481X

@@ -1,0 +1,13 @@
+
+bibentry(bibtype = "Misc",
+         key = "epiresearchcompendium",
+         year = 2023,
+         title = "research-compendium: Improve Your Code For Epidemic Analysis With R",
+         author = c(person(given = "Andree",
+                           family = "Valle"),
+                    person(given = "Carmen",
+                           family = "Tamayo"),
+                    person(given = "James M.",
+                           family = "Azam")),
+         abstract = "Epiverse-TRACE tutorial on Improve your code for Epidemic Analysis with R.",
+         version = "0.0.0.9000")
