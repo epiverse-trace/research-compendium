@@ -1,18 +1,26 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
 
 # research-compendium
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of research-compendium is to host a lesson on “Improve your
-code for Epidemic Analysis with R”.
+The goal of research-compendium is to host a lesson on "Improve your code for Epidemic Analysis with R".
 
 ## Usage
 
-Visualize this content as a webpage at
-<https://epiverse-trace.github.io/research-compendium/>
+Visualize this content as a webpage at <https://epiverse-trace.github.io/research-compendium/>
 
 ## Contributing
 
@@ -20,9 +28,10 @@ Contributions are always welcome!
 
 See our [Contributing guide](CONTRIBUTING.md) for ways to get started.
 
-Please adhere to this project’s [Code of Conduct](CODE_OF_CONDUCT.md).
+Please adhere to this project's [Code of Conduct](CODE_OF_CONDUCT.md).
 
 <!-- ## Support -->
+
 <!-- Please see our [Getting help guide](/.github/SUPPORT.md) for support. -->
 
 ## Authors
@@ -31,6 +40,13 @@ Please adhere to this project’s [Code of Conduct](CODE_OF_CONDUCT.md).
 - [@CarmenTamayo](https://github.com/CarmenTamayo)
 - [@jamesmbaazam](https://github.com/jamesmbaazam/)
 
+```{r,echo=FALSE,eval=FALSE}
+readCitationFile(file = "inst/CITATION")
+```
+
+
 ## License
 
 Read the [License](LICENSE.md) of this lesson.
+
+
