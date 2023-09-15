@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of research-compendium is to host a lesson on "Improve your code for Epidemic Analysis with R".
+The goal of research-compendium is to host a tutorial on "Improve your code for Epidemic Analysis with R".
 
 ## Usage
 
@@ -40,7 +40,7 @@ Please adhere to this project's [Code of Conduct](CODE_OF_CONDUCT.md).
 - [@CarmenTamayo](https://github.com/CarmenTamayo)
 - [@jamesmbaazam](https://github.com/jamesmbaazam/)
 
-```{r,echo=FALSE,eval=FALSE}
+```{r,echo=FALSE}
 readCitationFile(file = "inst/CITATION")
 ```
 

@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of research-compendium is to host a lesson on “Improve your
+The goal of research-compendium is to host a tutorial on “Improve your
 code for Epidemic Analysis with R”.
 
 ## Usage
@@ -30,6 +30,22 @@ Please adhere to this project’s [Code of Conduct](CODE_OF_CONDUCT.md).
 - [@avallecam](https://github.com/avallecam/)
 - [@CarmenTamayo](https://github.com/CarmenTamayo)
 - [@jamesmbaazam](https://github.com/jamesmbaazam/)
+
+<!-- -->
+
+    #> 
+    #> Valle A, Tamayo C, Azam J (2023). "research-compendium: Improve Your
+    #> Code For Epidemic Analysis With R."
+    #> 
+    #> A BibTeX entry for LaTeX users is
+    #> 
+    #>   @Misc{epiresearchcompendium,
+    #>     year = {2023},
+    #>     title = {research-compendium: Improve Your Code For Epidemic Analysis With R},
+    #>     author = {Andree Valle and Carmen Tamayo and James M. Azam},
+    #>     abstract = {Epiverse-TRACE tutorial on Improve your code for Epidemic Analysis with R.},
+    #>     version = {0.0.0.9000},
+    #>   }
 
 ## License
 
