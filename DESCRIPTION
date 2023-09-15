@@ -1,0 +1,17 @@
+Package: research-compendium
+Title: Improve Your Code For Epidemic Analysis With R
+Version: 0.0.0.9000
+Authors@R: 
+    c(
+        person("Andree", "Valle", , "andree.valle-campos@lshtm.ac.uk", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-7779-481X")),
+        person("Carmen", "Tamayo", , "Carmen.Tamayo-Cuartero@lshtm.ac.uk", role = c("aut"),
+           comment = c(ORCID = "0000-0003-4184-2864")),
+        person("James M.", "Azam", , "james.azam@lshtm.ac.uk", role = c("aut"),
+           comment = c(ORCID = "0000-0001-5782-7330"))
+    )
+Description: Epiverse-TRACE tutorial on Improve your code for Epidemic Analysis with R.
+License: CC BY 4.0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
