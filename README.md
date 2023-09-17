@@ -31,6 +31,10 @@ Please adhere to this project’s [Code of Conduct](CODE_OF_CONDUCT.md).
 
 Please see our [Getting help guide](/.github/SUPPORT.md) for support.
 
+## License
+
+Read the [License](LICENSE.md) of this lesson.
+
 ## Authors
 
 - [@avallecam](https://github.com/avallecam/)
@@ -52,7 +56,3 @@ Please see our [Getting help guide](/.github/SUPPORT.md) for support.
     #>     abstract = {Epiverse-TRACE tutorial on Improve your code for Epidemic Analysis with R.},
     #>     version = {0.0.0.9000},
     #>   }
-
-## License
-
-Read the [License](LICENSE.md) of this lesson.
