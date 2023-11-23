@@ -33,7 +33,7 @@ exercises: 2
 
 ## Self-assessment template
 
-During this process, we can self-assess our progress in these [good practices in scientific computing]([Wilson et al. 2017](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)) using a __review checklists__ like the one used by [JOSS, the Journal of Open Source Software](https://joss.readthedocs.io/en/latest/review_checklist.html).
+Now, we invite you to self-assess your progress in these [good practices](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)) using a __review checklists__ similar the one used by [JOSS, the Journal of Open Source Software](https://joss.readthedocs.io/en/latest/review_checklist.html).
 
 :::callout
 
