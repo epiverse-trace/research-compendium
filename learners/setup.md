@@ -20,9 +20,11 @@ Sadly, most of the time this is very difficult because:
 
 <!--Questions from [Rodriguez-Sánchez et al. 2016](https://revistaecosistemas.net/index.php/ecosistemas/article/view/1178)-->
 
+<!--
 A _reproducible workflow_ reduces errors and speeds up the process of re-running your analysis and auto-generating updated documents with the results.
 
 !["A reproducible workflow". 1:44 minutes. Video by Ignasi Bartomeus (@ibartomeus) & Francisco Rodríguez-Sánchez (@frod_san).  CC-by, <https://youtu.be/s3JldKoA0zw?si=xRzgVJvOTX5LubxN>](episodes/fig/non-reproducible-workflow.png){alt='Video: A Non Reproducible Workflow'}
+-->
 
 In this lesson, you will learn how to improve your code's _reliability_, _usability_ and _sustainability_ for epidemic analysis with R packages. You will learn how to __add specific features__ to your R project to keep it as __Open__, __Reproducible__, and __Sustainable__ as possible!
 
