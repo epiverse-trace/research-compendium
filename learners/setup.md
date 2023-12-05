@@ -2,9 +2,39 @@
 title: Setup
 ---
 
-We will use this site for the workshop on "Improving the reliability, usability and sustainability of code for epidemic analysis with R packages" at [IDDconf 2023](https://iddconf.org/).
+## Motivation
 
-Follow these instructions to prepare for the event.
+Have you ever wondered how cool would it be if you would be able to successfully: 
+
+- __Reuse__ an analysis months or years later each time you need to revisit it?
+- __Redo__ the analyses, figures or tables after correcting an error in the data or following a reviewer's recommendations?
+- __Reuse__ data from other authors for a secondary analysis thanks to informative metadata on the primary study?
+
+Sadly, most of the time this is very difficult because: 
+
+- __We__ do not remember how we did the analysis,
+- __Redoing__ figures and tables is time-consuming,
+- __Data__ is not easily available or unreadable today.
+
+<!-- - How much time do we spend trying to implement a new analysis method based on the brief description provided in an article? -->
+
+<!--Questions from [Rodriguez-Sánchez et al. 2016](https://revistaecosistemas.net/index.php/ecosistemas/article/view/1178)-->
+
+A _reproducible workflow_ reduces errors and speeds up the process of re-running your analysis and auto-generating updated documents with the results.
+
+!["A reproducible workflow". 1:44 minutes. Video by Ignasi Bartomeus (@ibartomeus) & Francisco Rodríguez-Sánchez (@frod_san).  CC-by, <https://youtu.be/s3JldKoA0zw?si=xRzgVJvOTX5LubxN>](episodes/fig/non-reproducible-workflow.png){alt='Video: A Non Reproducible Workflow'}
+
+In this lesson, you will learn how to improve your code's _reliability_, _usability_ and _sustainability_ for epidemic analysis with R packages. You will learn how to __add specific features__ to your R project to keep it as __Open__, __Reproducible__, and __Sustainable__ as possible!
+
+![Open science, Reproducible analysis, and Sustainable software: Different and Complementary.](episodes/fig/open-sustainable-reproducible.jpeg)
+
+::::::::::::::::: prereq
+
+In this lesson, we will use R, Git, and GitHub. Some previous experience using [RStudio projects](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects) is expected, _but isn’t mandatory_.
+
+For an introductory lesson on Git, please go to the [Version Control with Git in Rstudio](https://epiverse-trace.github.io/git-rstudio-basics/) lesson.
+
+::::::::::::::::::::::::
 
 <!--
 ## Data Sets

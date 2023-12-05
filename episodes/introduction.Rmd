@@ -20,22 +20,6 @@ exercises: 5
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::discussion
-
-## Questions to think about
-
-- How many times have we wanted to revisit a statistical analysis months or years later and have not been able to, either because we do not remember how to do it or the data is not easily available? 
-
-- How much time do we waste redoing statistical analyses, figures or tables after correcting an error in the data or following a reviewer's recommendations? 
-
-- How much time do we spend trying to implement a new analysis method based on the brief description provided in an article? 
-
-- How many times have we tried to collect data but failed because the authors have lost the data, its format is unreadable today, or they refuse to share it?
-
-Questions from [Rodriguez-Sánchez et al. 2016](https://revistaecosistemas.net/index.php/ecosistemas/article/view/1178)
-
-:::
-
 <!-- why? What? How? Vision/strategy/plan -->
 
 ## Why improve our code for epidemic analysis?
