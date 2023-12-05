@@ -28,7 +28,7 @@ A _reproducible workflow_ reduces errors and speeds up the process of re-running
 
 In this lesson, you will learn how to improve your code's _reliability_, _usability_ and _sustainability_ for epidemic analysis with R packages. You will learn how to __add specific features__ to your R project to keep it as __Open__, __Reproducible__, and __Sustainable__ as possible!
 
-![Open science, Reproducible analysis, and Sustainable software: Different and Complementary. Image by Bing, 2023, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), created with [Bing Image Creator powered by DALL·E 3](https://www.bing.com/create)](episodes/fig/open-sustainable-reproducible.jpeg){alt='A puzzle of three hexagon pieces, only showing the pieces, each with one of these words: OPEN, SUSTAINABLE, REPRODUCIBLE'}
+![Open science, Sustainable software, and Reproducible analysis: Different and Complementary. Image by Bing, 2023, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), created with [Bing Image Creator powered by DALL·E 3](https://www.bing.com/create)](episodes/fig/open-sustainable-reproducible.jpeg){alt='A puzzle of three hexagon pieces, only showing the pieces, each with one of these words: OPEN, SUSTAINABLE, REPRODUCIBLE'}
 
 ::::::::::::::::: prereq
 
