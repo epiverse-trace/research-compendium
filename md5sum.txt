@@ -13,6 +13,7 @@
 "episodes/appendix.Rmd" "8701920cce9c7a3ee879612cef7424c8" "site/built/appendix.md" "2023-11-21"
 "episodes/definitions.Rmd" "81b8514022c64661acac40958b01b325" "site/built/definitions.md" "2023-11-21"
 "instructors/instructor-notes.md" "5cf113fd22defb29d17b64597f3c9bc0" "site/built/instructor-notes.md" "2023-11-21"
+"instructors/materials.md" "e4fa9e868b71a6fb12a91e64f46fa5a3" "site/built/materials.md" "2023-12-08"
 "learners/reference.md" "527a12e217602daae51c5fd9ef8958df" "site/built/reference.md" "2023-11-21"
 "learners/setup.md" "9cf72d582354c251d5e4acb7215128ec" "site/built/setup.md" "2023-12-05"
 "profiles/learner-profiles.md" "5fe5bf7537072422b91ed393ada03f9a" "site/built/learner-profiles.md" "2023-11-21"
