@@ -15,6 +15,6 @@
 "instructors/instructor-notes.md" "5cf113fd22defb29d17b64597f3c9bc0" "site/built/instructor-notes.md" "2023-11-21"
 "instructors/materials.md" "e4fa9e868b71a6fb12a91e64f46fa5a3" "site/built/materials.md" "2023-12-08"
 "learners/reference.md" "527a12e217602daae51c5fd9ef8958df" "site/built/reference.md" "2023-11-21"
-"learners/setup.md" "9cf72d582354c251d5e4acb7215128ec" "site/built/setup.md" "2023-12-05"
+"learners/setup.md" "9d8df14921d2ed23a628a065e34342f6" "site/built/setup.md" "2023-12-08"
 "profiles/learner-profiles.md" "5fe5bf7537072422b91ed393ada03f9a" "site/built/learner-profiles.md" "2023-11-21"
 "renv/profiles/lesson-requirements/renv.lock" "4bfcd1f859e4d4481190cc0f08099515" "site/built/renv.lock" "2023-11-21"
