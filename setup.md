@@ -10,11 +10,11 @@ Have you ever wondered how cool would it be if you would be able to successfully
 - __Redo__ the analyses, figures or tables after correcting an error in the data or following a reviewer's recommendations?
 - __Reuse__ data from other authors for a secondary analysis thanks to informative metadata on the primary study?
 
-Sadly, most of the time this is very difficult because: 
+Sadly, most of the time, this isn't easy because: 
 
 - __We__ do not remember how we did the analysis,
 - __Redoing__ figures and tables is time-consuming,
-- __Data__ is not easily available or unreadable today.
+- __Data__ is not readily available or unreadable today.
 
 <!-- - How much time do we spend trying to implement a new analysis method based on the brief description provided in an article? -->
 
