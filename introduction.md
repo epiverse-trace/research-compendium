@@ -77,6 +77,11 @@ Share one idea from your neighbour.
 
 ::::::::::::::::::::::::::::
 
+:::::::: instructor
+
+The questions above are self-assessment questions to let the participants hear and report back on their or others' practices. This motivates a self-evaluation to include or replace previous practices, and potentially leave the session aware or motivated to proceed differently in the next iteration.
+
+::::::::::::::::
 
 ## What can we do?
 
