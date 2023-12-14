@@ -81,7 +81,7 @@ Take 5 minutes.
 Reflect on these questions:
 
 - How do you **organize** your files and folders?
-- Where does it describe what your project did or how to use it? Was it all in one place?
+- Where do you **describe** what your project does or how to use it? Was it all in one accessible place?
 - Could your project be reused by colleagues? Do you think it is?
 
 Share one idea from your neighbour.
