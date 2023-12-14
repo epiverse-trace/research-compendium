@@ -32,18 +32,7 @@ Our vision for this workshop is to increase the awareness of good practices that
 
 ![Our vision: Increase the awareness of good practices that complement an R and Git workflow](fig/goal-intro.png)
 
-## What can we do?
-
-A fair strategy to follow is to gradually incorporate good practices in scientific computing ([Wilson et al. 2017](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)) that include: 
-
-- Data management, 
-- Software development, 
-- Collaboration, 
-- Project organization, 
-- Keep track of changes, and 
-- Manuscript writing.
-
-But before incorporating any new practice, first, we can evaluate the **processes** we are following. A process-centred approach helps us remove the focus on human error, be aware that processes can fail people with good intentions, and accept that we can enter a continuous improvement cycle.
+The figure above helps us to visualize and potentially evaluate the **processes** we are following. A process-centred approach helps us remove the focus on human error, be aware that processes can fail people with good intentions, and accept that we can enter a continuous improvement cycle.
 
 > "By defining the process, we can begin to borrow from the rich field of operations,
 which focuses primarily on (the) process. One paradigm that proves especially useful is
@@ -88,15 +77,17 @@ Share one idea from your neighbour.
 
 ::::::::::::::::::::::::::::
 
-## How can we start?
 
-Our plan for this workshop is to prioritize three tools, given their [usefulness once mastered and the time to master them](https://teachtogether.tech/en/index.html#s:motivation-authentic):
+## What can we do?
 
-- Use research compendium templates.
-- Make reproducible analysis.
-- Write informative READMEs.
+A fair strategy to follow is to **gradually** incorporate good practices in scientific computing ([Wilson et al. 2017](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)) that include: 
 
-We'll relate relevant features for Sustainable software, Reproducible research, and Open science for each tool.
+- Data management, 
+- Software development, 
+- Collaboration, 
+- Project organization, 
+- Keep track of changes, and 
+- Manuscript writing.
 
 :::testimonial
 
@@ -109,6 +100,16 @@ If you already use a programming language like R and Git for version control, [y
 We support the opinion of [Jaime Quinn](https://sorse.github.io/blog/a-reproducible-phd/): "It can be challenging to absorb so many different good practices while still getting research done. However, I would argue that _anything helps_. While all good practices in open science are important, even just incorporating one example is good for the community and provides a solid personal foundation for _gradually incorporating_ more good practices."
 
 :::
+
+## How can we start?
+
+Our plan for this workshop is to prioritize three tools, given their [usefulness once mastered and the time to master them](https://teachtogether.tech/en/index.html#s:motivation-authentic):
+
+- Use research compendium templates.
+- Make reproducible analysis.
+- Write informative READMEs.
+
+We'll relate relevant features for Sustainable software, Reproducible research, and Open science for each tool.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
