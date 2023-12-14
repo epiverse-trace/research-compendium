@@ -43,7 +43,7 @@ A fair strategy to follow is to gradually incorporate good practices in scientif
 - Keep track of changes, and 
 - Manuscript writing.
 
-But before incorporating any new practice, first, we can evaluate the processes we are following. A process-centred approach helps us to remove the focus on human error and be aware that processes can fail people with good intentions, and we can enter a cycle of continuous improvement.
+But before incorporating any new practice, first, we can evaluate the **processes** we are following. A process-centred approach helps us remove the focus on human error, be aware that processes can fail people with good intentions, and accept that we can enter a continuous improvement cycle.
 
 > "By defining the process, we can begin to borrow from the rich field of operations,
 which focuses primarily on (the) process. One paradigm that proves especially useful is
