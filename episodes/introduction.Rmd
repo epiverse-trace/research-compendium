@@ -80,7 +80,7 @@ Take 5 minutes.
 
 Reflect on these questions:
 
-- How do you organize your files and folders?
+- How do you **organize** your files and folders?
 - Where does it describe what your project did or how to use it? Was it all in one place?
 - Could your project be reused by colleagues? Do you think it is?
 
