@@ -1,0 +1,14 @@
+Please cite as:
+
+Valle A, Tamayo C, Azam J (2023). “research-compendium: Improve Your
+Code For Epidemic Analysis With R.”
+
+A BibTeX entry for LaTeX users is
+
+  @Misc{valletamayo:2023,
+    title = {research-compendium: Improve Your Code For Epidemic Analysis With R},
+    author = {Andree Valle and Carmen Tamayo and James M. Azam},
+    year = {2023},
+    abstract = {Epiverse-TRACE tutorial on Improve your code for Epidemic Analysis with R.},
+    version = {0.0.0.9000},
+  }
