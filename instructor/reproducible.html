@@ -293,7 +293,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reproducible analysis</h1>
-        <p>Last updated on 2024-02-27 |
+        <p>Last updated on 2024-03-03 |
         
         <a href="https://github.com/avallecam/research-compendium/edit/main/episodes/reproducible.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -363,13 +363,12 @@ your computer packages. Lastly, <a href="https://rstudio.github.io/renv/" class=
 dependencies automatically, apart from adding them with functions
 (<code>renv::snapshot()</code>), and it can also automate the recovery
 of the whole project (<code>renv::restore()</code>).</p>
-<div id="callout1" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout1"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title">Callout</h3>
 <div class="callout-content">
 <p>The <a href="https://rstudio.github.io/renv/" class="external-link">renv</a> package:</p>
 <ul><li>
@@ -407,13 +406,12 @@ only <code>.R</code> file stored in the project’s root given by the
 <a href="https://github.com/FRBCesab/rcompendium" class="external-link">rcompendium</a> template. You can use the <code>make.R</code>
 file as the only script to run and regenerate all your project
 outputs.</p>
-<div id="callout2" class="callout callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout2"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title">Callout</h3>
 <div class="callout-content">
 <p>The <code>make.R</code> file is inspired but not equivalent to GNU
 <code>Make</code> file.</p>
@@ -440,7 +438,9 @@ files for this.</p>
 <p>Usually, to <a href="https://rstudio.github.io/renv/" class="external-link">initiate</a> a
 reproducible environment with <a href="https://rstudio.github.io/renv/" class="external-link">renv</a>, we need to run
 <code>renv::init()</code>.</p>
-<figure><img src="../fig/renv.png" alt="" class="figure mx-auto d-block"><figcaption>Source: <a href="https://rstudio.github.io/renv/" class="external-link uri">https://rstudio.github.io/renv/</a></figcaption></figure><p>However, when working in a <a href="https://github.com/FRBCesab/rcompendium" class="external-link">rcompendium</a> template, your
+<figure><img src="../fig/renv.png" alt="Source: https://rstudio.github.io/renv/" class="figure mx-auto d-block"><div class="figcaption">Source: <a href="https://rstudio.github.io/renv/" class="external-link uri">https://rstudio.github.io/renv/</a>
+</div>
+</figure><p>However, when working in a <a href="https://github.com/FRBCesab/rcompendium" class="external-link">rcompendium</a> template, your
 first step must be to run:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -477,7 +477,7 @@ instead of <code>DESCRIPTION</code> file.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>We can use <a href="https://rstudio.github.io/renv/" class="external-link">renv</a> in addition to
 <code>DESCRIPTION</code>.</p>
@@ -489,8 +489,9 @@ CRAN. If you want to add GitHub packages, <a href="https://remotes.r-lib.org/art
 add them manually</a> in a different section called
 <code>Remotes:</code> and write <code>repository/package</code>. The
 <a href="https://rstudio.github.io/renv/" class="external-link">renv</a> package solves this automatically.</p>
-<figure><img src="../fig/add_dependencies-github.png" alt="" class="figure mx-auto d-block"><figcaption>We need to fix the DESCRIPTION file manually.
-Packages like {cfr} and {epiparameter} are on GitHub.</figcaption></figure><p>However, this still needs to be assessed with different scenarios to
+<figure><img src="../fig/add_dependencies-github.png" alt="We need to fix the DESCRIPTION file manually. Packages like {cfr} and {epiparameter} are on GitHub." class="figure mx-auto d-block"><div class="figcaption">We need to fix the DESCRIPTION file manually.
+Packages like {cfr} and {epiparameter} are on GitHub.</div>
+</figure><p>However, this still needs to be assessed with different scenarios to
 confirm this as the final best decision.</p>
 <p>If you decide to use <a href="https://rstudio.github.io/renv/" class="external-link">renv</a> in addition to
 <code>DESCRIPTION</code> run:</p>
@@ -548,13 +549,12 @@ the default <code>devtools::install_deps()</code> by
 <pre class="output" tabindex="0"><code>This project does not contain a lockfile.
 Use renv::snapshot() to create a lockfile.</code></pre>
 </div>
-<div id="callout3" class="callout callout">
+<div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout3"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title">Callout</h3>
 <div class="callout-content">
 <p>Always follow the suggestions of the <code>renv::status()</code>
 output. You can also get a message from it each time you reopen your
@@ -639,13 +639,12 @@ folder. Copy and paste these lines of code:</p>
 </div>
 <p>Notice that we are writing a new cleaned data set in a different
 path: <code>data/derived-data/</code>.</p>
-<div id="callout4" class="callout callout">
+<div id="callout4" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout4"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title">Callout</h3>
 <div class="callout-content">
 <ul><li><p>The default folder to save R scripts will be <code>R/</code>.
 This path is the place to write your <em>Modular functions</em>. Go to
@@ -738,7 +737,7 @@ a model</a> to the incidence curve.</li>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1">Give me a hint</h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <ul><li>You can reuse the <code>incidence2</code> object as input in the
 same file.</li>
@@ -880,8 +879,8 @@ any links that you are not going to use.
   "url": "https://avallecam.github.io/research-compendium/instructor/reproducible.html",
   "identifier": "https://avallecam.github.io/research-compendium/instructor/reproducible.html",
   "dateCreated": "2023-08-29",
-  "dateModified": "2024-02-27",
-  "datePublished": "2024-02-27"
+  "dateModified": "2024-03-03",
+  "datePublished": "2024-03-03"
 }
 
   </script><script>
