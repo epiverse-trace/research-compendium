@@ -76,7 +76,7 @@ The `Usage` section includes the installation steps of:
 - Clone a repository, and
 - Use R/Rstudio.
 
-We can assess our [target audience](https://merely-useful.tech/py-rse/documentation.html#documentation-audience) and adapt this content to our projects. 
+We can assess our [target audience](https://third-bit.com/py-rse/documentation.html#documentation-audience) and adapt this content to our projects. 
 
 Let's assume that the following personas are examples of the types of people that are your target audience:
 
