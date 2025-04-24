@@ -226,18 +226,24 @@ library(readxl)
 library(tidyverse)
 
 # Read raw data
-dat <- readxl::read_xlsx("data/linelist_20140701.xlsx")
+dat_path <- "https://github.com/reconhub/learn/raw/master/static/data/linelist_20140701.xlsx"
+dat <- rio::import(file = dat_path) %>%
+  tibble::as_tibble()
 
 # Clean raw data
-dat_clean <- dat %>% 
-  select(case_id,date_of_onset,date_of_outcome,outcome) %>% 
-  mutate(across(.cols = c(date_of_onset,date_of_outcome),
-                .fns = as.Date)) %>% 
-  mutate(outcome = fct(outcome,level = c("Death","Recover"),na = "NA"))
+dat_clean <- dat %>%
+  dplyr::select(case_id, date_of_onset, date_of_outcome, outcome) %>%
+  dplyr::mutate(dplyr::across(
+    .cols = c(date_of_onset, date_of_outcome),
+    .fns = as.Date
+  )) %>%
+  dplyr::mutate(
+    outcome = fct(outcome, level = c("Death", "Recover"), na = "NA")
+  )
 
 # Write clean data
-dat_clean %>% 
-  write_rds("outputs/linelist_clean.rds")
+dat_clean %>%
+  readr::write_rds("outputs/linelist_clean.rds")
 ```
 
 Notice that we are writing a new cleaned data set in a different path: `data/derived-data/`.
