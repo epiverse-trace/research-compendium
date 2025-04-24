@@ -226,7 +226,7 @@ library(readxl)
 library(tidyverse)
 
 # Read raw data
-dat <- readxl::read_xlsx("data/raw-data/linelist_20140701.xlsx")
+dat <- readxl::read_xlsx("data/linelist_20140701.xlsx")
 
 # Clean raw data
 dat_clean <- dat %>% 
@@ -237,7 +237,7 @@ dat_clean <- dat %>%
 
 # Write clean data
 dat_clean %>% 
-  write_rds("data/derived-data/linelist_clean.rds")
+  write_rds("outputs/linelist_clean.rds")
 ```
 
 Notice that we are writing a new cleaned data set in a different path: `data/derived-data/`.
