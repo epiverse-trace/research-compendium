@@ -150,34 +150,44 @@ Commit and Push your changes. Identify that GitHub has built-in support for this
 
 :::solution
 
-First, write a `inst/CITATION` file:
+First, open the `CITATION.cff` file:
 
 ```r
-cffr::write_citation(x = "CITATION.cff")
+usethis::edit_file(path = "CITATION.cff")
 ```
 
-Our default `CITATION.cff` do not record the `year` of creation. To solve it, we can follow the following steps:
-
-- Open the `inst/CITATION` file. Within the `bibentry()` add:
+Our default `CITATION.cff` does not record the `year` of creation. To solve it, we can add this extra line at the end:
 
 ```
-year = 2023,
+date-released: '2023-04-23'
 ```
 
-- Then, paste this chunk with the `echo=FALSE` option in the `README.Rmd`:
+Second, to read the `CITATION.cff` in the `README.Rmd`, as in
+[this other tutorial README file](https://github.com/epiverse-trace/tutorials-early/blob/431ac47e0e58fcdfeecf6f90c559022a2be12c3e/README.Rmd#L70-L83):
+
+1. Paste this template text in the `README.Rmd` at the Citation section
+
+```
+See [CITATION.cff](CITATION.cff) for citation information,
+including a list of authors.
+([Read more about the Citation File Format and how to use it](https://citation-file-format.github.io/).)
+
+To cite these tutorials in publications use:
+```
+
+2. Add this chunk using following chunk options `eval=TRUE, echo=FALSE, comment=""`:
 
 ```r
-readCitationFile(file = "inst/CITATION")
+cffr::as_bibentry(x = "CITATION.cff")
 ```
 
-- `Knit` the `README.Rmd` file.
-
-- Finally, re-run this line to update the `.cff` file with the `year`:
+3. To include a BibTeX entry for LaTeX users, paste this chunk with options `eval=TRUE, echo=FALSE, comment=""`:
 
 ```r
-cffr::cff_write(dependencies = FALSE)
+utils::toBibtex(cffr::as_bibentry(x = "CITATION.cff"))
 ```
 
+Lastly, `Knit` the `README.Rmd` file. If you get an error, try [installing the latest version of {evaluate} R package](https://forum.posit.co/t/error-in-render-when-using-knit/193761/2).
 
 :::
 
