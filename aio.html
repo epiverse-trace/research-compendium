@@ -1554,7 +1554,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-readmefile"><p>Content from <a href="readmefile.html">README files</a></p>
 <hr>
-<p>Last updated on 2025-04-22 |
+<p>Last updated on 2025-04-24 |
 
         <a href="https://github.com/avallecam/research-compendium/edit/main/episodes/readmefile.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1781,42 +1781,52 @@ support for this citation.</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<p>First, write a <code>inst/CITATION</code> file:</p>
+<p>First, open the <code>CITATION.cff</code> file:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">cffr</span><span class="fu">::</span><span class="fu">write_citation</span><span class="op">(</span>x <span class="op">=</span> <span class="st">"CITATION.cff"</span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">edit_file</span><span class="op">(</span>path <span class="op">=</span> <span class="st">"CITATION.cff"</span><span class="op">)</span></span></code></pre>
 </div>
-<p>Our default <code>CITATION.cff</code> do not record the
-<code>year</code> of creation. To solve it, we can follow the following
-steps:</p>
-<ul>
-<li>Open the <code>inst/CITATION</code> file. Within the
-<code>bibentry()</code> add:</li>
-</ul>
-<pre><code>year = 2023,</code></pre>
-<ul>
-<li>Then, paste this chunk with the <code>echo=FALSE</code> option in
-the <code>README.Rmd</code>:</li>
-</ul>
-<div class="codewrapper sourceCode" id="cb6">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">readCitationFile</span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/CITATION"</span><span class="op">)</span></span></code></pre>
-</div>
-<ul>
-<li><p><code>Knit</code> the <code>README.Rmd</code> file.</p></li>
-<li><p>Finally, re-run this line to update the <code>.cff</code> file
-with the <code>year</code>:</p></li>
-</ul>
+<p>Our default <code>CITATION.cff</code> does not record the
+<code>year</code> of creation. To solve it, we can add this extra line
+at the end:</p>
+<pre><code><span><span class="va">date</span><span class="op">-</span><span class="va">released</span><span class="op">:</span> <span class="st">'2023-04-23'</span></span></code></pre>
+<p>Second, to read the <code>CITATION.cff</code> in the
+<code>README.Rmd</code>, as in <a href="https://github.com/epiverse-trace/tutorials-early/blob/431ac47e0e58fcdfeecf6f90c559022a2be12c3e/README.Rmd#L70-L83" class="external-link">this
+other tutorial README file</a>:</p>
+<ol style="list-style-type: decimal">
+<li>Paste this template text in the <code>README.Rmd</code> at the
+Citation section</li>
+</ol>
+<pre><code>See [CITATION.cff](CITATION.cff) for citation information,
+including a list of authors.
+([Read more about the Citation File Format and how to use it](https://citation-file-format.github.io/).)
+
+To cite these tutorials in publications use:</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Add this chunk using following chunk options
+<code>eval=TRUE, echo=FALSE, comment=""</code>:</li>
+</ol>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">cffr</span><span class="fu">::</span><span class="fu">cff_write</span><span class="op">(</span>dependencies <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="fu">cffr</span><span class="fu">::</span><span class="fu">as_bibentry</span><span class="op">(</span>x <span class="op">=</span> <span class="st">"CITATION.cff"</span><span class="op">)</span></span></code></pre>
 </div>
+<ol start="3" style="list-style-type: decimal">
+<li>To include a BibTeX entry for LaTeX users, paste this chunk with
+options <code>eval=TRUE, echo=FALSE, comment=""</code>:</li>
+</ol>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">utils</span><span class="fu">::</span><span class="fu">toBibtex</span><span class="op">(</span><span class="fu">cffr</span><span class="fu">::</span><span class="fu">as_bibentry</span><span class="op">(</span>x <span class="op">=</span> <span class="st">"CITATION.cff"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+</div>
+<p>Lastly, <code>Knit</code> the <code>README.Rmd</code> file. If you
+get an error, try <a href="https://forum.posit.co/t/error-in-render-when-using-knit/193761/2" class="external-link">installing
+the latest version of {evaluate} R package</a>.</p>
 </div>
 </div>
 </div>
