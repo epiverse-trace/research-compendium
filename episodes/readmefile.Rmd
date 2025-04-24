@@ -187,7 +187,7 @@ cffr::as_bibentry(x = "CITATION.cff")
 utils::toBibtex(cffr::as_bibentry(x = "CITATION.cff"))
 ```
 
-Lastly, `Knit` the `README.Rmd` file.
+Lastly, `Knit` the `README.Rmd` file. If you get an error, try [installing the latest version of {evaluate} R package](https://forum.posit.co/t/error-in-render-when-using-knit/193761/2).
 
 :::
 
