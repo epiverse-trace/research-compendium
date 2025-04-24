@@ -1048,7 +1048,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-reproducible"><p>Content from <a href="reproducible.html">Reproducible analysis</a></p>
 <hr>
-<p>Last updated on 2025-04-22 |
+<p>Last updated on 2025-04-24 |
 
         <a href="https://github.com/avallecam/research-compendium/edit/main/episodes/reproducible.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 60 minutes</p>
@@ -1237,7 +1237,7 @@ instead of <code>DESCRIPTION</code> file.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>We can use <a href="https://rstudio.github.io/renv/" class="external-link">renv</a> in addition to
 <code>DESCRIPTION</code>.</p>
@@ -1389,18 +1389,24 @@ folder. Copy and paste these lines of code:</p>
 <span><span class="kw">library</span><span class="op">(</span><span class="va">tidyverse</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Read raw data</span></span>
-<span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu">readxl</span><span class="fu">::</span><span class="fu">read_xlsx</span><span class="op">(</span><span class="st">"data/raw-data/linelist_20140701.xlsx"</span><span class="op">)</span></span>
+<span><span class="va">dat_path</span> <span class="op">&lt;-</span> <span class="st">"https://github.com/reconhub/learn/raw/master/static/data/linelist_20140701.xlsx"</span></span>
+<span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu">rio</span><span class="fu">::</span><span class="fu">import</span><span class="op">(</span>file <span class="op">=</span> <span class="va">dat_path</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">tibble</span><span class="fu">::</span><span class="fu">as_tibble</span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Clean raw data</span></span>
-<span><span class="va">dat_clean</span> <span class="op">&lt;-</span> <span class="va">dat</span> <span class="op">%&gt;%</span> </span>
-<span>  <span class="fu">select</span><span class="op">(</span><span class="va">case_id</span>,<span class="va">date_of_onset</span>,<span class="va">date_of_outcome</span>,<span class="va">outcome</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
-<span>  <span class="fu">mutate</span><span class="op">(</span><span class="fu">across</span><span class="op">(</span>.cols <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="va">date_of_onset</span>,<span class="va">date_of_outcome</span><span class="op">)</span>,</span>
-<span>                .fns <span class="op">=</span> <span class="va">as.Date</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
-<span>  <span class="fu">mutate</span><span class="op">(</span>outcome <span class="op">=</span> <span class="fu">fct</span><span class="op">(</span><span class="va">outcome</span>,level <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"Death"</span>,<span class="st">"Recover"</span><span class="op">)</span>,na <span class="op">=</span> <span class="st">"NA"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">dat_clean</span> <span class="op">&lt;-</span> <span class="va">dat</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu">select</span><span class="op">(</span><span class="va">case_id</span>, <span class="va">date_of_onset</span>, <span class="va">date_of_outcome</span>, <span class="va">outcome</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu">mutate</span><span class="op">(</span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu">across</span><span class="op">(</span></span>
+<span>    .cols <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="va">date_of_onset</span>, <span class="va">date_of_outcome</span><span class="op">)</span>,</span>
+<span>    .fns <span class="op">=</span> <span class="va">as.Date</span></span>
+<span>  <span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu">mutate</span><span class="op">(</span></span>
+<span>    outcome <span class="op">=</span> <span class="fu">fct</span><span class="op">(</span><span class="va">outcome</span>, level <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"Death"</span>, <span class="st">"Recover"</span><span class="op">)</span>, na <span class="op">=</span> <span class="st">"NA"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Write clean data</span></span>
-<span><span class="va">dat_clean</span> <span class="op">%&gt;%</span> </span>
-<span>  <span class="fu">write_rds</span><span class="op">(</span><span class="st">"data/derived-data/linelist_clean.rds"</span><span class="op">)</span></span></code></pre>
+<span><span class="va">dat_clean</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">readr</span><span class="fu">::</span><span class="fu">write_rds</span><span class="op">(</span><span class="st">"outputs/linelist_clean.rds"</span><span class="op">)</span></span></code></pre>
 </div>
 <p>Notice that we are writing a new cleaned data set in a different
 path: <code>data/derived-data/</code>.</p>
@@ -1464,16 +1470,16 @@ this cleaned data set. Name it <code>02-plot.R</code>. Save it in the
 <span><span class="kw">library</span><span class="op">(</span><span class="va">incidence2</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Read data</span></span>
-<span><span class="va">ebola_dat</span> <span class="op">&lt;-</span> <span class="fu">read_rds</span><span class="op">(</span><span class="st">"data/derived-data/linelist_clean.rds"</span><span class="op">)</span></span>
+<span><span class="va">ebola_dat</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu">read_rds</span><span class="op">(</span><span class="st">"outputs/linelist_clean.rds"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Create incidence2 object</span></span>
-<span><span class="va">ebola_onset</span> <span class="op">&lt;-</span> </span>
+<span><span class="va">ebola_onset</span> <span class="op">&lt;-</span></span>
 <span>  <span class="fu">incidence2</span><span class="fu">::</span><span class="fu">incidence</span><span class="op">(</span></span>
 <span>    x <span class="op">=</span> <span class="va">ebola_dat</span>,</span>
 <span>    date_index <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"date_of_onset"</span><span class="op">)</span>,</span>
 <span>    interval <span class="op">=</span> <span class="st">"epiweek"</span></span>
 <span>  <span class="op">)</span></span>
-<span>  </span>
+<span></span>
 <span><span class="co"># Read incidence2 object</span></span>
 <span><span class="va">ebola_onset</span></span>
 <span></span>
@@ -1481,7 +1487,7 @@ this cleaned data set. Name it <code>02-plot.R</code>. Save it in the
 <span><span class="fu">plot</span><span class="op">(</span><span class="va">ebola_onset</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Write ggplot as figure</span></span>
-<span><span class="fu">ggsave</span><span class="op">(</span><span class="st">"figures/02-plot_incidence.png"</span>,height <span class="op">=</span> <span class="fl">3</span>,width <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre>
+<span><span class="fu">ggsave</span><span class="op">(</span><span class="st">"figures/02-plot_incidence.png"</span>, height <span class="op">=</span> <span class="fl">3</span>, width <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre>
 </div>
 <p>Notice that we are writing the new plot in a different path:
 <code>figures/</code>.</p>
@@ -1505,7 +1511,7 @@ a model</a> to the incidence curve.</li>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <ul>
 <li>You can reuse the <code>incidence2</code> object as input in the
@@ -2360,7 +2366,7 @@ through:</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>If required, you can add vignettes for an <a href="https://github.com/FRBCesab/rcompendium" class="external-link">rcompendium</a>
 using:</p>
@@ -2403,7 +2409,7 @@ functions can change it.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
   <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
 <div class="accordion-body">
 <p>This manuscript will not be visible on a website unless moved to the
 <code>vignette/</code> folder. We have yet to test that behaviour.</p>
