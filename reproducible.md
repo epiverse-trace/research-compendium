@@ -226,18 +226,24 @@ library(readxl)
 library(tidyverse)
 
 # Read raw data
-dat <- readxl::read_xlsx("data/raw-data/linelist_20140701.xlsx")
+dat_path <- "https://github.com/reconhub/learn/raw/master/static/data/linelist_20140701.xlsx"
+dat <- rio::import(file = dat_path) %>%
+  tibble::as_tibble()
 
 # Clean raw data
-dat_clean <- dat %>% 
-  select(case_id,date_of_onset,date_of_outcome,outcome) %>% 
-  mutate(across(.cols = c(date_of_onset,date_of_outcome),
-                .fns = as.Date)) %>% 
-  mutate(outcome = fct(outcome,level = c("Death","Recover"),na = "NA"))
+dat_clean <- dat %>%
+  dplyr::select(case_id, date_of_onset, date_of_outcome, outcome) %>%
+  dplyr::mutate(dplyr::across(
+    .cols = c(date_of_onset, date_of_outcome),
+    .fns = as.Date
+  )) %>%
+  dplyr::mutate(
+    outcome = fct(outcome, level = c("Death", "Recover"), na = "NA")
+  )
 
 # Write clean data
-dat_clean %>% 
-  write_rds("data/derived-data/linelist_clean.rds")
+dat_clean %>%
+  readr::write_rds("outputs/linelist_clean.rds")
 ```
 
 Notice that we are writing a new cleaned data set in a different path: `data/derived-data/`.
@@ -283,16 +289,16 @@ library(tidyverse)
 library(incidence2)
 
 # Read data
-ebola_dat <- read_rds("data/derived-data/linelist_clean.rds")
+ebola_dat <- readr::read_rds("outputs/linelist_clean.rds")
 
 # Create incidence2 object
-ebola_onset <- 
+ebola_onset <-
   incidence2::incidence(
     x = ebola_dat,
     date_index = c("date_of_onset"),
     interval = "epiweek"
   )
-  
+
 # Read incidence2 object
 ebola_onset
 
@@ -300,7 +306,7 @@ ebola_onset
 plot(ebola_onset)
 
 # Write ggplot as figure
-ggsave("figures/02-plot_incidence.png",height = 3,width = 5)
+ggsave("figures/02-plot_incidence.png", height = 3, width = 5)
 ```
 
 Notice that we are writing the new plot in a different path: `figures/`.
