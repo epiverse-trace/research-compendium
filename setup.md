@@ -102,21 +102,13 @@ For [Linux](https://happygitwithr.com/install-git.html#linux)
 
 These installation steps could ask you `? Do you want to continue (Y/n)` write `y` and press ENTER. It can take up to 3 minutes to complete.
 
-First, we strongly suggest to install the development versions of the `{rcompendium}` and `{rrtools}` packages:
-
-```r
-if (!require("remotes")) install.packages("remotes")
-
-remotes::install_github("FRBCesab/rcompendium")
-remotes::install_github("benmarwick/rrtools")
-```
-
-Then, install all these packages:
+First, we strongly suggest installing the development versions of the `{rcompendium}` and `{rrtools}` packages, and others like `{usethis}` and `{renv}`, using the following code chunk:
 
 ```r
 if(!require("pak")) install.packages("pak")
 
-new <- c("gh",
+new <- c("FRBCesab/rcompendium",
+         "benmarwick/rrtools",
          "usethis",
          "tidyverse",
          "here",
