@@ -283,7 +283,7 @@ library(tidyverse)
 library(incidence2)
 
 # Read data
-ebola_dat <- read_rds("data/derived-data/linelist_clean.rds")
+ebola_dat <- read_rds("outputs/linelist_clean.rds")
 
 # Create incidence2 object
 ebola_onset <- 
