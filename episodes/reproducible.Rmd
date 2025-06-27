@@ -362,13 +362,16 @@ If you are working alone, try restoring this repository: <https://github.com/epi
 
 :::::::::::::: solution
 
-We notice that `renv::restore()` compares packages recorded in the lockfile to the packages installed in the project library.
+We notice that `renv::restore()` compares packages recorded in the lockfile (`renv.lock`) to the packages installed in the project library.
 If they differ, this will trigger a package update.
 For example, in the output below, the computer has `{bslib}` version `0.7.0`, but the lockfile has `0.4.0`,
 so the update goes in the direction to return to the previous version.
 
 ```r
-> renv::restore()
+renv::restore()
+```
+
+```output
 It looks like you've called renv::restore() in a project that hasn't been activated yet.
 How would you like to proceed? 
 
@@ -387,6 +390,23 @@ The following package(s) will be updated:
 - cli         [3.6.3 -> 3.6.1]
 - ...
 ```
+
+We need to use `renv::status()` to assess that we have completed this stage.
+We can expect output messages about a different R version generating the lockfile.
+
+```r
+renv::status()
+```
+
+```output
+The lockfile was generated with R 4.2.1, but you're using R 4.4.2.
+
+See ?renv::status() for advice on resolving these issues.
+```
+
+To confirm specific package versions in the R console,
+compare the registry in the lockfile (`renv.lock`)
+with the output of the function `packageVersion("package_name")`.
 
 ::::::::::::::
 
