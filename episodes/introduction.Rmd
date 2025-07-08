@@ -45,7 +45,7 @@ individual actor) (Dekker 2014). When an error in an analysis occurs, it is safe
 to assume (aside from nefarious actors) that the analyst did not want that error
 to occur. Given that she thought she was producing an analysis free from errors,
 you must look at the way she developed the analysis to understand where the
-error occurred, and create safeguards so that the error does not occur again." ([Parker, 2017a](https://sachsmc.github.io/rpackage-workshop/opinionated-analysis-dev.pdf) and [Parker, 2017b](https://posit.co/resources/videos/opinionated-analysis-development/))
+error occurred, and create safeguards so that the error does not occur again." ([Parker, 2017a](https://peerj.com/preprints/3210/) and [Parker, 2017b](https://posit.co/resources/videos/opinionated-analysis-development/))
 
 Repetitive events (like outbreak response and research data analysis projects) give us the opportunity to:
 
