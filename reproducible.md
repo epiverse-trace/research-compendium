@@ -348,6 +348,71 @@ source(here::here("analyses", "02-plot.R"))
 :::
 
 
+:::::::::::::::::::::::: challenge
+
+**Restore the analysis of a colleague**
+
+Get the link to a GitHub repository and try to restore their reproducible environment using `renv::restore()`. Does it work?
+
+:::::::::::::: hint
+
+If you are working alone, try restoring this repository: <https://github.com/epiverse-trace/epiverse_demos/>
+
+::::::::::::::
+
+:::::::::::::: solution
+
+We notice that `renv::restore()` compares packages recorded in the lockfile (`renv.lock`) to the packages installed in the project library.
+If they differ, this will trigger a package update.
+For example, in the output below, the computer has `{bslib}` version `0.7.0`, but the lockfile has `0.4.0`,
+so the update goes in the direction to return to the previous version.
+
+```r
+renv::restore()
+```
+
+```output
+It looks like you've called renv::restore() in a project that hasn't been activated yet.
+How would you like to proceed? 
+
+1: Activate the project and use the project library.
+2: Do not activate the project and use the current library paths.
+3: Cancel and resolve the situation another way.
+
+Selection: 
+1
+- renv activated -- please restart the R session.
+The following package(s) will be updated:
+
+# CRAN -----------------------------------------------------------------------
+- bslib       [0.7.0 -> 0.4.0]
+- cachem      [1.1.0 -> 1.0.6]
+- cli         [3.6.3 -> 3.6.1]
+- ...
+```
+
+We need to use `renv::status()` to assess that we have completed this stage.
+We can expect output messages about a different R version generating the lockfile.
+
+```r
+renv::status()
+```
+
+```output
+The lockfile was generated with R 4.2.1, but you're using R 4.4.2.
+
+See ?renv::status() for advice on resolving these issues.
+```
+
+To confirm specific package versions in the R console,
+compare the registry in the lockfile (`renv.lock`)
+with the output of the function `packageVersion("package_name")`.
+
+::::::::::::::
+
+::::::::::::::::::::::::
+
+
 ## Reproducible research features
 
 We defined Reproducible research as a practice that wants to ensure that _anyone with access_ to data inputs and software can _feasibly generate_ the outputs to check or build on them.
