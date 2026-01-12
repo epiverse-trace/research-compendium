@@ -288,7 +288,8 @@ rcompendium::set_credentials(
 )
 ```
 
-This function will automatically copy a line of code to the clipboard that starts with `options(...`, and open a file called `.Rprofile`. Paste the line of code in the file. After this, close Rstudio and open it again for changes to take effect. 
+This function will automatically copy a line of code to the clipboard that starts with `options(...`, and open a file called `.Rprofile`. Paste the line of code in the file.
+After this, close Rstudio and open it again for changes to take effect. 
 
 You can access the content of the `.Rprofile` file at any time with `usethis::edit_r_profile()`.
 
